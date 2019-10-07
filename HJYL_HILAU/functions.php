@@ -384,6 +384,19 @@ function move_comment_field_to_bottom( $fields ) {
 }
 add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
 
+//快捷输入[Prism]标签
+function hjyl_highlight_quicktags() { ?>
+<script type="text/javascript">
+QTags.addButton( 'post_h3', '<h3>', '\n<h3>', '</h3>\n' ); //快捷输入[h3]标签
+QTags.addButton( 'highlight_php', '[php]', '\n[php]', '[/php]\n' ); //快捷输入[php]标签
+QTags.addButton( 'highlight_css', '[css]', '\n[css]', '[/css]\n' ); //快捷输入[css]标签
+QTags.addButton( 'highlight_js', '[js]', '\n[js]', '[/js]\n' ); //快捷输入[js]标签
+QTags.addButton( 'highlight_xml', '[xml]', '\n[xml]', '[/xml]\n' ); //快捷输入[xml]标签
+QTags.addButton( 'highlight_code', '[code]', '\n[code]', '[/code]\n' ); //快捷输入[code]标签
+</script>
+<?php }
+add_action('admin_print_footer_scripts', 'hjyl_highlight_quicktags' );
+
 //显示数据库查询次数、查询时间及内存占用的代码
 function iperformance($visible = false){
     $stat = sprintf('%d 次查询 用时 %.3f 秒, 耗费了 %.2fMB 内存', get_num_queries(), timer_stop(0, 3), memory_get_peak_usage() / 1024 / 1024);
@@ -397,4 +410,12 @@ add_action('wp_footer', 'iperformance', 20);
  	// Custom Category control 
 require( dirname( __FILE__ ) . '/inc/category-dropdown-custom-control.php');
 require( dirname( __FILE__ ) . '/inc/class-wp-bootstrap-navwalker.php');
+require( dirname( __FILE__ ) . '/inc/functions-weixin-push.php');
+
+//检测主题更新 
+require_once(dirname( __FILE__ ) . '/inc/theme-update-checker.php'); 
+$hjyl_update_checker = new ThemeUpdateChecker(
+	'HJYL_HILAU', //主题名字
+	'https://hilau.com/wp-content/themes/HJYL_HILAU/info.json'  //info.json 的访问地址
+);
 ?>

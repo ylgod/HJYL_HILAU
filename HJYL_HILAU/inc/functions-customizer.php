@@ -6,7 +6,16 @@ function hjyl_customize_register( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'title'      => __('HJYL_HILAU settings', 'HJYL_HILAU'),
 	));
-
+		
+	//basic options 
+	$wp_customize->add_section(
+        'basic_options',
+        array(
+            'title' => __('Basic Options','HJYL_HILAU'),
+           'priority' => 10,
+			'panel' => 'hjyl_hilau_setting',
+        ));
+		
 	//slide options
 	$wp_customize->add_section(
         'slide_options',
@@ -41,8 +50,29 @@ function hjyl_customize_register( $wp_customize ) {
             'title' => __('SEO Options','HJYL_HILAU'),
            'priority' => 55,
 			'panel' => 'hjyl_hilau_setting',
-        ));
-		
+        ));	
+
+	
+	//评论微信推送
+	$wp_customize->add_setting(
+    'hjyl_hilau_options[wxpush]',
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field',
+			'transport' => 'postMessage',
+			'type' => 'theme_mod',
+		)
+	);
+	$wp_customize->add_control(
+    'hjyl_hilau_options[wxpush]',
+		array(
+			'label' => __('SCKEY','HJYL_HILAU'),
+			'description' => __( 'No SCKEY? you can register on https://sc.ftqq.com', 'HJYL_HILAU'),
+			'section' => 'basic_options',
+			'type' => 'text',
+		)
+	);
+
 	// 幻灯片分类设置
  	$wp_customize->add_setting(
     'hjyl_hilau_options[slide]',

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-06 18:42+0800\n"
-"PO-Revision-Date: 2019-10-06 18:42+0800\n"
+"POT-Creation-Date: 2019-10-07 12:58+0800\n"
+"PO-Revision-Date: 2019-10-07 12:58+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
@@ -66,7 +66,7 @@ msgstr "名字"
 msgid "(required)"
 msgstr "(必填)"
 
-#: ../comments.php:47 ../inc/functions-customizer.php:130
+#: ../comments.php:47 ../inc/functions-customizer.php:159
 msgid "Email"
 msgstr "邮箱"
 
@@ -322,81 +322,113 @@ msgid "HJYL_HILAU settings"
 msgstr "主题设置"
 
 #: ../inc/functions-customizer.php:14
+msgid "Basic Options"
+msgstr "基本设置"
+
+#: ../inc/functions-customizer.php:23
 msgid "Slide Options"
 msgstr "幻灯片设置"
 
-#: ../inc/functions-customizer.php:23
+#: ../inc/functions-customizer.php:32
 msgid "Social Links"
 msgstr "社会链接"
 
-#: ../inc/functions-customizer.php:32
+#: ../inc/functions-customizer.php:41
 msgid "AD Options"
 msgstr "广告位设置"
 
-#: ../inc/functions-customizer.php:41
+#: ../inc/functions-customizer.php:50
 msgid "SEO Options"
 msgstr "SEO设置"
 
-#: ../inc/functions-customizer.php:57
+#: ../inc/functions-customizer.php:68
+msgid "SCKEY"
+msgstr "SCKEY"
+
+#: ../inc/functions-customizer.php:69
+msgid "No SCKEY? you can register on https://sc.ftqq.com"
+msgstr "没有SCKEY？你可以到https://sc.ftqq.com注册一个"
+
+#: ../inc/functions-customizer.php:86
 msgid "Select category for slide"
 msgstr "选择一个分类显示幻灯片"
 
-#: ../inc/functions-customizer.php:75
+#: ../inc/functions-customizer.php:104
 msgid "QQ No."
-msgstr "QQ号码"
+msgstr "QQ号码."
 
-#: ../inc/functions-customizer.php:94
+#: ../inc/functions-customizer.php:123
 msgid "Weibo Account"
 msgstr "微博号"
 
-#: ../inc/functions-customizer.php:112
+#: ../inc/functions-customizer.php:141
 msgid "WeChat QRcode"
 msgstr "微信二维码"
 
-#: ../inc/functions-customizer.php:149
+#: ../inc/functions-customizer.php:178
 msgid "Only Show AD on Home Page"
 msgstr "仅首页显示顶部广告"
 
-#: ../inc/functions-customizer.php:168
+#: ../inc/functions-customizer.php:197
 msgid "Home Ad"
 msgstr "首页顶部广告"
 
-#: ../inc/functions-customizer.php:169 ../inc/functions-customizer.php:209
-#: ../inc/functions-customizer.php:229
+#: ../inc/functions-customizer.php:198 ../inc/functions-customizer.php:238
+#: ../inc/functions-customizer.php:258
 msgid "AD for 468px*60px"
 msgstr "468px*60px 广告位最佳"
 
-#: ../inc/functions-customizer.php:188
+#: ../inc/functions-customizer.php:217
 msgid "Single Right Ad"
 msgstr "文章右侧广告"
 
-#: ../inc/functions-customizer.php:189
+#: ../inc/functions-customizer.php:218
 msgid "AD for 336px*280px"
 msgstr "336px*280px 广告位最佳"
 
-#: ../inc/functions-customizer.php:208
+#: ../inc/functions-customizer.php:237
 msgid "Singlar Bottom Ad"
 msgstr "页面底部广告"
 
-#: ../inc/functions-customizer.php:228
+#: ../inc/functions-customizer.php:257
 msgid "Archive Ad"
 msgstr "归档页广告"
 
-#: ../inc/functions-customizer.php:248
+#: ../inc/functions-customizer.php:277
 msgid "keywords"
 msgstr "关键词keywords"
 
-#: ../inc/functions-customizer.php:249
+#: ../inc/functions-customizer.php:278
 msgid "keywords, separate by \",\""
 msgstr "关键词，用英文逗号( , )隔开"
 
-#: ../inc/functions-customizer.php:268 ../inc/functions-customizer.php:269
+#: ../inc/functions-customizer.php:297 ../inc/functions-customizer.php:298
 msgid "description"
 msgstr "描述description"
 
-#: ../inc/functions-customizer.php:288 ../inc/functions-customizer.php:289
+#: ../inc/functions-customizer.php:317 ../inc/functions-customizer.php:318
 msgid "Footer Code"
 msgstr "底部代码"
+
+#: ../inc/functions-weixin-push.php:8
+msgid "You have new Message, Please Check it"
+msgstr "网站上有新的评论，请及时查看"
+
+#: ../inc/functions-weixin-push.php:11
+msgid "Comment Author: "
+msgstr "评论人： "
+
+#: ../inc/functions-weixin-push.php:12
+msgid "Post Title: "
+msgstr "文章标题： "
+
+#: ../inc/functions-weixin-push.php:13
+msgid "Post Link: "
+msgstr "文章链接： "
+
+#: ../inc/functions-weixin-push.php:14
+msgid "Post Content: "
+msgstr "评论内容： "
 
 #: ../inc/header-breadcrumb.php:21
 #, php-format
@@ -725,9 +757,6 @@ msgstr "下一篇: %title"
 #~ msgid "QQmail Subscribe"
 #~ msgstr "QQ邮箱订阅"
 
-#~ msgid "title:"
-#~ msgstr "标题:"
-
 #~ msgid "QQmail ID:"
 #~ msgstr "QQ邮箱ID:"
 
@@ -757,9 +786,6 @@ msgstr "下一篇: %title"
 
 #~ msgid "start time:"
 #~ msgstr "开始时间："
-
-#~ msgid "Post num:"
-#~ msgstr "∴日志数量:"
 
 #~ msgid "unit"
 #~ msgstr "+"
