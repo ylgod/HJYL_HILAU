@@ -67,12 +67,48 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[wxpush]',
 		array(
 			'label' => __('SCKEY','HJYL_HILAU'),
-			'description' => __( 'No SCKEY? you can register on https://sc.ftqq.com', 'HJYL_HILAU'),
+			'description' => esc_html__( 'No SCKEY? you can register on https://sc.ftqq.com', 'HJYL_HILAU'),
 			'section' => 'basic_options',
 			'type' => 'text',
 		)
 	);
-
+	
+	//打赏--->支付宝二维码(建议尺寸150*150)
+	$wp_customize->add_setting(
+    'hjyl_hilau_options[alipay]',
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field',
+			'type' => 'theme_mod',
+		)
+	);
+	$wp_customize->add_control(
+	new WP_Customize_Upload_Control( $wp_customize, 'hjyl_hilau_options[alipay]',
+	array(
+		'label' => __( 'Alipay QRcode', 'HJYL_HILAU' ),
+		'description' => esc_html__( 'upload your alipay QRcode. 150px*150px', 'HJYL_HILAU'),
+		'section' => 'basic_options',
+		'settings'   =>  'hjyl_hilau_options[alipay]',
+	) ) );
+	
+	//打赏--->微信二维码(建议尺寸150*150)
+	$wp_customize->add_setting(
+    'hjyl_hilau_options[wxpay]',
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field',
+			'type' => 'theme_mod',
+		)
+	);
+	$wp_customize->add_control(
+	new WP_Customize_Upload_Control( $wp_customize, 'hjyl_hilau_options[wxpay]',
+	array(
+		'label' => __( 'WeChat Pay QRcode', 'HJYL_HILAU' ),
+		'description' => esc_html__( 'upload your WeChat Pay QRcode. 150px*150px', 'HJYL_HILAU'),
+		'section' => 'basic_options',
+		'settings'   =>  'hjyl_hilau_options[wxpay]',
+	) ) );
+	
 	// 幻灯片分类设置
  	$wp_customize->add_setting(
     'hjyl_hilau_options[slide]',
@@ -139,7 +175,7 @@ function hjyl_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	new WP_Customize_Upload_Control( $wp_customize, 'hjyl_hilau_options[social_wechat]',
 	array(
-		'label' => _( 'WeChat QRcode', 'HJYL_HILAU' ),
+		'label' => __( 'WeChat QRcode', 'HJYL_HILAU' ),
 		'section' => 'copyright_social_icon',
 		'settings'   =>  'hjyl_hilau_options[social_wechat]',
 	) ) );
@@ -196,7 +232,7 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[home_google_ad]',
 		array(
 			'label' => __('Home Ad','HJYL_HILAU'),
-			'description' => __( 'AD for 468px*60px', 'HJYL_HILAU'),
+			'description' => esc_html__( 'AD for 468px*60px', 'HJYL_HILAU'),
 			'section' => 'google_ad_options',
 			'type' => 'code_editor',
 		)
@@ -216,7 +252,7 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[single_google_ad]',
 		array(
 			'label' => __('Single Right Ad','HJYL_HILAU'),
-			'description' => __( 'AD for 336px*280px', 'HJYL_HILAU' ),
+			'description' => esc_html__( 'AD for 336px*280px', 'HJYL_HILAU' ),
 			'section' => 'google_ad_options',
 			'type' => 'code_editor',
 		)
@@ -236,7 +272,7 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[singlar_google_ad]',
 		array(
 			'label' => __('Singlar Bottom Ad','HJYL_HILAU'),
-			'description' => __( 'AD for 468px*60px', 'HJYL_HILAU' ),
+			'description' => esc_html__( 'AD for 468px*60px', 'HJYL_HILAU' ),
 			'section' => 'google_ad_options',
 			'type' => 'code_editor',
 		)
@@ -256,7 +292,7 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[archive_google_ad]',
 		array(
 			'label' => __('Archive Ad','HJYL_HILAU'),
-			'description' => __( 'AD for 468px*60px', 'HJYL_HILAU' ),
+			'description' => esc_html__( 'AD for 468px*60px', 'HJYL_HILAU' ),
 			'section' => 'google_ad_options',
 			'type' => 'code_editor',
 		)
@@ -276,7 +312,7 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[keywords]',
 		array(
 			'label' => __('keywords','HJYL_HILAU'),
-			'description' => __( 'keywords, separate by ","', 'HJYL_HILAU' ),
+			'description' => esc_html__( 'keywords, separate by ","', 'HJYL_HILAU' ),
 			'section' => 'seo_options',
 			'type' => 'text',
 		)
@@ -296,7 +332,7 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[description]',
 		array(
 			'label' => __('description','HJYL_HILAU'),
-			'description' => __( 'description', 'HJYL_HILAU' ),
+			'description' => esc_html__( 'description', 'HJYL_HILAU' ),
 			'section' => 'seo_options',
 			'type' => 'textarea',
 		)
@@ -307,7 +343,7 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[footer_code]',
 		array(
 			'default' => '',
-			//'sanitize_callback' => 'wp_filter_kses',
+			'sanitize_callback' => 'footer_sanitize_html',
 			'transport' => 'postMessage',
 			'type' => 'theme_mod',
 		)
@@ -316,12 +352,15 @@ function hjyl_customize_register( $wp_customize ) {
     'hjyl_hilau_options[footer_code]',
 		array(
 			'label' => __('Footer Code','HJYL_HILAU'),
-			'description' => __( 'Footer Code', 'HJYL_HILAU' ),
+			'description' => esc_html__( 'Footer Code', 'HJYL_HILAU' ),
 			'section' => 'seo_options',
 			'type' => 'code_editor',
 		)
 	);
-	
+
+function footer_sanitize_html( $input ) {
+    return force_balance_tags( $input );
+	}	
 }
 
 add_action( 'customize_register', 'hjyl_customize_register' );

@@ -62,5 +62,13 @@
 					<?php comments_popup_link( __( ' Leave a reply', 'HJYL_HILAU' ), __( ' 1 Comment ', 'HJYL_HILAU' ), __( ' % Comments', 'HJYL_HILAU' ),'fas fa-comments comments-views',__( ' Comments Off', 'HJYL_HILAU' ) ); ?>
 					<?php edit_post_link( __( 'Edit', 'HJYL_HILAU' ), '<span class="fa fa-pencil-square-o edit-link"> ', '</span>' ); ?>
 				<?php } ?>
+				<div class="reward">
+					<div class="reward-button">
+					  <?php _e('$', 'HJYL_HILAU'); ?>
+					  <span class="reward-code"><span class="alipay-code"><img class="alipay-img" src="<?php if(!empty($options['alipay'])) { echo $options['alipay']; } ?>"><b><?php _e('Alipay Donate', 'HJYL_HILAU'); ?></b></span><span class="wechat-code"><img class="wechat-img" src="<?php if(!empty($options['wxpay'])) { echo $options['wxpay']; } ?>"><b><?php _e('WeChat Pay Donate', 'HJYL_HILAU'); ?></b></span></span>
+					</div>
+					<p class="reward-notice"><?php _e('If valuable for you, welcome to donate.', 'HJYL_HILAU'); ?></p>
+				 
+				</div>
 				</footer><!-- .entry-footer -->
 			</article><!-- #post-<?php the_ID(); ?> -->

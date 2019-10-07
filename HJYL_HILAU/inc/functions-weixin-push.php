@@ -31,7 +31,7 @@ $context = stream_context_create($opts);
 $admin_email = get_bloginfo ('admin_email');
 $comment_author_email = trim($comment->comment_author_email);
 if($admin_email!=$comment_author_email){
-return $result = file_get_contents('http://sc.ftqq.com/'.$key.'.send', false, $context);
+return $result = file_get_contents('https://sc.ftqq.com/'.$key.'.send', false, $context);
 }
 }
 add_action('comment_post', 'wpso_wechet_comment_notify', 19, 2);

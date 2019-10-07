@@ -20,7 +20,7 @@ if ( !class_exists('ThemeUpdateChecker') ):
  */
 class ThemeUpdateChecker {
 	public $theme = 'HJYL_HILAU';              //The theme associated with this update checker instance.
-	public $metadataUrl = 'https://hilau.com/wp-content/themes/HJYL_HILAU/info.json';        //The URL of the theme's metadata file.
+	public $metadataUrl = 'http://127.0.0.1/wp-content/themes/HJYL_HILAU/info.json';        //The URL of the theme's metadata file.
 	public $enableAutomaticChecking = true; //Enable/disable automatic update checks.
 	
 	protected $optionName = '';      //Where to store update info.

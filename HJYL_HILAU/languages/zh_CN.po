@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-07 12:58+0800\n"
-"PO-Revision-Date: 2019-10-07 12:58+0800\n"
+"POT-Creation-Date: 2019-10-07 20:38+0800\n"
+"PO-Revision-Date: 2019-10-07 20:41+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 2.2.3\n"
@@ -66,7 +66,7 @@ msgstr "名字"
 msgid "(required)"
 msgstr "(必填)"
 
-#: ../comments.php:47 ../inc/functions-customizer.php:159
+#: ../comments.php:47 ../inc/functions-customizer.php:196
 msgid "Email"
 msgstr "邮箱"
 
@@ -126,83 +126,83 @@ msgstr "https://hjyl.org/"
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
-#: ../functions.php:32
+#: ../functions.php:33
 msgid "Top Menu"
 msgstr "顶部菜单"
 
-#: ../functions.php:106 ../functions.php:307 ../inc/content-slide.php:44
+#: ../functions.php:107 ../functions.php:308 ../inc/content-slide.php:44
 #: ../inc/content-slide.php:66 ../inc/content-slide.php:82
 #: ../inc/header-breadcrumb.php:39
 #, php-format
 msgid "Untitled #%s"
 msgstr "无题 #%s"
 
-#: ../functions.php:177
+#: ../functions.php:178
 msgid "Search"
 msgstr "搜索"
 
-#: ../functions.php:185 ../inc/header-breadcrumb.php:5
+#: ../functions.php:186 ../inc/header-breadcrumb.php:5
 msgid "Home"
 msgstr "首页"
 
-#: ../functions.php:193
+#: ../functions.php:194
 msgid "Single"
 msgstr "文章页"
 
-#: ../functions.php:201
+#: ../functions.php:202
 msgid "Pages"
 msgstr "页面"
 
-#: ../functions.php:209
+#: ../functions.php:210
 msgid "404"
 msgstr "404页面"
 
-#: ../functions.php:217
+#: ../functions.php:218
 msgid "Other"
 msgstr "其他页"
 
-#: ../functions.php:265
+#: ../functions.php:266
 msgid "Wait a moment..."
 msgstr "请稍候..."
 
-#: ../functions.php:266
+#: ../functions.php:267
 msgid "Good Comment"
 msgstr "提交成功"
 
-#: ../functions.php:338
+#: ../functions.php:339
 #, php-format
 msgid "%s ago"
 msgstr "%s前"
 
-#: ../functions.php:343
+#: ../functions.php:344
 msgid "Just Now"
 msgstr "刚刚"
 
-#: ../functions.php:345
+#: ../functions.php:346
 msgid " years ago"
 msgstr " 年前"
 
-#: ../functions.php:346
+#: ../functions.php:347
 msgid " month ago"
 msgstr " 个月前"
 
-#: ../functions.php:347
+#: ../functions.php:348
 msgid " weeks ago"
 msgstr " 周前"
 
-#: ../functions.php:348
+#: ../functions.php:349
 msgid " days ago"
 msgstr " 天前"
 
-#: ../functions.php:349
+#: ../functions.php:350
 msgid " hours ago"
 msgstr " 小时前"
 
-#: ../functions.php:350
+#: ../functions.php:351
 msgid " minutes ago"
 msgstr " 分钟前"
 
-#: ../functions.php:351
+#: ../functions.php:352
 msgid " seconds ago"
 msgstr " 秒前"
 
@@ -226,6 +226,10 @@ msgid ""
 msgstr ""
 "HJYL_HILAU THEME要求WordPress版本至少5.0以上，你目前的版本是%s。请升级后再"
 "试。"
+
+#: ../inc/class-wp-bootstrap-navwalker.php:366
+msgid "Add a menu"
+msgstr "添加菜单"
 
 #: ../inc/content-none.php:3
 msgid "Nothing Found"
@@ -276,6 +280,22 @@ msgstr "页面："
 #: ../inc/content.php:39
 msgid "Continue reading"
 msgstr "继续阅读"
+
+#: ../inc/content.php:67
+msgid "$"
+msgstr "赏"
+
+#: ../inc/content.php:68
+msgid "Alipay Donate"
+msgstr "支付宝打赏"
+
+#: ../inc/content.php:68
+msgid "WeChat Pay Donate"
+msgstr "微信打赏"
+
+#: ../inc/content.php:70
+msgid "If valuable for you, welcome to donate."
+msgstr "如果此文对你有帮助，欢迎打赏作者。"
 
 #: ../inc/functions-comment.php:16
 #, php-format
@@ -341,72 +361,88 @@ msgstr "广告位设置"
 msgid "SEO Options"
 msgstr "SEO设置"
 
-#: ../inc/functions-customizer.php:68
+#: ../inc/functions-customizer.php:69
 msgid "SCKEY"
 msgstr "SCKEY"
 
-#: ../inc/functions-customizer.php:69
+#: ../inc/functions-customizer.php:70
 msgid "No SCKEY? you can register on https://sc.ftqq.com"
 msgstr "没有SCKEY？你可以到https://sc.ftqq.com注册一个"
 
-#: ../inc/functions-customizer.php:86
+#: ../inc/functions-customizer.php:88
+msgid "Alipay QRcode"
+msgstr "支付宝二维码"
+
+#: ../inc/functions-customizer.php:89
+msgid "upload your alipay QRcode. 150px*150px"
+msgstr "上传你的支付宝二维码。建议150px*150px"
+
+#: ../inc/functions-customizer.php:106
+msgid "WeChat Pay QRcode"
+msgstr "微信支付二维码"
+
+#: ../inc/functions-customizer.php:107
+msgid "upload your WeChat Pay QRcode. 150px*150px"
+msgstr "上传你的微信支付二维码。建议150px*150px"
+
+#: ../inc/functions-customizer.php:123
 msgid "Select category for slide"
 msgstr "选择一个分类显示幻灯片"
 
-#: ../inc/functions-customizer.php:104
+#: ../inc/functions-customizer.php:141
 msgid "QQ No."
 msgstr "QQ号码."
 
-#: ../inc/functions-customizer.php:123
+#: ../inc/functions-customizer.php:160
 msgid "Weibo Account"
 msgstr "微博号"
 
-#: ../inc/functions-customizer.php:141
+#: ../inc/functions-customizer.php:178
 msgid "WeChat QRcode"
 msgstr "微信二维码"
 
-#: ../inc/functions-customizer.php:178
+#: ../inc/functions-customizer.php:215
 msgid "Only Show AD on Home Page"
 msgstr "仅首页显示顶部广告"
 
-#: ../inc/functions-customizer.php:197
+#: ../inc/functions-customizer.php:234
 msgid "Home Ad"
 msgstr "首页顶部广告"
 
-#: ../inc/functions-customizer.php:198 ../inc/functions-customizer.php:238
-#: ../inc/functions-customizer.php:258
+#: ../inc/functions-customizer.php:235 ../inc/functions-customizer.php:275
+#: ../inc/functions-customizer.php:295
 msgid "AD for 468px*60px"
-msgstr "468px*60px 广告位最佳"
+msgstr "468px*60px大小的广告"
 
-#: ../inc/functions-customizer.php:217
+#: ../inc/functions-customizer.php:254
 msgid "Single Right Ad"
 msgstr "文章右侧广告"
 
-#: ../inc/functions-customizer.php:218
+#: ../inc/functions-customizer.php:255
 msgid "AD for 336px*280px"
-msgstr "336px*280px 广告位最佳"
+msgstr "336px*280px大小的广告"
 
-#: ../inc/functions-customizer.php:237
+#: ../inc/functions-customizer.php:274
 msgid "Singlar Bottom Ad"
 msgstr "页面底部广告"
 
-#: ../inc/functions-customizer.php:257
+#: ../inc/functions-customizer.php:294
 msgid "Archive Ad"
 msgstr "归档页广告"
 
-#: ../inc/functions-customizer.php:277
+#: ../inc/functions-customizer.php:314
 msgid "keywords"
 msgstr "关键词keywords"
 
-#: ../inc/functions-customizer.php:278
+#: ../inc/functions-customizer.php:315
 msgid "keywords, separate by \",\""
-msgstr "关键词，用英文逗号( , )隔开"
+msgstr "关键词，以英文逗号\",\"隔开"
 
-#: ../inc/functions-customizer.php:297 ../inc/functions-customizer.php:298
+#: ../inc/functions-customizer.php:334 ../inc/functions-customizer.php:335
 msgid "description"
 msgstr "描述description"
 
-#: ../inc/functions-customizer.php:317 ../inc/functions-customizer.php:318
+#: ../inc/functions-customizer.php:354 ../inc/functions-customizer.php:355
 msgid "Footer Code"
 msgstr "底部代码"
 
@@ -492,578 +528,3 @@ msgstr "上一篇: %title"
 #: ../single.php:16
 msgid "Next: %title"
 msgstr "下一篇: %title"
-
-#~ msgid "Published at %s"
-#~ msgstr "%s发布"
-
-#~ msgid "Published %s"
-#~ msgstr "发布于 %s"
-
-#~ msgid "(Edit)"
-#~ msgstr "（编辑）"
-
-#~ msgid "Navbar"
-#~ msgstr "导航栏"
-
-#~ msgid "All Menu"
-#~ msgstr "所有菜单"
-
-#~ msgid "Before Refresh, you can"
-#~ msgstr "刷新之前，你可以"
-
-#~ msgid "Cancel Editing"
-#~ msgstr "取消编辑"
-
-#~ msgid "Invalid comment status."
-#~ msgstr "评论状态错误."
-
-#~ msgid "Sorry, comments are closed for this item."
-#~ msgstr "对不起，此文评论关闭."
-
-#~ msgid "Password Protected"
-#~ msgstr "密码保护"
-
-#~ msgid "Sorry, you must be logged in to post a comment."
-#~ msgstr "对不起，你必须登录之后才能发布评论."
-
-#~ msgid "Error: please fill the required fields (name, email)."
-#~ msgstr "错误：请填写必填部分（名字，邮箱）."
-
-#~ msgid "Error: please enter a valid email address."
-#~ msgstr "错误：请填写正确的邮箱地址."
-
-#~ msgid "Error: please type a comment."
-#~ msgstr "错误：请填上一段评论."
-
-#~ msgid ""
-#~ "Duplicate comment detected; it looks as though you&#8217;ve already said "
-#~ "that!"
-#~ msgstr "检查有重复评论；你好像刚刚评论过了！"
-
-#~ msgid "You are posting comments too quickly.  Slow down."
-#~ msgstr "你评论太快了。淡定。"
-
-#~ msgid "Most Viewed Posts"
-#~ msgstr "热门文章"
-
-#~ msgid "Select if shown"
-#~ msgstr "如果显示请勾选"
-
-#~ msgid "%s "
-#~ msgstr "%s"
-
-#~ msgid "Published %1$s"
-#~ msgstr "发布于 %1$s"
-
-#~ msgid "Leave a reply"
-#~ msgstr "回复"
-
-#~ msgid "<b>1</b> Reply"
-#~ msgstr ""
-#~ "<span id = \"sourceId::$sid\" class = \"cy_cmt_count\" ></span><script id="
-#~ "\"cy_cmt_num\" src=\"https://changyan.sohu.com/upload/plugins/plugins."
-#~ "list.count.js?clientId=cytuEdxlL\""
-
-#~ msgid "<b>%</b> Replies"
-#~ msgstr "<b>%</b>条评论"
-
-#~ msgid "%s published"
-#~ msgstr "发布于 %s "
-
-#~ msgid "Small"
-#~ msgstr "小号"
-
-#~ msgid "S"
-#~ msgstr "S"
-
-#~ msgid "Normal"
-#~ msgstr "中号"
-
-#~ msgid "M"
-#~ msgstr "M"
-
-#~ msgid "Large"
-#~ msgstr "大号"
-
-#~ msgid "L"
-#~ msgstr "L"
-
-#~ msgid "Huge"
-#~ msgstr "超大号"
-
-#~ msgid "XL"
-#~ msgstr "XL"
-
-#~ msgid "Primary Navigation"
-#~ msgstr "主要导航"
-
-#~ msgid "Mobile Navigation"
-#~ msgstr "手机导航"
-
-#~ msgid "CopyRights"
-#~ msgstr "转载请注明"
-
-#~ msgid "Location: "
-#~ msgstr "位置: "
-
-#~ msgid "Anti-spam Code"
-#~ msgstr "请输入验证码"
-
-#~ msgid "Error: Incorrect Anti-spam Code!"
-#~ msgstr "错误：请输入正确的验证码！"
-
-#~ msgid "l Y-m-d"
-#~ msgstr "l Y年m月d日"
-
-#~ msgid "<b>1 Comment</b>"
-#~ msgstr "<b>1个评论</b>"
-
-#~ msgid "Previous Image"
-#~ msgstr "上一张图片"
-
-#~ msgid "Next Image"
-#~ msgstr "下一张图片"
-
-#~ msgid "Posted by"
-#~ msgstr "作者"
-
-#~ msgid "Posted in"
-#~ msgstr "分类"
-
-#~ msgid "<b>1</b>"
-#~ msgstr "<b>1</b>"
-
-#~ msgid "<b>%</b>"
-#~ msgstr "<b>%</b>"
-
-#~ msgid ""
-#~ "Apologies, but no results were found for the requested archive. Perhaps "
-#~ "searching will help find a related post."
-#~ msgstr "抱歉，这里没有你要找的，你可以试试搜搜。。"
-
-#~ msgid "Y-m-d H:i:s"
-#~ msgstr "Y年m月d日 H:i:s"
-
-#~ msgid "Last Updated %s"
-#~ msgstr "最后更新于 %s"
-
-#~ msgid "Put your ICP No. here."
-#~ msgstr "这里填写你的备案号."
-
-#~ msgid "stat"
-#~ msgstr "统计代码"
-
-#~ msgid "Enter Your Stat Code"
-#~ msgstr "输入你的统计代码"
-
-#~ msgid "关键词keywords 「以英文逗号隔开，建议不超过100字包括字符」"
-#~ msgstr "关键词keywords 「以英文逗号隔开，建议不超过100字包括字符」"
-
-#~ msgid "SEO"
-#~ msgstr "SEO优化"
-
-#~ msgid "描述description 「建议不超过150字包括符号」"
-#~ msgstr "描述description 「建议不超过150字包括符号」"
-
-#~ msgid "Right Single AD"
-#~ msgstr "文章右侧广告位"
-
-#~ msgid "文章右侧336×280广告位"
-#~ msgstr "文章右侧336×280广告位"
-
-#~ msgid "bottom Single AD"
-#~ msgstr "文章底部广告位"
-
-#~ msgid "文章底部和归档页顶部468×60广告位"
-#~ msgstr "文章底部和归档页顶部468×60广告位"
-
-#~ msgid "底部首页显示链接"
-#~ msgstr "底部首页显示链接"
-
-#~ msgid "底部全站显示链接"
-#~ msgstr "底部全站显示链接"
-
-#~ msgid "Theme Options"
-#~ msgstr "主题设置"
-
-#~ msgid "%1$s Theme Options"
-#~ msgstr "%1$s 主题设置"
-
-#~ msgid "Donation"
-#~ msgstr "捐助"
-
-#~ msgid ""
-#~ "Created, Developed and maintained by %s . If you feel my work is useful "
-#~ "and want to support the development of more free resources, you can "
-#~ "donate me. Thank you very much!"
-#~ msgstr ""
-#~ "本主题由%s开发和维护，如果你觉得还不错，并想支持开发更多免费资源，你可以给"
-#~ "我捐助。非常感谢你的支持！"
-
-#~ msgid "http://hjyl.org/"
-#~ msgstr "http://hjyl.org/"
-
-#~ msgid "http://t1.qpic.cn/mblogpic/bcd7926bbc4d4e03f384/2000"
-#~ msgstr "http://t1.qpic.cn/mblogpic/bcd7926bbc4d4e03f384/2000"
-
-#~ msgid "Alipay"
-#~ msgstr "支付宝捐赠"
-
-#~ msgid "General settings"
-#~ msgstr "常规设置"
-
-#~ msgid "Reset All Settings"
-#~ msgstr "重置所有设置"
-
-#~ msgid "Click OK to reset. Any settings will be lost!"
-#~ msgstr "点击‘确定’重置。所有设置将被丢失！"
-
-#~ msgid "aside"
-#~ msgstr "日记"
-
-#~ msgid "gallery"
-#~ msgstr "相册"
-
-#~ msgid "link"
-#~ msgstr "链接"
-
-#~ msgid "image"
-#~ msgstr "图片"
-
-#~ msgid "quote"
-#~ msgstr "引用"
-
-#~ msgid "status"
-#~ msgstr "状态"
-
-#~ msgid "video"
-#~ msgstr "视频"
-
-#~ msgid "audio"
-#~ msgstr "音频"
-
-#~ msgid "chat"
-#~ msgstr "聊天"
-
-#~ msgid "Headline"
-#~ msgstr "头条"
-
-#~ msgid "【 %1$s 】 %2$s : "
-#~ msgstr "【 %1$s 】%2$s ： "
-
-#~ msgid "%1$s Read More %2$s"
-#~ msgstr "%1$s 阅读全文 %2$s"
-
-#~ msgid "QQmail Subscribe"
-#~ msgstr "QQ邮箱订阅"
-
-#~ msgid "QQmail ID:"
-#~ msgstr "QQ邮箱ID:"
-
-#~ msgid "https://list.qq.com/"
-#~ msgstr "https://list.qq.com/"
-
-#~ msgid "Apply For QQmail Subscriptions"
-#~ msgstr "申请QQ邮箱订阅"
-
-#~ msgid "For Example: blue codes as followed"
-#~ msgstr "例如：下面蓝色的代码"
-
-#~ msgid "https://list.qq.com/cgi-bin/qf_invite?id="
-#~ msgstr "https://list.qq.com/cgi-bin/qf_invite?id="
-
-#~ msgid "Please enter your email"
-#~ msgstr "请输入您的邮箱"
-
-#~ msgid "Confirm Subscription"
-#~ msgstr "确认订阅"
-
-#~ msgid "Max Num:"
-#~ msgstr "最大显示数量："
-
-#~ msgid "Website stat"
-#~ msgstr "网站统计"
-
-#~ msgid "start time:"
-#~ msgstr "开始时间："
-
-#~ msgid "unit"
-#~ msgstr "+"
-
-#~ msgid "Website age:"
-#~ msgstr "∴网站运行:"
-
-#~ msgid "days"
-#~ msgstr "天"
-
-#~ msgid "Tags num:"
-#~ msgstr "∴标签数量:"
-
-#~ msgid "units"
-#~ msgstr "个"
-
-#~ msgid "Recent Comments For Gravatar"
-#~ msgstr "最新评论头像版"
-
-#~ msgid "Recent Comments"
-#~ msgstr "最新评论"
-
-#~ msgid "comments at < %s >"
-#~ msgstr "在《 %s 》上的评论"
-
-#~ msgid "Comments Wall For Gravatar"
-#~ msgstr "回复排行榜头像版"
-
-#~ msgid "Comments Wall"
-#~ msgstr "回复排行榜"
-
-#~ msgid "How many months:"
-#~ msgstr "最近几个月:"
-
-#~ msgid " %1$s replied for %2$s comments"
-#~ msgstr " %1$s 发表 %2$s 条评论"
-
-#~ msgid "Search...Enter"
-#~ msgstr "搜索......回车"
-
-#~ msgid "Meta"
-#~ msgstr "管理"
-
-#~ msgid " %1$s # %2$s # "
-#~ msgstr " %1$s # %2$s # "
-
-#~ msgid "By "
-#~ msgstr "By "
-
-#~ msgid "Page %1$s of %2$s"
-#~ msgstr "Page %1$s of %2$s"
-
-#~ msgid "Website stat:"
-#~ msgstr "网站统计"
-
-#~ msgid "Last Updated"
-#~ msgstr "最后更新时间"
-
-#~ msgid "<cite id=\"commentmeta\">%1$s</cite>"
-#~ msgstr "<cite id=\"commentmeta\">%1$s</cite>"
-
-#~ msgid "文章底部468×60广告位"
-#~ msgstr "文章底部468×60广告位"
-
-#~ msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
-#~ msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">说:</span>"
-
-#~ msgid "gravatar"
-#~ msgstr "头像缓存机制"
-
-#~ msgid "Top Archive AD"
-#~ msgstr "归档顶部广告位"
-
-#~ msgid "归档顶部468×60广告位"
-#~ msgstr "归档顶部468×60广告位"
-
-#~ msgid "http://me.alipay.com/hjyl"
-#~ msgstr "http://me.alipay.com/hjyl"
-
-#~ msgid "WordPress"
-#~ msgstr "WordPress"
-
-#~ msgid "Theme"
-#~ msgstr "Theme"
-
-#~ msgid "olo"
-#~ msgstr "olo"
-
-#~ msgid "&laquo; Previous page"
-#~ msgstr "&laquo; 前一页"
-
-#~ msgid "Next page &raquo;"
-#~ msgstr "下一页 &raquo;"
-
-#~ msgid "<< Previous"
-#~ msgstr "上一页"
-
-#~ msgid "Next >>"
-#~ msgstr "下一页"
-
-#~ msgid "Show ICP No."
-#~ msgstr "显示备案号"
-
-#~ msgid "Enable ICP"
-#~ msgstr "启用"
-
-#~ msgid "« Previous"
-#~ msgstr "上一页"
-
-#~ msgid "Next »"
-#~ msgstr "下一页"
-
-#~ msgid "Copy and Specify"
-#~ msgstr "转载请注明"
-
-#~ msgid "mailto:i@hjyl.org"
-#~ msgstr "mailto:i@hjyl.org"
-
-#~ msgid "Reply me When reply"
-#~ msgstr "有人回复时邮件通知我"
-
-#~ msgid "Options take effect."
-#~ msgstr "设置已保存。"
-
-#~ msgid "Gravatar Cache Option"
-#~ msgstr "头像缓存功能"
-
-#~ msgid "Enable Gravatar cache. If host not supported,cancel it."
-#~ msgstr "启用图片缓存功能。若空间不支持，取消这项。"
-
-#~ msgid ""
-#~ "Before Enable Gravatar cache, Create a folder named avatar, and upload "
-#~ "default.jpg"
-#~ msgstr "注意启用前，在WordPress根目录建立avatar文件夹，并上传default.jpg"
-
-#~ msgid "Save Changes"
-#~ msgstr "保存设置"
-
-#~ msgid "Share to Sina"
-#~ msgstr "分享到新浪微博"
-
-#~ msgid "WeiBo"
-#~ msgstr "新浪微博"
-
-#~ msgid "QQ"
-#~ msgstr "腾讯微博"
-
-#~ msgid "DouBan"
-#~ msgstr "豆瓣"
-
-#~ msgid "QQ Space"
-#~ msgstr "QQ空间"
-
-#~ msgid "Share to RenRen"
-#~ msgstr "分享到人人网"
-
-#~ msgid "RenRen"
-#~ msgstr "人人网"
-
-#~ msgid "Share to Twitter"
-#~ msgstr "分享到Twitter"
-
-#~ msgid "Twitter"
-#~ msgstr "Twitter"
-
-#~ msgid "meta tags"
-#~ msgstr "meta标签设置"
-
-#~ msgid "Enable SEO."
-#~ msgstr "启用SEO功能"
-
-#~ msgid "keywords[comma-separated, no more than 100 characters]"
-#~ msgstr "关键词keywords 「以英文逗号隔开，建议不超过100字包括字符」"
-
-#~ msgid "description, no more than 150 characters."
-#~ msgstr "描述description 「建议不超过150字包括符号」"
-
-#~ msgid "Custom login theme"
-#~ msgstr "自定义后台登录风格"
-
-#~ msgid "Enable Custom login theme. "
-#~ msgstr "启用自定义后台登录风格"
-
-#~ msgid "If modify, See css/login.css and images/logo.gif"
-#~ msgstr "如果修改，请参见css/login.css 和 images/logo.gif"
-
-#~ msgid "AD Plugin Enable"
-#~ msgstr "广告插件"
-
-#~ msgid "Enable AD Plugin. "
-#~ msgstr "启用广告插件"
-
-#~ msgid "The option controls the Ads as followed, including links on bottom."
-#~ msgstr "此选项控制下面所有的广告，包括底部链接"
-
-#~ msgid "336 x 280 AD"
-#~ msgstr "336×280 广告"
-
-#~ msgid "468 x 60 AD"
-#~ msgstr "468×60 广告"
-
-#~ msgid "Home Links on bottom"
-#~ msgstr "首页底部链接显示"
-
-#~ msgid "All Links on bottom"
-#~ msgstr "全站底部链接"
-
-#~ msgid "Stat Code"
-#~ msgstr "统计代码"
-
-#~ msgid "http://wpa.qq.com/msgrd?v=3&uin=4953363&site=qq&menu=yes"
-#~ msgstr "http://wpa.qq.com/msgrd?v=3&uin=4953363&site=qq&menu=yes"
-
-#~ msgid "Just For Three Widgets"
-#~ msgstr "只支持三个边栏"
-
-#~ msgid "Posts About "
-#~ msgstr "文章列表关于"
-
-#~ msgid "Theme Update"
-#~ msgstr "主题升级"
-
-#~ msgid "olo Update"
-#~ msgstr "olo主题升级"
-
-#~ msgid "olo Can be Updated!"
-#~ msgstr "olo主题可以升级啦！"
-
-#~ msgid "This Version"
-#~ msgstr "此版本"
-
-#~ msgid "Please Update to"
-#~ msgstr "请升级到"
-
-#~ msgid "Download And Update"
-#~ msgstr "下载并升级"
-
-#~ msgid "Notice:Please backup before update!"
-#~ msgstr "提醒：请在升级前备份！"
-
-#~ msgid "Download olo"
-#~ msgstr "下载olo主题"
-
-#~ msgid "Updates:"
-#~ msgstr "升级："
-
-#~ msgid "Blogroll"
-#~ msgstr "友情链接"
-
-#~ msgid "About Me"
-#~ msgstr "关于我"
-
-#~ msgid "1 Reply"
-#~ msgstr "1条评论"
-
-#~ msgid "% Replies"
-#~ msgstr "%条评论"
-
-#~ msgid "(will not be published)"
-#~ msgstr "(将不会被公开)"
-
-#~ msgid "required"
-#~ msgstr "必填"
-
-#~ msgid "Views:"
-#~ msgstr "浏览："
-
-#~ msgid "SiteMap"
-#~ msgstr "网站地图"
-
-#~ msgid "Sorry, you can't be verified."
-#~ msgstr "抱歉，你不能被验证。"
-
-#~ msgid "post list : "
-#~ msgstr "文章列表："
-
-#~ msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-#~ msgstr "<span class=\"meta-nav\">&larr;</span> 上一篇"
-
-#~ msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-#~ msgstr "下一篇 <span class=\"meta-nav\">&rarr;</span>"

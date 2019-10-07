@@ -20,6 +20,7 @@ if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 		remove_filter('the_content', 'wptexturize');
 		//hard-coded <title> tag in the document head, and expect WordPress to
 		add_theme_support( 'title-tag' );
+		add_editor_style('css/bootstrap.min.css');
 
 		//Enable support for Post Thumbnails on posts and pages.
 		add_theme_support( 'post-thumbnails' );
@@ -385,16 +386,19 @@ function move_comment_field_to_bottom( $fields ) {
 add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
 
 //快捷输入[Prism]标签
-function hjyl_highlight_quicktags() { ?>
+function hjyl_highlight_quicktags() { 
+if (wp_script_is('quicktags')){
+?>
 <script type="text/javascript">
-QTags.addButton( 'post_h3', '<h3>', '\n<h3>', '</h3>\n' ); //快捷输入[h3]标签
-QTags.addButton( 'highlight_php', '[php]', '\n[php]', '[/php]\n' ); //快捷输入[php]标签
-QTags.addButton( 'highlight_css', '[css]', '\n[css]', '[/css]\n' ); //快捷输入[css]标签
-QTags.addButton( 'highlight_js', '[js]', '\n[js]', '[/js]\n' ); //快捷输入[js]标签
-QTags.addButton( 'highlight_xml', '[xml]', '\n[xml]', '[/xml]\n' ); //快捷输入[xml]标签
-QTags.addButton( 'highlight_code', '[code]', '\n[code]', '[/code]\n' ); //快捷输入[code]标签
+QTags.addButton( 'post_h3', '<h3>', '\n<h3>', '</h3>\n' ); //快捷输入<h3>标签
+QTags.addButton( 'post_hr', '<hr>', '\n<hr />\n' ); //快捷输入<hr>标签
+QTags.addButton( 'highlight_php', '[php]', '\n[php]\n', '[/php]\n' ); //快捷输入[php]标签
+QTags.addButton( 'highlight_css', '[css]', '\n[css]\n', '[/css]\n' ); //快捷输入[css]标签
+QTags.addButton( 'highlight_js', '[js]', '\n[js]\n', '[/js]\n' ); //快捷输入[js]标签
+QTags.addButton( 'highlight_xml', '[xml]', '\n[xml]\n', '[/xml]\n' ); //快捷输入[xml]标签
+QTags.addButton( 'highlight_code', '[code]', '\n[code]\n', '[/code]\n' ); //快捷输入[code]标签
 </script>
-<?php }
+<?php }}
 add_action('admin_print_footer_scripts', 'hjyl_highlight_quicktags' );
 
 //显示数据库查询次数、查询时间及内存占用的代码
@@ -416,6 +420,6 @@ require( dirname( __FILE__ ) . '/inc/functions-weixin-push.php');
 require_once(dirname( __FILE__ ) . '/inc/theme-update-checker.php'); 
 $hjyl_update_checker = new ThemeUpdateChecker(
 	'HJYL_HILAU', //主题名字
-	'https://hilau.com/wp-content/themes/HJYL_HILAU/info.json'  //info.json 的访问地址
+	'http://127.0.0.1/wp-content/themes/HJYL_HILAU/info.json'  //info.json 的访问地址
 );
 ?>
