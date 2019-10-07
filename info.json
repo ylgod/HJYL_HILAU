@@ -1,5 +1,5 @@
 {
-	"version" : "1.1", //主题版本号
-	"details_url" : "https://hilau.com/wp-content/themes/HJYL_HILAU/readme.txt",  //details.txt网址
-	"download_url" : "https://codeload.github.com/ylgod/HJYL_HILAU/zip/master"  //主题下载网址
+"version" : "5.1", //主题版本号
+"details_url" : "http://www.xxx.com/themes/details.txt",  //details.txt网址
+"download_url" : "http://www.xxx.com/themes/theme_aaa.zip"  //主题下载网址
 }

@@ -1,0 +1,530 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-07 20:38+0800\n"
+"PO-Revision-Date: 2019-10-07 20:41+0800\n"
+"Last-Translator: 皇家元林 <i@hjyl.org>\n"
+"Language-Team: hjyl.org <i@hjyl.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:2
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "此文密码保护。键入你的密码才能看所有的评论。"
+
+#: ../comments.php:5 ../header.php:119 ../inc/content.php:62
+msgid " Leave a reply"
+msgstr " 回复"
+
+#: ../comments.php:5 ../header.php:119 ../inc/content.php:62
+msgid " 1 Comment "
+msgstr " 1条评论 "
+
+#: ../comments.php:5 ../header.php:119 ../inc/content.php:62
+msgid " % Comments"
+msgstr " %条评论"
+
+#: ../comments.php:5 ../header.php:119 ../inc/content.php:62
+msgid " Comments Off"
+msgstr " 评论关闭"
+
+#: ../comments.php:9
+msgid "Previous"
+msgstr "上一页"
+
+#: ../comments.php:9
+msgid "Next"
+msgstr "下一页"
+
+#: ../comments.php:14 ../comments.php:46
+msgid "(Toggle)"
+msgstr "(打开)"
+
+#: ../comments.php:15
+msgid "(Close)"
+msgstr "(关闭)"
+
+#: ../comments.php:46
+#, php-format
+msgid "Welcome <strong>%s</strong>"
+msgstr "欢迎回来 <strong>%s</strong>"
+
+#: ../comments.php:46
+msgid "Name"
+msgstr "名字"
+
+#: ../comments.php:46 ../comments.php:47
+msgid "(required)"
+msgstr "(必填)"
+
+#: ../comments.php:47 ../inc/functions-customizer.php:196
+msgid "Email"
+msgstr "邮箱"
+
+#: ../comments.php:48
+msgid "Website"
+msgstr "网站"
+
+#: ../comments.php:53
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "你必须 <a href=\"%s\">登录</a> 才能发布评论。"
+
+#: ../comments.php:54
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"<a href=\"%1$s\">%2$s</a>已登录。 <a href=\"%3$s\" title=\"登出账户\">退出？"
+"</a>"
+
+#: ../comments.php:61
+msgid "Leave a Reply"
+msgstr "发表评论"
+
+#: ../comments.php:62
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "回复 %s"
+
+#: ../comments.php:63
+msgid "Cancel reply"
+msgstr "取消回复"
+
+#: ../comments.php:64
+msgid "Post Comment"
+msgstr "发布评论"
+
+#: ../comments.php:72
+msgid "Pingbacks"
+msgstr "引用通告"
+
+#: ../footer.php:3
+msgid "CopyRight"
+msgstr "版权"
+
+#: ../footer.php:3
+#, php-format
+msgid "%1$s Powered by %2$s"
+msgstr "%1$s 由 %2$s 强力驱动"
+
+#: ../footer.php:3
+msgid "https://hjyl.org/"
+msgstr "https://hjyl.org/"
+
+#: ../footer.php:3
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: ../functions.php:33
+msgid "Top Menu"
+msgstr "顶部菜单"
+
+#: ../functions.php:107 ../functions.php:308 ../inc/content-slide.php:44
+#: ../inc/content-slide.php:66 ../inc/content-slide.php:82
+#: ../inc/header-breadcrumb.php:39
+#, php-format
+msgid "Untitled #%s"
+msgstr "无题 #%s"
+
+#: ../functions.php:178
+msgid "Search"
+msgstr "搜索"
+
+#: ../functions.php:186 ../inc/header-breadcrumb.php:5
+msgid "Home"
+msgstr "首页"
+
+#: ../functions.php:194
+msgid "Single"
+msgstr "文章页"
+
+#: ../functions.php:202
+msgid "Pages"
+msgstr "页面"
+
+#: ../functions.php:210
+msgid "404"
+msgstr "404页面"
+
+#: ../functions.php:218
+msgid "Other"
+msgstr "其他页"
+
+#: ../functions.php:266
+msgid "Wait a moment..."
+msgstr "请稍候..."
+
+#: ../functions.php:267
+msgid "Good Comment"
+msgstr "提交成功"
+
+#: ../functions.php:339
+#, php-format
+msgid "%s ago"
+msgstr "%s前"
+
+#: ../functions.php:344
+msgid "Just Now"
+msgstr "刚刚"
+
+#: ../functions.php:346
+msgid " years ago"
+msgstr " 年前"
+
+#: ../functions.php:347
+msgid " month ago"
+msgstr " 个月前"
+
+#: ../functions.php:348
+msgid " weeks ago"
+msgstr " 周前"
+
+#: ../functions.php:349
+msgid " days ago"
+msgstr " 天前"
+
+#: ../functions.php:350
+msgid " hours ago"
+msgstr " 小时前"
+
+#: ../functions.php:351
+msgid " minutes ago"
+msgstr " 分钟前"
+
+#: ../functions.php:352
+msgid " seconds ago"
+msgstr " 秒前"
+
+#: ../header.php:116 ../header.php:117 ../inc/content.php:59
+#: ../inc/content.php:60 ../inc/functions-comment.php:91
+#: ../inc/functions-comment.php:155 ../inc/functions-comment.php:156
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../header.php:120 ../inc/content.php:63
+msgid "Edit"
+msgstr "编辑"
+
+#: ../inc/back-compat.php:12 ../inc/back-compat.php:20
+#: ../inc/back-compat.php:34
+#, php-format
+msgid ""
+"HJYL_HILAU THEME requires at least WordPress version 5.0. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+"HJYL_HILAU THEME要求WordPress版本至少5.0以上，你目前的版本是%s。请升级后再"
+"试。"
+
+#: ../inc/class-wp-bootstrap-navwalker.php:366
+msgid "Add a menu"
+msgstr "添加菜单"
+
+#: ../inc/content-none.php:3
+msgid "Nothing Found"
+msgstr "什么都没有"
+
+#: ../inc/content-none.php:13
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好写博客了吗？ <a href=\"%1$s\">从这开始吧</a>."
+
+#: ../inc/content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "很抱歉，没有搜索到你要的，请尝试用其他关键词吧."
+
+#: ../inc/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "貌似我们能找到，或许可以试试搜索."
+
+#: ../inc/content-slide.php:38
+msgid "Lasted Posts"
+msgstr "最新文章"
+
+#: ../inc/content-slide.php:54
+msgid "Lasted Comments"
+msgstr "最新评论"
+
+#: ../inc/content-slide.php:60
+msgid "Lasted Modified"
+msgstr "最近更新"
+
+#: ../inc/content-slide.php:76
+msgid "Rand Posts"
+msgstr "随机文章"
+
+#: ../inc/content.php:15
+msgid "Featured"
+msgstr "置顶"
+
+#: ../inc/content.php:37 ../tougao.php:33
+msgid "Pages:"
+msgstr "页面："
+
+#: ../inc/content.php:39
+msgid "Continue reading"
+msgstr "继续阅读"
+
+#: ../inc/content.php:67
+msgid "$"
+msgstr "赏"
+
+#: ../inc/content.php:68
+msgid "Alipay Donate"
+msgstr "支付宝打赏"
+
+#: ../inc/content.php:68
+msgid "WeChat Pay Donate"
+msgstr "微信打赏"
+
+#: ../inc/content.php:70
+msgid "If valuable for you, welcome to donate."
+msgstr "如果此文对你有帮助，欢迎打赏作者。"
+
+#: ../inc/functions-comment.php:16
+#, php-format
+msgid "replied you at [ %s ] as followed:"
+msgstr "在 《 %s 》文章上的回应："
+
+#: ../inc/functions-comment.php:18
+#, php-format
+msgid "replied you at [ Untitled #%s ] as followed:"
+msgstr "在 《 无题 #%s 》文章上的回应："
+
+#: ../inc/functions-comment.php:30
+#, php-format
+msgid "You have a message from %s"
+msgstr "您在[ %s ]上的评论有回应"
+
+#: ../inc/functions-comment.php:34
+msgid "Hello!"
+msgstr "你好！"
+
+#: ../inc/functions-comment.php:40
+msgid "Read more"
+msgstr "点击查看"
+
+#: ../inc/functions-comment.php:43
+msgid "The mail automatically by system, Do not Reply."
+msgstr "此邮件由系统自动生成，请勿回复."
+
+#: ../inc/functions-comment.php:55
+msgid "Email me if replied"
+msgstr "有人回复时邮件通知我"
+
+#: ../inc/functions-comment.php:150
+msgid "Your comment is awaiting moderation."
+msgstr "你的评论正在等待审核。"
+
+#: ../inc/functions-comment.php:156
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: ../inc/functions-customizer.php:7
+msgid "HJYL_HILAU settings"
+msgstr "主题设置"
+
+#: ../inc/functions-customizer.php:14
+msgid "Basic Options"
+msgstr "基本设置"
+
+#: ../inc/functions-customizer.php:23
+msgid "Slide Options"
+msgstr "幻灯片设置"
+
+#: ../inc/functions-customizer.php:32
+msgid "Social Links"
+msgstr "社会链接"
+
+#: ../inc/functions-customizer.php:41
+msgid "AD Options"
+msgstr "广告位设置"
+
+#: ../inc/functions-customizer.php:50
+msgid "SEO Options"
+msgstr "SEO设置"
+
+#: ../inc/functions-customizer.php:69
+msgid "SCKEY"
+msgstr "SCKEY"
+
+#: ../inc/functions-customizer.php:70
+msgid "No SCKEY? you can register on https://sc.ftqq.com"
+msgstr "没有SCKEY？你可以到https://sc.ftqq.com注册一个"
+
+#: ../inc/functions-customizer.php:88
+msgid "Alipay QRcode"
+msgstr "支付宝二维码"
+
+#: ../inc/functions-customizer.php:89
+msgid "upload your alipay QRcode. 150px*150px"
+msgstr "上传你的支付宝二维码。建议150px*150px"
+
+#: ../inc/functions-customizer.php:106
+msgid "WeChat Pay QRcode"
+msgstr "微信支付二维码"
+
+#: ../inc/functions-customizer.php:107
+msgid "upload your WeChat Pay QRcode. 150px*150px"
+msgstr "上传你的微信支付二维码。建议150px*150px"
+
+#: ../inc/functions-customizer.php:123
+msgid "Select category for slide"
+msgstr "选择一个分类显示幻灯片"
+
+#: ../inc/functions-customizer.php:141
+msgid "QQ No."
+msgstr "QQ号码."
+
+#: ../inc/functions-customizer.php:160
+msgid "Weibo Account"
+msgstr "微博号"
+
+#: ../inc/functions-customizer.php:178
+msgid "WeChat QRcode"
+msgstr "微信二维码"
+
+#: ../inc/functions-customizer.php:215
+msgid "Only Show AD on Home Page"
+msgstr "仅首页显示顶部广告"
+
+#: ../inc/functions-customizer.php:234
+msgid "Home Ad"
+msgstr "首页顶部广告"
+
+#: ../inc/functions-customizer.php:235 ../inc/functions-customizer.php:275
+#: ../inc/functions-customizer.php:295
+msgid "AD for 468px*60px"
+msgstr "468px*60px大小的广告"
+
+#: ../inc/functions-customizer.php:254
+msgid "Single Right Ad"
+msgstr "文章右侧广告"
+
+#: ../inc/functions-customizer.php:255
+msgid "AD for 336px*280px"
+msgstr "336px*280px大小的广告"
+
+#: ../inc/functions-customizer.php:274
+msgid "Singlar Bottom Ad"
+msgstr "页面底部广告"
+
+#: ../inc/functions-customizer.php:294
+msgid "Archive Ad"
+msgstr "归档页广告"
+
+#: ../inc/functions-customizer.php:314
+msgid "keywords"
+msgstr "关键词keywords"
+
+#: ../inc/functions-customizer.php:315
+msgid "keywords, separate by \",\""
+msgstr "关键词，以英文逗号\",\"隔开"
+
+#: ../inc/functions-customizer.php:334 ../inc/functions-customizer.php:335
+msgid "description"
+msgstr "描述description"
+
+#: ../inc/functions-customizer.php:354 ../inc/functions-customizer.php:355
+msgid "Footer Code"
+msgstr "底部代码"
+
+#: ../inc/functions-weixin-push.php:8
+msgid "You have new Message, Please Check it"
+msgstr "网站上有新的评论，请及时查看"
+
+#: ../inc/functions-weixin-push.php:11
+msgid "Comment Author: "
+msgstr "评论人： "
+
+#: ../inc/functions-weixin-push.php:12
+msgid "Post Title: "
+msgstr "文章标题： "
+
+#: ../inc/functions-weixin-push.php:13
+msgid "Post Link: "
+msgstr "文章链接： "
+
+#: ../inc/functions-weixin-push.php:14
+msgid "Post Content: "
+msgstr "评论内容： "
+
+#: ../inc/header-breadcrumb.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "\" %s \"的搜索结果"
+
+#: ../inc/header-breadcrumb.php:43
+msgid "404 Error"
+msgstr "404错误"
+
+#: ../inc/header-breadcrumb.php:45
+#, php-format
+msgid "Author \"%s\" as followed"
+msgstr "作者 %s 的文章"
+
+#: ../inc/header-breadcrumb.php:48
+#, php-format
+msgid " - Page %s - "
+msgstr " - 第 %s 页 - "
+
+#: ../inc/header-breadcrumb.php:57
+msgid "Follow me on QQ"
+msgstr "QQ联系我"
+
+#: ../inc/header-breadcrumb.php:60
+msgid "Follow me on Weibo"
+msgstr "关注我的微博"
+
+#: ../inc/header-breadcrumb.php:63
+msgid "Follow me on weChat"
+msgstr "关注我的微信公众号"
+
+#: ../inc/header-breadcrumb.php:66
+msgid "Follow me on Email"
+msgstr "给我发邮件"
+
+#: ../inc/header-breadcrumb.php:70
+msgid "Share To : "
+msgstr "分享到： "
+
+#: ../inc/header-breadcrumb.php:71
+msgid "Share me on WeChat"
+msgstr "分享到微信"
+
+#: ../inc/header-breadcrumb.php:72
+msgid "Share me on Weibo"
+msgstr "分享到微博"
+
+#: ../inc/header-breadcrumb.php:73
+msgid "Share me to QQ Friends"
+msgstr "分享给QQ好友"
+
+#: ../inc/header-breadcrumb.php:74
+msgid "Share me on Qzone"
+msgstr "分享到QQ空间"
+
+#: ../single.php:14
+msgid "Previous: %title"
+msgstr "上一篇: %title"
+
+#: ../single.php:16
+msgid "Next: %title"
+msgstr "下一篇: %title"
