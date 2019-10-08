@@ -1,8 +1,6 @@
 $(document).ready(function(){ //Begin jQuery
 
 $(".carousel-inner a:first-child").addClass("active");
-$(".carousel-inner img").removeClass("img-fluid");
-
 
 //up to top
 $body=(window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');

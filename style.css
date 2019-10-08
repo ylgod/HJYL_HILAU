@@ -22,6 +22,7 @@ html body a:hover{
 	color:rgba(255,0,0,1);
 }
 /* =WordPress Reset CSS */
+img,
 img.size-auto,
 img.size-full,
 img.size-large,
@@ -31,7 +32,7 @@ img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"]{
 	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
-	max-width: 100%; /* Override height to match resized width for correct aspect ratio. */
+	max-height: 100%; /* Override height to match resized width for correct aspect ratio. */
 }
 .alignleft,
 img.alignleft {

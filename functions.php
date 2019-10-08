@@ -356,7 +356,7 @@ function post_thumbnail($width=0, $height=0){
 	preg_match_all( $sp, $pc, $aPics );   
 	$np = count($aPics[0]);  
 	if ( $np > 0 ) { 
-		echo '<img class="img-fluid" src="'.$aPics[1][0].'" alt="'.get_the_title().'" width="'.$width.'" height="'.$height.'"/>';      
+		echo '<img src="'.$aPics[1][0].'" alt="'.get_the_title().'" width="'.$width.'" height="'.$height.'"/>';      
 	}; 
 }
 
