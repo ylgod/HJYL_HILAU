@@ -297,6 +297,27 @@ function par_pagenavi($range = 9){
     if($paged != $max_page){echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'><i class='fas fa-angle-double-right'></i></a>";}}
 }
 
+// 文末版权声明
+function hjyl_content_copyright($content)
+{
+  if (is_singular() || is_feed()) {
+    $content .=
+      '<div id="content-copyright"><span style="font-weight:bold;text-shadow:0 1px 0 #ddd;font-size: 13px;">声明:</span><span style="font-size: 13px;">本文采用 <a rel="nofollow" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="署名-非商业性使用-相同方式共享">BY-NC-SA</a> 协议进行授权，如无注明均为原创，转载请注明转自<a href="' .
+      home_url() .
+      '">' .
+      get_bloginfo('name') .
+      '</a><br>本文地址:<a rel="bookmark" title="' .
+      get_the_title() .
+      '" href="' .
+      get_permalink() .
+      '">' .
+      get_the_title() .
+      '</a></span></div>';
+  }
+  return $content;
+}
+add_filter('the_content', 'hjyl_content_copyright');
+
 /* 最新回复 */
 function new_comment_posts($no_posts = 10, $before = '<li>', $after = '</li>', $show_pass_post = false, $duration='') {
 global $wpdb;
@@ -406,7 +427,7 @@ QTags.addButton( 'highlight_xml', '[xml]', '\n[xml]\n', '[/xml]\n' ); //快捷�
 QTags.addButton( 'highlight_code', '[code]', '\n[code]\n', '[/code]\n' ); //快捷输入[code]标签
 </script>
 <?php }}
-add_action('admin_print_footer_scripts', 'hjyl_highlight_quicktags' );
+add_action('after_wp_tiny_mce', 'hjyl_highlight_quicktags' );
 
 //显示数据库查询次数、查询时间及内存占用的代码
 function iperformance($visible = false){
