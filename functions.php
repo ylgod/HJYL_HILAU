@@ -7,13 +7,11 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
 	return;
 }
 //检测主题更新 
-if (is_admin()){
-require_once(get_template_directory() . '/inc/theme-update-checker.php'); 
+require(get_template_directory() . '/inc/theme-update-checker.php'); 
 $hjyl_update_checker = new ThemeUpdateChecker(
 	'HJYL_HILAU', //主题名字
 	'https://hilau.com/wp-content/themes/HJYL_HILAU/check_update.json'  //info.json 的访问地址
 );
-}
 if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 
 	function HJYL_HILAU_setup() {
@@ -443,5 +441,6 @@ require( get_template_directory() . '/inc/functions-customizer.php' );
 require( get_template_directory() . '/inc/category-dropdown-custom-control.php');
 require( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
 require( get_template_directory() . '/inc/functions-weixin-push.php');
+//require( get_template_directory() . '/inc/functions-svg.php');
 
 ?>
