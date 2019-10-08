@@ -901,3 +901,8 @@ ins.play-gif:hover{
     margin-left: -10px;
     border-top-color: #e6e6e6;
 }
+
+#content-copyright{
+	border-left: 10px solid #ddd;
+    padding-left: 20px;
+}

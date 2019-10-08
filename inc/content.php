@@ -62,6 +62,7 @@
 					<?php comments_popup_link( __( ' Leave a reply', 'HJYL_HILAU' ), __( ' 1 Comment ', 'HJYL_HILAU' ), __( ' % Comments', 'HJYL_HILAU' ),'fas fa-comments comments-views',__( ' Comments Off', 'HJYL_HILAU' ) ); ?>
 					<?php edit_post_link( __( 'Edit', 'HJYL_HILAU' ), '<span class="fa fa-pencil-square-o edit-link"> ', '</span>' ); ?>
 				<?php } ?>
+				<?php if(is_singular()){ ?>
 				<div class="reward">
 					<div class="reward-button">
 					  <?php _e('$', 'HJYL_HILAU'); ?>
@@ -70,5 +71,6 @@
 					<p class="reward-notice"><?php _e('If valuable for you, welcome to donate.', 'HJYL_HILAU'); ?></p>
 				 
 				</div>
+				<?php } ?>
 				</footer><!-- .entry-footer -->
 			</article><!-- #post-<?php the_ID(); ?> -->
