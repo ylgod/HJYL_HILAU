@@ -141,7 +141,7 @@ tr.even td{
 blockquote{
 	padding:20px 30px;
 	border-radius:3px;
-	box-shadow:0px 0px 1px #DDDDDD inset;
+	box-shadow:0px 0px 1px rgba(51,52,54,0.8) inset;
 	margin:10px 5px;
 	position:relative;
 }
@@ -154,21 +154,22 @@ blockquote:after{
 	width:70px;
 	height:50px;
 	position: absolute;
-	z-index:-1;
 }
 .wp-caption:before,
 blockquote:before{
-    border-top: 1px solid #DDDDDD;
-    border-left: 1px solid #DDDDDD;
+    border-top: 2px solid rgba(51,52,54,0.8);
+    border-left: 2px solid rgba(51,52,54,0.8);
 	top: 0;
-	left: 0;	
+	left: 0;
+	border-radius:3px 0 0 0;
 }
 .wp-caption:after,
 blockquote:after{
-    border-bottom: 1px solid #DDDDDD;
-    border-right: 1px solid #DDDDDD;
+    border-bottom: 2px solid rgba(51,52,54,0.8);
+    border-right: 2px solid rgba(51,52,54,0.8);
 	bottom: 0;
-	right: 0;	
+	right: 0;
+	border-radius:0  0 3px 0;
 }
 blockquote p{
 	text-align:left !important;
