@@ -302,11 +302,11 @@ function hjyl_content_copyright($content)
 {
   if (is_singular() || is_feed()) {
     $content .=
-      '<div id="content-copyright"><span style="font-weight:bold;text-shadow:0 1px 0 #ddd;font-size: 13px;">声明:</span><span style="font-size: 13px;">本文采用 <a rel="nofollow" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="署名-非商业性使用-相同方式共享">BY-NC-SA</a> 协议进行授权，如无注明均为原创，转载请注明转自<a href="' .
+      '<div id="content-copyright"><span style="font-weight:bold;text-shadow:0 1px 0 #ddd;font-size: 13px;">声明：</span><span style="font-size: 13px;">本文采用 <a rel="nofollow" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="署名-非商业性使用-相同方式共享">BY-NC-SA</a> 协议进行授权，如无注明均为原创，转载请注明转自 <a href="' .
       home_url() .
       '">' .
       get_bloginfo('name') .
-      '</a><br>本文地址:<a rel="bookmark" title="' .
+      '</a><br>本文地址：<a rel="bookmark" title="' .
       get_the_title() .
       '" href="' .
       get_permalink() .
