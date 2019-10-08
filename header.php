@@ -8,8 +8,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <?php
 $options = get_theme_mod('hjyl_hilau_options');
-	$keywords = empty($options['keywords'] ) ? $options['keywords'] : '';
-	$description = empty($options['description'] ) ? $options['description'] : '';
+	$keywords = isset($options['keywords'] ) ? $options['keywords'] : '';
+	$description = isset($options['description'] ) ? $options['description'] : '';
 if(is_singular()){
 	if ($post->post_excerpt) {
 		$description     = $post->post_excerpt;
@@ -28,8 +28,8 @@ if(is_singular()){
 	$keywords = $category[0]->cat_name;
 	$description = category_description();
 }else{
-	$keywords = esc_attr($options['keywords']);
-	$description = esc_attr($options['description']);
+	$keywords = isset($options['keywords'] ) ? $options['keywords'] : '';
+	$description = isset($options['description'] ) ? $options['description'] : '';
 }
 ?>
 	<meta name="keywords" content="<?php echo $keywords; ?>" />

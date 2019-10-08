@@ -48,7 +48,7 @@ function hjyl_customize_register( $wp_customize ) {
         'seo_options',
         array(
             'title' => __('SEO Options','HJYL_HILAU'),
-           'priority' => 55,
+           'priority' => 15,
 			'panel' => 'hjyl_hilau_setting',
         ));	
 
