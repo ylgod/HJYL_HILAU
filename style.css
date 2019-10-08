@@ -34,6 +34,19 @@ img[class*="attachment-"]{
 	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
 	max-height: 100%; /* Override height to match resized width for correct aspect ratio. */
 }
+@media only screen and (max-width: 768px){
+img,
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"]{
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}	
+}
 .alignleft,
 img.alignleft {
 	display: inline;
