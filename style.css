@@ -11,8 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: HJYL_HILAU
 Tags: two-columns,  customizer, custom-menu, right-sidebar, editor-style, sticky-post, CMS
 */
+@font-face {
+	font-family:'Play';font-style:normal;font-weight:400;src:url('images/play.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
+}
 html body{
+	font-family: Play,"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif;
 	color:rgba(116,127,140,1);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
 }
 html body a{
 	color:rgba(116,127,140,1);
@@ -199,19 +205,19 @@ blockquote:after{
 blockquote p{
 	text-align:left !important;
 }
+html body code, html body pre{
+	font-family: Play,"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif;
+	font-size: 15px;
+	line-height: 26px;
+}
 code{
-	background:#555;
-	color:#ddd;
 	padding:5px 10px;
 	display: inline-block;
 	overflow-x: auto;
 }
 pre{
-	font-size:12px;
 	width:auto;
-	line-height:16px;
 	overflow:auto;
-	font-family:"Courier New", clearSys;
 	background:none;
 	border:none;
 	padding:0 5px 16px;
@@ -305,6 +311,7 @@ pre{
 	position: absolute;
 	left:50px;
 	top:70px;
+	z-index: 99;
 }
 .custom-logo-link:before{
 	content: "";
