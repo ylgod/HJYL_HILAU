@@ -39,7 +39,7 @@ html body a:hover{
 	width: 1em;
 }
 /* =WordPress Reset CSS */
-img,
+#primary img,
 img.size-auto,
 img.size-full,
 img.size-large,
