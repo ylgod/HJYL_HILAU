@@ -83,7 +83,7 @@ function hjyl_comment( $comment, $args, $depth ) {
 			<?php
 			$default= ''; echo get_avatar( $comment, 96, $default, $comment->comment_author );
 			if ( is_comment_by_post_author( $comment ) ) {
-				printf( '<span class="post-author-badge" aria-hidden="true"><i class="fas fa-hospital-symbol"></i></span>' );
+				printf( '<span class="post-author-badge" aria-hidden="true">'.hjyl_get_svg( array( 'icon' => 'hjyl' ) ).'</span>' );
 			}
 			?>
 			<div class="comment_meta">

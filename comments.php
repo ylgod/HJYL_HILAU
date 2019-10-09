@@ -2,7 +2,7 @@
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'HJYL_HILAU' ); ?></p>
 <?php return;endif; ?>
 <?php if ( have_comments() ) : ?>
-		<h3 id="comments-title"><span><?php comments_popup_link( __( ' Leave a reply', 'HJYL_HILAU' ), __( ' 1 Comment ', 'HJYL_HILAU' ), __( ' % Comments', 'HJYL_HILAU' ),'fas fa-comments comments-views',__( ' Comments Off', 'HJYL_HILAU' ) ); ?></span></h3>
+		<h3 id="comments-title"><span><?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); ?><?php comments_popup_link( __( ' Leave a reply', 'HJYL_HILAU' ), __( ' 1 Comment ', 'HJYL_HILAU' ), __( ' % Comments', 'HJYL_HILAU' ),'comments-views',__( ' Comments Off', 'HJYL_HILAU' ) ); ?></span></h3>
 	<ol class="commentlist" id="comments">
 		<?php wp_list_comments( array( 'callback' => 'hjyl_comment' ) );?>
 			<p id="comments-nav">
@@ -69,7 +69,7 @@
 <div class="clearfix"></div>
 <?php /*output Trackbacks and Pingbacks*/ $havepings="pings"; foreach($comments as $comment){if(get_comment_type() != 'comment' && $comment->comment_approved != '0'){ $havepings = 1; break; }}if($havepings == 1) : ?>
 <div id="pings">
-	<h3 id="pings-title"><span><i class="fas fa-link"></i> <a><?php _e('Pingbacks', 'HJYL_HILAU'); ?></a></span></h3>
+	<h3 id="pings-title"><span><?php echo hjyl_get_svg( array( 'icon' => 'chain' ) ); ?> <a><?php _e('Pingbacks', 'HJYL_HILAU'); ?></a></span></h3>
 		<ul id="pinglist"><?php wp_list_comments('type=pings&per_page=0&callback=hjyl_pings'); ?></ul>
 </div>
 

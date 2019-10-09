@@ -2,7 +2,7 @@
 			<nav id="breadcrumb" class="row">
 				<ol class="breadcrumb col-xs-12 col-md-9">
 					<li class="breadcrumb-item">
-						<i class="fas fa-home"></i> <a href="<?php echo home_url(); ?>"><?php _e('Home', 'HJYL_HILAU'); ?></a>
+						<?php echo hjyl_get_svg( array( 'icon' => 'home' ) ); ?> <a href="<?php echo home_url(); ?>"><?php _e('Home', 'HJYL_HILAU'); ?></a>
 					</li>
 					
 					<?php if(is_single()) {?>
@@ -53,25 +53,26 @@
 				</ol>
 				  <div class="socialink col-xs-12 col-md-3 alert-warning">
 				<?php if(!is_singular()) {?>
+					<span><?php _e('Contact : ', 'HJYL_HILAU'); ?></span>
 					<?php if(!empty($options['social_qq'])){ ?>
-					<a href="tencent://Message/?Uin=<?php echo $options['social_qq']; ?>&amp;websiteName=hilau.com&amp;Menu=yes"><span class="tooltiptext"><?php _e('Follow me on QQ', 'HJYL_HILAU'); ?></span><i class="fab fa-qq"></i><span class="rotate"></span></a>
+					<a href="tencent://Message/?Uin=<?php echo $options['social_qq']; ?>&amp;websiteName=hilau.com&amp;Menu=yes"><span class="tooltiptext"><?php _e('Follow me on QQ', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'qq' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
 					<?php if(!empty($options['social_weibo'])){ ?>
-					<a href="https://weibo.com/<?php echo $options['social_weibo']; ?>?is_all=1"><span class="tooltiptext"><?php _e('Follow me on Weibo', 'HJYL_HILAU'); ?></span><i class="fab fa-weibo"></i><span class="rotate"></span></a>
+					<a href="https://weibo.com/<?php echo $options['social_weibo']; ?>?is_all=1"><span class="tooltiptext"><?php _e('Follow me on Weibo', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'weibo' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
 					<?php if(!empty($options['social_wechat'])){ ?>
-					<a href="#" class="bds_weixin"><span class="tooltiptext"><img width="180" height="180" src="<?php echo $options['social_wechat']; ?>" alt="<?php _e('Follow me on weChat', 'HJYL_HILAU'); ?>"></span><i class="fab fa-weixin"></i><span class="rotate"></span></a>
+					<a href="#" class="bds_weixin"><span class="tooltiptext"><img width="180" height="180" src="<?php echo $options['social_wechat']; ?>" alt="<?php _e('Follow me on weChat', 'HJYL_HILAU'); ?>"></span><?php echo hjyl_get_svg( array( 'icon' => 'qrcode' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
 					<?php if(!empty($options['social_mail'])){ ?>
-					<a href="mailto:<?php echo $options['social_mail']; ?>"><span class="tooltiptext"><?php _e('Follow me on Email', 'HJYL_HILAU'); ?></span><i class="fas fa-at"></i><span class="rotate"></span></a>
+					<a href="mailto:<?php echo $options['social_mail']; ?>"><span class="tooltiptext"><?php _e('Follow me on Email', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'email' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
 				<?php }else{ ?>
 					<div class="share-button">
 						<span><?php _e('Share To : ', 'HJYL_HILAU'); ?></span>
-						<a href="#" class="bds_weixin" data-cmd="weixin" title="<?php _e('Share me on WeChat', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><i class="qrcode"></i></span><i class="fab fa-weixin"></i><span class="rotate"></span></a>
-						<a target="_blank" href="https://service.weibo.com/share/share.php?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&pic=&appkey=1867581383&searchPic=true" class="bds_tsina" data-cmd="tsina" title="<?php _e('Share me on Weibo', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><?php _e('Share me on Weibo', 'HJYL_HILAU'); ?></span><i class="fab fa-weibo"></i><span class="rotate"></span></a>
-						<a target="_blank" href="https://connect.qq.com/widget/shareqq/index.html?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&desc=&summary=&site=<?php echo home_url(); ?>" class="bds_sqq" data-cmd="sqq" title="<?php _e('Share me to QQ Friends', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><?php _e('Share me to QQ Friends', 'HJYL_HILAU'); ?></span><i class="fab fa-qq"></i><span class="rotate"></span></a>
-						<a target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&desc=&summary=<?php the_title(); ?>&site=<?php echo home_url(); ?>" class="bds_qzone" data-cmd="qzone" title="<?php _e('Share me on Qzone', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><?php _e('Share me on Qzone', 'HJYL_HILAU'); ?></span><i class="fab fa-tencent-weibo"></i><span class="rotate"></span></a>
+						<a href="#" class="bds_weixin" data-cmd="weixin" title="<?php _e('Share me on WeChat', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><i class="qrcode"></i></span><?php echo hjyl_get_svg( array( 'icon' => 'qrcode' ) ); ?><span class="rotate"></span></a>
+						<a target="_blank" href="https://service.weibo.com/share/share.php?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&pic=&appkey=1867581383&searchPic=true" class="bds_tsina" data-cmd="tsina" title="<?php _e('Share me on Weibo', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><?php _e('Share me on Weibo', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'weibo' ) ); ?><span class="rotate"></span></a>
+						<a target="_blank" href="https://connect.qq.com/widget/shareqq/index.html?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&desc=&summary=&site=<?php echo home_url(); ?>" class="bds_sqq" data-cmd="sqq" title="<?php _e('Share me to QQ Friends', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><?php _e('Share me to QQ Friends', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'qq' ) ); ?><span class="rotate"></span></a>
+						<a target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&desc=&summary=<?php the_title(); ?>&site=<?php echo home_url(); ?>" class="bds_qzone" data-cmd="qzone" title="<?php _e('Share me on Qzone', 'HJYL_HILAU'); ?>"><span class="tooltiptext"><?php _e('Share me on Qzone', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'qzone' ) ); ?><span class="rotate"></span></a>
 					</div>
    
 				  </div>

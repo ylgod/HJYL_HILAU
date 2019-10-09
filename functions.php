@@ -243,7 +243,6 @@ add_action( 'after_setup_theme', 'hjyl_content_width', 0 );
  */
 function hjyl_script() {
 	wp_enqueue_style( 'hjyl-hilau', get_stylesheet_uri(), array(), '20191004', 'all' );
-	wp_enqueue_style('font-awesome', 'https://cdn.bootcss.com/font-awesome/5.10.2/css/all.min.css', array(), '20191004', 'all');
 	wp_deregister_script( 'l10n' );
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js', array(), '20191004', false);
@@ -279,8 +278,8 @@ function par_pagenavi($range = 9){
 	global $paged, $wp_query;
 	$max_page = $wp_query->max_num_pages;
 	if($max_page > 1){if(!$paged){$paged = 1;}
-	if($paged != 1){echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='跳转到第一页'><i class='fas fa-angle-double-left'></i></a>";}
-	previous_posts_link('<i class="fas fa-angle-left"></i>');
+	if($paged != 1){echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='".__('To first page', 'HJYL_HILAU')."'>".hjyl_get_svg( array( 'icon' => 'arrow-dleft' ) )."</a>";}
+	previous_posts_link(hjyl_get_svg( array( 'icon' => 'arrow-left' ) ));
     if($max_page > $range){
 		if($paged < $range){for($i = 1; $i <= ($range + 1); $i++){echo "<a href='" . get_pagenum_link($i) ."'";
 		if($i==$paged)echo " class='current'";echo ">$i</a>";}}
@@ -291,8 +290,8 @@ function par_pagenavi($range = 9){
 		for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){echo "<a href='" . get_pagenum_link($i) ."'";if($i==$paged) echo " class='current'";echo ">$i</a>";}}}
     else{for($i = 1; $i <= $max_page; $i++){echo "<a href='" . get_pagenum_link($i) ."'";
     if($i==$paged)echo " class='current'";echo ">$i</a>";}}
-	next_posts_link('<i class="fas fa-angle-right"></i>');
-    if($paged != $max_page){echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'><i class='fas fa-angle-double-right'></i></a>";}}
+	next_posts_link(hjyl_get_svg( array( 'icon' => 'arrow-right' ) ));
+    if($paged != $max_page){echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='".__('To last page', 'HJYL_HILAU')."'>".hjyl_get_svg( array( 'icon' => 'arrow-dright' ) )."</a>";}}
 }
 
 // 文末版权声明
@@ -441,6 +440,6 @@ require( get_template_directory() . '/inc/functions-customizer.php' );
 require( get_template_directory() . '/inc/category-dropdown-custom-control.php');
 require( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
 require( get_template_directory() . '/inc/functions-weixin-push.php');
-//require( get_template_directory() . '/inc/functions-svg.php');
+require( get_template_directory() . '/inc/functions-svg.php');
 
 ?>

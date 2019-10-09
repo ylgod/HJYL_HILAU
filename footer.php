@@ -7,7 +7,7 @@
 		</div>
 		
 		<div id="hjylUp">
-			<i class="fas fa-chevron-up"></i>
+			<i><?php echo hjyl_get_svg( array( 'icon' => 'arrow-up' ) ); ?></i>
 		</div>	
 		</footer><!-- #footer -->
 	</div>

@@ -35,7 +35,7 @@
 				  <!--------------幻灯片  结束--------------->
 				</div>
 				<div class="col-xs-12 col-md-4 colnum-2">
-					<span><i class="fas fa-list"></i> <?php _e('Lasted Posts', 'HJYL_HILAU'); ?></span>
+					<span><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php _e('Lasted Posts', 'HJYL_HILAU'); ?></span>
 					<ul class="list-unstyled">
 						<?php query_posts('posts_per_page=13&ignore_sticky_posts=1'); while (have_posts()) : the_post(); ?>
 						<li>
@@ -51,13 +51,13 @@
 					</ul>
 				</div>
 				<div class="col-xs-12 col-md-4 colnum-3">
-					<span><i class="fas fa-list"></i> <?php _e('Lasted Comments', 'HJYL_HILAU'); ?></span>
+					<span><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php _e('Lasted Comments', 'HJYL_HILAU'); ?></span>
 					<ul class="list-unstyled">	
 						<?php new_comment_posts(); ?>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-md-4 colnum-4">
-					<span><i class="fas fa-list"></i> <?php _e('Lasted Modified', 'HJYL_HILAU'); ?></span>
+					<span><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php _e('Lasted Modified', 'HJYL_HILAU'); ?></span>
 					<ul class="list-unstyled">	
 						<?php query_posts('posts_per_page=10&ignore_sticky_posts=1&orderby=modified'); while (have_posts()) : the_post(); ?>
 						<li>
@@ -73,7 +73,7 @@
 					</ul>
 				</div>
 				<div class="col-xs-12 col-md-4 colnum-5">
-					<span><i class="fas fa-list"></i> <?php _e('Rand Posts', 'HJYL_HILAU'); ?></span>
+					<span><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php _e('Rand Posts', 'HJYL_HILAU'); ?></span>
 					<ul class="list-unstyled">	
 					<?php $rand_posts = get_posts('numberposts=10&orderby=rand&ignore_sticky_posts=1');foreach($rand_posts as $post) : ?> 
 						<li>

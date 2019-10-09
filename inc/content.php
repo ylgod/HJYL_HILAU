@@ -12,7 +12,7 @@
 					</figure>
 					<?php
 					if ( is_sticky() && is_home() && ! is_paged() ) {
-						printf( '<span class="sticky-post"><i class="fas fa-thumbtack"></i> %s</span>', __( 'Featured', 'HJYL_HILAU' ) );
+						printf( '<span class="sticky-post">%1$s %2$s</span>', hjyl_get_svg( array( 'icon' => 'thumb-tack') ) , __( 'Featured', 'HJYL_HILAU' ) );
 					}
 					if ( is_singular() ) :
 						the_title( '<h1 class="entry-title">', '</h1>' );
@@ -34,7 +34,7 @@
 							echo '</figure>';
 							}
 							the_content();
-							wp_link_pages( array( 'before' => '<nav class="page-link"><i class="fa fa-folder-open" aria-hidden="true"></i> <span>' . __( 'Pages:', 'HJYL_HILAU' ) . '</span>', 'after' => '</nav>' ) );
+							wp_link_pages( array( 'before' => '<nav class="page-link">'.hjyl_get_svg( array( 'icon' => 'folder-open') ).'<span>' . __( 'Pages:', 'HJYL_HILAU' ) . '</span>', 'after' => '</nav>' ) );
 						}else{
 							echo wp_trim_words( get_the_content(), 200, '......<a href="'. get_permalink() .'">'.__( 'Continue reading', 'HJYL_HILAU' ).'</a>'  );
 						}
@@ -50,17 +50,24 @@
 					}
 				?>
 				<?php if(!is_singular()){ ?>
-					<span class="fas fa-user author">
+					<span class="author">
+						<?php echo hjyl_get_svg( array( 'icon' => 'user' ) ); ?>
 						<?php the_author_posts_link(); ?>
 					</span>
-					<span class="fas fa-flag cat-links" >
+					<span class="cat-links" >
+						<?php echo hjyl_get_svg( array( 'icon' => 'bars' ) ); ?>
 						<?php the_category(', '); ?>
 					</span>
-					<span class="fas fa-clock last-updated" title="<?php printf(__('%s', 'HJYL_HILAU'),the_time('Y-m-d G:i:s')); ?>">
+					<span class="last-updated" title="<?php printf(__('%s', 'HJYL_HILAU'),the_time('Y-m-d G:i:s')); ?>">
+						<?php echo hjyl_get_svg( array( 'icon' => 'time' ) ); ?>
 						<?php printf(__('%s', 'HJYL_HILAU'),timeago(get_gmt_from_date(get_the_time('Y-m-d G:i:s')))); ?>
 					</span>
-					<?php comments_popup_link( __( ' Leave a reply', 'HJYL_HILAU' ), __( ' 1 Comment ', 'HJYL_HILAU' ), __( ' % Comments', 'HJYL_HILAU' ),'fas fa-comments comments-views',__( ' Comments Off', 'HJYL_HILAU' ) ); ?>
-					<?php edit_post_link( __( 'Edit', 'HJYL_HILAU' ), '<span class="fa fa-pencil-square-o edit-link"> ', '</span>' ); ?>
+					<span>
+						<?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); ?>
+						<?php comments_popup_link( __( 'Leave a reply', 'HJYL_HILAU' ), __( '1 Comment', 'HJYL_HILAU' ), __( '% Comments', 'HJYL_HILAU' ),'comments-views',__( 'Comments Off', 'HJYL_HILAU' ) ); ?>
+					</span>
+					<?php edit_post_link( __( 'Edit', 'HJYL_HILAU' ), '<span class="edit-link">'.hjyl_get_svg( array( 'icon' => 'edit' ) ).'', '</span>' ); ?>
+					
 				<?php } ?>
 				<?php if(is_singular()){ ?>
 				<div class="reward">

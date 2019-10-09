@@ -22,3 +22,4 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 == Changelog ==
 2019.09.09	HJYL_HILAU is comming.
 2019.10.08	WordPress theme HJYL_HILAU 开源发布.
+2019.10.09	将font-awesome图标插件换成SVG Sprite技术实现小图标，大大减少了主题包的大小，减少了1.6M左右.

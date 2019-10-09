@@ -105,20 +105,26 @@ if(is_singular()){
 				<?php } }else{ ?>
 					<div class="single-widget">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-						<span class="fas fa-user author">
+						<span>
+							<?php echo hjyl_get_svg( array( 'icon' => 'user' ) ); ?>
 							<?php while(have_posts()){the_post(); the_author_posts_link();} ?>
 						</span>
 						<?php if(!is_page()){ ?>
-						<span class="fas fa-flag cat-links" >
+						<span class="cat-links" >
+							<?php echo hjyl_get_svg( array( 'icon' => 'bars' ) ); ?>
 							<?php the_category(', '); ?>
 						</span>
 						<?php } ?>
-						<span class="fas fa-clock last-updated" title="<?php printf(__('%s', 'HJYL_HILAU'),the_time('Y-m-d G:i:s')); ?>">
+						<span class="last-updated" title="<?php printf(__('%s', 'HJYL_HILAU'),the_time('Y-m-d G:i:s')); ?>">
+							<?php echo hjyl_get_svg( array( 'icon' => 'time' ) ); ?>
 							<?php printf(__('%s', 'HJYL_HILAU'),timeago(get_gmt_from_date(get_the_time('Y-m-d G:i:s')))); ?>
 						</span>
-						<?php comments_popup_link( __( ' Leave a reply', 'HJYL_HILAU' ), __( ' 1 Comment ', 'HJYL_HILAU' ), __( ' % Comments', 'HJYL_HILAU' ),'fas fa-comments comments-views',__( ' Comments Off', 'HJYL_HILAU' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'HJYL_HILAU' ), '<span class="fa fa-pencil-square-o edit-link"> ', '</span>' ); ?>
-						<?php while(have_posts()){the_post(); the_tags('<p class="tags"><i class="fas fa-tags"></i> ', ', ', '</p>'); } ?>
+						<span>
+						<?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); ?>
+						<?php comments_popup_link( __( 'Leave a reply', 'HJYL_HILAU' ), __( '1 Comment', 'HJYL_HILAU' ), __( '% Comments', 'HJYL_HILAU' ),'comments-views',__( 'Comments Off', 'HJYL_HILAU' ) ); ?>
+						</span>
+						<?php edit_post_link( __( 'Edit', 'HJYL_HILAU' ), '<span class="edit-link">'.hjyl_get_svg( array( 'icon' => 'edit' ) ).'', '</span>' ); ?>
+						<?php while(have_posts()){the_post(); the_tags('<p class="tags">'.hjyl_get_svg( array( 'icon' => 'tags' ) ).'', ', ', '</p>'); } ?>
 					</div>
 				<?php } ?>
 				</div><!-- .slideNav -->
