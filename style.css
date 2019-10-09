@@ -305,6 +305,7 @@ pre{
 	position: absolute;
 	left:50px;
 	top:70px;
+	z-index: 99;
 }
 .custom-logo-link:before{
 	content: "";
