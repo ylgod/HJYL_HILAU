@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/ylgod/HJYL_HILAU
 Description: based on bootstrap4, HTML5 and CSS3.
 Author: HJYL
 Author URI: https://hjyl.org/
-Version: 2.0
+Version: 2.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: HJYL_HILAU
@@ -42,9 +42,10 @@ html body a:hover{
 img{
 	max-width: 100%;
 }
-img[class*="wp-image-"]{
-	max-width: 95%; 
-	max-height: 100%; 
+.wp-caption img{
+	max-width: 95%;
+	max-height: 100%;
+	margin: 5px 5px 0;
 }
 .alignleft,
 img.alignleft {
@@ -78,9 +79,6 @@ img.aligncenter {
 	padding-top: 4px;
 	text-align: center;
 	position:relative;
-}
-.wp-caption img {
-	margin: 5px 5px 0;
 }
 .wp-caption p.wp-caption-text {
 	color: #888;
