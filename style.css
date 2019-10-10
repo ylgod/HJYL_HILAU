@@ -39,30 +39,11 @@ html body a:hover{
 	width: 1em;
 }
 /* =WordPress Reset CSS */
-#primary img,
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"]{
+#primary img{
 	max-width: 95%; /* When images are too wide for containing element, force them to fit. */
 	max-height: 100%; /* Override height to match resized width for correct aspect ratio. */
 }
-@media only screen and (max-width: 768px){
-img,
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"]{
-	height: auto; /* Override height to match resized width for correct aspect ratio. */
-}	
+@media only screen and (max-width: 768px){	
 }
 .alignleft,
 img.alignleft {
