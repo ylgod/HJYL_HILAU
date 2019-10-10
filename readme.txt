@@ -23,3 +23,5 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 2019.09.09	HJYL_HILAU is comming.
 2019.10.08	WordPress theme HJYL_HILAU 开源发布.
 2019.10.09	将font-awesome图标插件换成SVG Sprite技术实现小图标，大大减少了主题包的大小，减少了1.6M左右.
+2019.10.10  整站换一种字体“play”，来自于inlojv.com，感觉非常舒服的字体.
+			修复文章图片在相册下超宽的情况.

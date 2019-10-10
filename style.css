@@ -5,14 +5,20 @@ Github Theme URI: https://github.com/ylgod/HJYL_HILAU
 Description: based on bootstrap4, HTML5 and CSS3.
 Author: HJYL
 Author URI: https://hjyl.org/
-Version: 2.0
+Version: 2.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: HJYL_HILAU
 Tags: two-columns,  customizer, custom-menu, right-sidebar, editor-style, sticky-post, CMS
 */
+@font-face {
+	font-family:'Play';font-style:normal;font-weight:400;src:url('images/play.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215
+}
 html body{
+	font-family: Play,"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif;
 	color:rgba(116,127,140,1);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
 }
 html body a{
 	color:rgba(116,127,140,1);
@@ -33,30 +39,13 @@ html body a:hover{
 	width: 1em;
 }
 /* =WordPress Reset CSS */
-img,
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"]{
-	max-width: 95%; /* When images are too wide for containing element, force them to fit. */
-	max-height: 100%; /* Override height to match resized width for correct aspect ratio. */
+img{
+	max-width: 100%;
 }
-@media only screen and (max-width: 768px){
-img,
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"]{
-	height: auto; /* Override height to match resized width for correct aspect ratio. */
-}	
+.wp-caption img{
+	max-width: 95%;
+	max-height: 100%;
+	margin: 5px 5px 0;
 }
 .alignleft,
 img.alignleft {
@@ -90,9 +79,6 @@ img.aligncenter {
 	padding-top: 4px;
 	text-align: center;
 	position:relative;
-}
-.wp-caption img {
-	margin: 5px 5px 0;
 }
 .wp-caption p.wp-caption-text {
 	color: #888;
@@ -199,19 +185,19 @@ blockquote:after{
 blockquote p{
 	text-align:left !important;
 }
+html body code, html body pre{
+	font-family: Play,"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif;
+	font-size: 15px;
+	line-height: 26px;
+}
 code{
-	background:#555;
-	color:#ddd;
 	padding:5px 10px;
 	display: inline-block;
 	overflow-x: auto;
 }
 pre{
-	font-size:12px;
 	width:auto;
-	line-height:16px;
 	overflow:auto;
-	font-family:"Courier New", clearSys;
 	background:none;
 	border:none;
 	padding:0 5px 16px;
