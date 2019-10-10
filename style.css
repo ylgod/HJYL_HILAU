@@ -39,7 +39,7 @@ html body a:hover{
 	width: 1em;
 }
 /* =WordPress Reset CSS */
-#primary img{
+.entry-content img{
 	max-width: 95%; /* When images are too wide for containing element, force them to fit. */
 	max-height: 100%; /* Override height to match resized width for correct aspect ratio. */
 }
