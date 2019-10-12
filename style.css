@@ -780,7 +780,82 @@ nav.page-link{
 .comment-welcomeback{
 	margin-bottom:10px;
 }
-
+/** 评论回复邮件通知 **/
+.mail-notify {
+	padding-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.mail-notify span {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 230px;
+    color: #999;
+    padding-left: 38px;
+    padding-left: 5px\9;
+}
+.notify {
+    display: none;
+    display: inline\9;
+}
+.notify + label {
+    position: relative;
+    background: #a5a5a5;
+    width: 30px;
+    width: 0\9;
+    height: 15px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 15px;
+}
+.notify + label:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: -1px;
+    width: 15px;
+    width: 0\9;
+    height: 15px;
+    z-index: 99999;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    border: none\9;
+}
+.notify + label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 9px;
+    font-size: 0.9rem;
+}
+.notify:checked + label {
+    background: rgba(178,34,34,1);
+    border-radius: 15px;
+}
+.notify:checked + label:after {
+    content: '';
+    left: 6px;
+}
+.notify:checked + label:before {
+    content: '';
+    position: absolute;
+    z-index: 99999;
+    left: 15px;
+    border-radius: 15px;
+}
+.notify + label:after {
+    left: 15px;
+    line-height: 21px;
+}
+.notify + label:after, .notify + label:before {
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+	
 /******************************
 * AD 广告部分
 *******************************/

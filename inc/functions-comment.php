@@ -52,7 +52,7 @@ function comment_mail_notify($comment_id) {
 add_action('comment_post', 'comment_mail_notify');
 /* default: true */
 function add_checkbox() {
-  echo '<input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked" style="margin:10px 0;" /><label for="comment_mail_notify">'.__('Email me if replied','HJYL_HILAU').'</label>';
+  echo '<span class="mail-notify"><input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked" class="notify" /><label for="comment_mail_notify"><span>'.__('Email me if replied','HJYL_HILAU').'</span></label></span>';
 }
 add_action('comment_form', 'add_checkbox');
 // -- END ----------------------------------------
