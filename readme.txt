@@ -26,3 +26,5 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 2019.10.10  整站换一种字体“play”，来自于inlojv.com，感觉非常舒服的字体.
 			修复文章图片在相册下超宽的情况.
 2019.10.12  更换网站英文字体play为谷歌字体链接.
+			添加归档页面，建立一个页面别名必须为“Archives”.
+			在自定义添加一个选项：如果选中，主题可以支持博客模式，即简单的隐藏CMS首页中间部分.

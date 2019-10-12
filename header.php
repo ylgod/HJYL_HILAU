@@ -2,7 +2,8 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<link rel="dns-prefetch" href="https://cdn.bootcss.com" />
+	<link rel="dns-prefetch" href="//cdn.bootcss.com" />
+	<link rel="dns-prefetch" href="//fonts.gstatic.font.im" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
