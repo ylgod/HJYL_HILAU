@@ -1,15 +1,15 @@
 /*
 Theme Name: HJYL_HILAU
 Theme URI: https://hjyl.org/wordpress-theme-HJYL-HILAU/
-Github Theme URI: https://github.com/ylgod/HJYL_HILAU
+Github Theme URI: https://github.com/ylgod/HJYL_HILAU/
 Description: based on bootstrap4, HTML5 and CSS3.
 Author: HJYL
 Author URI: https://hjyl.org/
 Version: 2.2
-License: GNU General Public License v2.0 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3.0 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: HJYL_HILAU
-Tags: two-columns,  customizer, custom-menu, right-sidebar, editor-style, sticky-post, CMS
+Tags: two-columns,  customizer, custom-menu, right-sidebar, editor-style, sticky-post, CMS, blog
 */
 @font-face {
 	font-family:'Play';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.font.im/s/play/v11/6aez4K2oVqwIvtU2Hw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -594,7 +594,7 @@ pre{
 }
 .widget-area h3 span{
 	border-bottom:1px solid rgba(178,34,34,1);
-	padding:19px 5px;
+	padding:20px 5px;
 }
 .widget-area .widget{
 	margin-bottom:50px;
@@ -693,7 +693,7 @@ nav.page-link{
 }
 #comments-title span{
 	border-bottom:1px solid rgba(178,34,34,1);
-	padding:10px;
+	padding:11px 10px;
 	margin-left:-10px;
 }
 .commentlist li.comment{
