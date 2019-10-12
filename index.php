@@ -1,5 +1,7 @@
-<?php get_header(); ?>
-<?php if(is_home()&&!is_paged()){ ?>		
+<?php get_header(); $options = get_theme_mod('hjyl_hilau_options'); ?>
+<?php
+	$is_blog = isset($options['is_blog'] ) ? $options['is_blog'] : 0;
+	if(is_home() && !is_paged() && $is_blog == 0){ ?>		
 <?php get_template_part( 'inc/content', 'slide'); ?>
 <?php } ?>
 		<section id="primary" class="content-area row">

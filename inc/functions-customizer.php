@@ -51,7 +51,24 @@ function hjyl_customize_register( $wp_customize ) {
            'priority' => 15,
 			'panel' => 'hjyl_hilau_setting',
         ));	
-
+		
+	//选中为博客模式，不选中为cms模式
+	$wp_customize->add_setting(
+    'hjyl_hilau_options[is_blog]',
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field',
+			'type' => 'theme_mod',
+		)
+	);
+	$wp_customize->add_control(
+    'hjyl_hilau_options[is_blog]',
+		array(
+			'label' => __('Blog if selected(Hide Slide part)','HJYL_HILAU'),
+			'section' => 'basic_options',
+			'type' => 'checkbox',
+		)
+	);
 	
 	//评论微信推送
 	$wp_customize->add_setting(
@@ -79,6 +96,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'sanitize_callback' => 'sanitize_text_field',
+			'transport' => 'postMessage',
 			'type' => 'theme_mod',
 		)
 	);
@@ -97,6 +115,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'sanitize_callback' => 'sanitize_text_field',
+			'transport' => 'postMessage',
 			'type' => 'theme_mod',
 		)
 	);
@@ -132,6 +151,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'sanitize_callback' => 'sanitize_text_field',
+			'transport' => 'postMessage',
 			'type' => 'theme_mod',
 		)
 	);
@@ -151,6 +171,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'sanitize_callback' => 'sanitize_text_field',
+			'transport' => 'postMessage',
 			'type' => 'theme_mod'
 		)
 	);
@@ -169,6 +190,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'sanitize_callback' => 'sanitize_text_field',
+			'transport' => 'postMessage',
 			'type' => 'theme_mod',
 		)
 	);
@@ -187,6 +209,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'sanitize_callback' => 'sanitize_text_field',
+			'transport' => 'postMessage',
 			'type' => 'theme_mod',
 		)
 	);
@@ -200,7 +223,6 @@ function hjyl_customize_register( $wp_customize ) {
 	);
 
 	//顶部广告所有页面显示/首页显示设置
-	
 	$wp_customize->add_setting(
     'hjyl_hilau_options[is_home_ad]',
 		array(
@@ -224,7 +246,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'validate_callback' => 'wp_filter_kses',
-			'transport' => 'postMessage',
+			'transport' => 'refresh',
 			'type' => 'theme_mod',
 		)
 	);
@@ -244,7 +266,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'validate_callback' => 'wp_filter_kses',
-			'transport' => 'postMessage',
+			'transport' => 'refresh',
 			'type' => 'theme_mod',
 		)
 	);
@@ -264,7 +286,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'validate_callback' => 'wp_filter_kses',
-			'transport' => 'postMessage',
+			'transport' => 'refresh',
 			'type' => 'theme_mod',
 		)
 	);
@@ -284,7 +306,7 @@ function hjyl_customize_register( $wp_customize ) {
 		array(
 			'default' => '',
 			'validate_callback' => 'wp_filter_kses',
-			'transport' => 'postMessage',
+			'transport' => 'refresh',
 			'type' => 'theme_mod',
 		)
 	);
