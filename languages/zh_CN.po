@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-09 12:54+0800\n"
-"PO-Revision-Date: 2019-10-09 12:55+0800\n"
+"POT-Creation-Date: 2019-10-12 20:18+0800\n"
+"PO-Revision-Date: 2019-10-12 20:19+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
@@ -66,7 +66,7 @@ msgstr "名字"
 msgid "(required)"
 msgstr "(必填)"
 
-#: ../comments.php:47 ../inc/functions-customizer.php:196
+#: ../comments.php:47 ../inc/functions-customizer.php:219
 msgid "Email"
 msgstr "邮箱"
 
@@ -130,7 +130,7 @@ msgstr "https://wordpress.org/"
 msgid "Top Menu"
 msgstr "顶部菜单"
 
-#: ../functions.php:112 ../functions.php:334 ../inc/content-slide.php:44
+#: ../functions.php:112 ../functions.php:337 ../inc/content-slide.php:44
 #: ../inc/content-slide.php:66 ../inc/content-slide.php:82
 #: ../inc/header-breadcrumb.php:39
 #, php-format
@@ -161,91 +161,83 @@ msgstr "404页面"
 msgid "Other"
 msgstr "其他页"
 
-#: ../functions.php:271
+#: ../functions.php:274
 msgid "Wait a moment..."
 msgstr "请稍候..."
 
-#: ../functions.php:272
+#: ../functions.php:275
 msgid "Good Comment"
 msgstr "提交成功"
 
-#: ../functions.php:282
+#: ../functions.php:285
 msgid "To first page"
 msgstr "跳转到第一页"
 
-#: ../functions.php:283
-msgid "Previous page"
-msgstr "上一页"
-
-#: ../functions.php:294
-msgid "Next page"
-msgstr "下一页"
-
-#: ../functions.php:295
+#: ../functions.php:298
 msgid "To last page"
 msgstr "跳转到最后一页"
 
-#: ../functions.php:365
+#: ../functions.php:368
 #, php-format
 msgid "%s ago"
 msgstr "%s前"
 
-#: ../functions.php:370
+#: ../functions.php:373
 msgid "Just Now"
 msgstr "刚刚"
 
-#: ../functions.php:372
+#: ../functions.php:375
 msgid " years ago"
 msgstr " 年前"
 
-#: ../functions.php:373
+#: ../functions.php:376
 msgid " month ago"
 msgstr " 个月前"
 
-#: ../functions.php:374
+#: ../functions.php:377
 msgid " weeks ago"
 msgstr " 周前"
 
-#: ../functions.php:375
+#: ../functions.php:378
 msgid " days ago"
 msgstr " 天前"
 
-#: ../functions.php:376
+#: ../functions.php:379
 msgid " hours ago"
 msgstr " 小时前"
 
-#: ../functions.php:377
+#: ../functions.php:380
 msgid " minutes ago"
 msgstr " 分钟前"
 
-#: ../functions.php:378
+#: ../functions.php:381
 msgid " seconds ago"
 msgstr " 秒前"
 
-#: ../header.php:118 ../header.php:120 ../inc/content.php:61
+#: ../header.php:119 ../header.php:121 ../inc/content.php:61
 #: ../inc/content.php:63 ../inc/functions-comment.php:91
 #: ../inc/functions-comment.php:155 ../inc/functions-comment.php:156
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: ../header.php:124 ../inc/content.php:67
+#: ../header.php:125 ../inc/content.php:67
 msgid "Leave a reply"
 msgstr "回复"
 
-#: ../header.php:124 ../inc/content.php:67
+#: ../header.php:125 ../inc/content.php:67
 msgid "1 Comment"
 msgstr "1条评论"
 
-#: ../header.php:124 ../inc/content.php:67
+#: ../header.php:125 ../inc/content.php:67
 msgid "% Comments"
 msgstr "%条评论"
 
-#: ../header.php:124 ../inc/content.php:67
+#: ../header.php:125 ../inc/content.php:67
 msgid "Comments Off"
 msgstr "评论关闭"
 
-#: ../header.php:126 ../inc/content.php:69
+#: ../header.php:127 ../inc/content.php:69
 msgid "Edit"
 msgstr "编辑"
 
@@ -305,7 +297,7 @@ msgstr "随机文章"
 msgid "Featured"
 msgstr "置顶"
 
-#: ../inc/content.php:37 ../tougao.php:33
+#: ../inc/content.php:37 ../page-tougao.php:33
 msgid "Pages:"
 msgstr "页面："
 
@@ -393,96 +385,100 @@ msgstr "广告位设置"
 msgid "SEO Options"
 msgstr "SEO设置"
 
-#: ../inc/functions-customizer.php:69
+#: ../inc/functions-customizer.php:67
+msgid "Blog if selected(Hide Slide part)"
+msgstr "选中转换为博客模式（隐藏幻灯片部分）"
+
+#: ../inc/functions-customizer.php:86
 msgid "SCKEY"
 msgstr "SCKEY"
 
-#: ../inc/functions-customizer.php:70
+#: ../inc/functions-customizer.php:87
 msgid "No SCKEY? you can register on https://sc.ftqq.com"
 msgstr "没有SCKEY？你可以到https://sc.ftqq.com注册一个"
 
-#: ../inc/functions-customizer.php:88
+#: ../inc/functions-customizer.php:106
 msgid "Alipay QRcode"
 msgstr "支付宝二维码"
 
-#: ../inc/functions-customizer.php:89
+#: ../inc/functions-customizer.php:107
 msgid "upload your alipay QRcode. 150px*150px"
 msgstr "上传你的支付宝二维码。建议150px*150px"
 
-#: ../inc/functions-customizer.php:106
+#: ../inc/functions-customizer.php:125
 msgid "WeChat Pay QRcode"
 msgstr "微信支付二维码"
 
-#: ../inc/functions-customizer.php:107
+#: ../inc/functions-customizer.php:126
 msgid "upload your WeChat Pay QRcode. 150px*150px"
 msgstr "上传你的微信支付二维码。建议150px*150px"
 
-#: ../inc/functions-customizer.php:123
+#: ../inc/functions-customizer.php:142
 msgid "Select category for slide"
 msgstr "选择一个分类显示幻灯片"
 
-#: ../inc/functions-customizer.php:141
+#: ../inc/functions-customizer.php:161
 msgid "QQ No."
 msgstr "QQ号码."
 
-#: ../inc/functions-customizer.php:160
+#: ../inc/functions-customizer.php:181
 msgid "Weibo Account"
 msgstr "微博号"
 
-#: ../inc/functions-customizer.php:178
+#: ../inc/functions-customizer.php:200
 msgid "WeChat QRcode"
 msgstr "微信二维码"
 
-#: ../inc/functions-customizer.php:215
+#: ../inc/functions-customizer.php:237
 msgid "Only Show AD on Home Page"
 msgstr "仅首页显示顶部广告"
 
-#: ../inc/functions-customizer.php:234
+#: ../inc/functions-customizer.php:256
 msgid "Home Ad"
 msgstr "首页顶部广告"
 
-#: ../inc/functions-customizer.php:235 ../inc/functions-customizer.php:275
-#: ../inc/functions-customizer.php:295
+#: ../inc/functions-customizer.php:257 ../inc/functions-customizer.php:297
+#: ../inc/functions-customizer.php:317
 msgid "AD for 468px*60px"
 msgstr "468px*60px大小的广告"
 
-#: ../inc/functions-customizer.php:254
+#: ../inc/functions-customizer.php:276
 msgid "Single Right Ad"
 msgstr "文章右侧广告"
 
-#: ../inc/functions-customizer.php:255
+#: ../inc/functions-customizer.php:277
 msgid "AD for 336px*280px"
 msgstr "336px*280px大小的广告"
 
-#: ../inc/functions-customizer.php:274
+#: ../inc/functions-customizer.php:296
 msgid "Singlar Bottom Ad"
 msgstr "页面底部广告"
 
-#: ../inc/functions-customizer.php:294
+#: ../inc/functions-customizer.php:316
 msgid "Archive Ad"
 msgstr "归档页广告"
 
-#: ../inc/functions-customizer.php:314
+#: ../inc/functions-customizer.php:336
 msgid "keywords"
 msgstr "关键词keywords"
 
-#: ../inc/functions-customizer.php:315
+#: ../inc/functions-customizer.php:337
 msgid "keywords, separate by \",\""
 msgstr "关键词，以英文逗号\",\"隔开"
 
-#: ../inc/functions-customizer.php:334 ../inc/functions-customizer.php:335
+#: ../inc/functions-customizer.php:356 ../inc/functions-customizer.php:357
 msgid "description"
 msgstr "描述description"
 
-#: ../inc/functions-customizer.php:354 ../inc/functions-customizer.php:355
+#: ../inc/functions-customizer.php:376 ../inc/functions-customizer.php:377
 msgid "Footer Code"
 msgstr "底部代码"
 
-#: ../inc/functions-svg.php:43
+#: ../inc/functions-svg.php:35
 msgid "Please define default parameters in the form of an array."
 msgstr "请用数组的形式定义默认参数。"
 
-#: ../inc/functions-svg.php:48
+#: ../inc/functions-svg.php:40
 msgid "Please define an SVG icon filename."
 msgstr "请定义SVG图标文件名。"
 
@@ -572,6 +568,12 @@ msgstr "上一篇: %title"
 #: ../single.php:16
 msgid "Next: %title"
 msgstr "下一篇: %title"
+
+#~ msgid "Previous page"
+#~ msgstr "上一页"
+
+#~ msgid "Next page"
+#~ msgstr "下一页"
 
 #, php-format
 #~ msgid "%s Comments Off"
