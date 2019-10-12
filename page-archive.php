@@ -10,9 +10,9 @@ $options = get_theme_mod( 'hjyl_hilau_options');
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="entry-content">
 				<?php
-					if(!empty($options['single_google_ad'])){
-					echo '<figure class="single_google_ad">';
-						echo $options['single_google_ad'];
+					if(!empty($options['singlar_google_ad'])){
+					echo '<figure class="singlar_google_ad mx-auto">';
+						echo $options['singlar_google_ad'];
 					echo '</figure>';
 					}
 				?>
