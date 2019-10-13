@@ -10,7 +10,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
 require get_template_directory() . '/inc/theme-update-checker.php'; 
 $hjyl_update_checker = new ThemeUpdateChecker(
 	'HJYL_HILAU', //主题名字
-	'https://hilau.com/wp-content/themes/HJYL_HILAU-master/check_update.json',  //info.json 的访问地址
+	'https://raw.githubusercontent.com/ylgod/HJYL_HILAU/master/check_update.json',  //info.json 的访问地址
 );
 if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 
