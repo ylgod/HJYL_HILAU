@@ -136,7 +136,7 @@ add_action('wp_head', 'hjyl_bg');
 //bing美图自定义登录页面背景
 function custom_login_head() {
         if(defined('UM_DIR')){echo '<style type="text/css">#um_captcha{width:170px!important;}</style>';}
-        echo '<style type="text/css">#reg_passmail{display:none!important}body{background: url(' . hjyl_img() . ');background-repeat: no-repeat;background-position: top center;background-attachment: fixed;background-size: cover;width: 100%!important;height: 100%!important;}.login label,a {font-weight: bold;}.login-action-register #login{padding: 5% 0 0;}.login p {line-height: 1;}.login form {background:rgba(251,251,251,0.3);margin-top: 10px;padding: 16px 24px 16px;}width:32px;height:32px;-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px;}#registerform,#loginform {background-color:rgba(251,251,251,0.3)!important;}.login label,a{color:#000!important;}form label input{margin-top:10px!important;}@media screen and (max-width:600px){.login-action-register h1 {display: none;}.login-action-register #login{top:50%!important;}}</style>';
+        echo '<style type="text/css">#reg_passmail{display:none!important}body{background: url(' . hjyl_img() . ');background-repeat: no-repeat;background-position: top center;background-attachment: fixed;background-size: cover;width: 100%!important;height: 100%!important;}.login label,a {font-weight: bold;}.login-action-register #login{padding: 5% 0 0;}.login p {line-height: 1;}.login form {background:rgba(251,251,251,0.3);margin-top: 10px;padding: 16px 24px 16px;}width:32px;height:32px;-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px;}#registerform,#loginform {background-color:rgba(251,251,251,0.3)!important;}.login label,a{color:#000;}form label input{margin-top:10px!important;}@media screen and (max-width:600px){.login-action-register h1 {display: none;}.login-action-register #login{top:50%!important;}}</style>';
 }
 add_action('login_head', 'custom_login_head');
 
@@ -242,30 +242,30 @@ add_action( 'after_setup_theme', 'hjyl_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function hjyl_script() {
-	wp_enqueue_style( 'hjyl-hilau', get_stylesheet_uri(), array(), '20191012', 'all' );
+	wp_enqueue_style( 'hjyl-hilau', get_stylesheet_uri(), array(), '20191014', 'all' );
 	wp_deregister_script( 'l10n' );
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js', array(), '20191012', false);
+	wp_register_script( 'jquery', 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js', array(), '20191014', false);
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js', array(), '20191012', false );
-	wp_enqueue_style('bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css', array(), '20191012', 'all');
-	wp_enqueue_script( 'hjyl', get_theme_file_uri( '/js/hjyl.js' ), array(), '20191012', true );
+	wp_enqueue_script( 'bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js', array(), '20191014', false );
+	wp_enqueue_style('bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css', array(), '20191014', 'all');
+	wp_enqueue_script( 'hjyl', get_theme_file_uri( '/js/hjyl.js' ), array(), '20191014', true );
 	if ( ! has_custom_logo() ) {
-		wp_enqueue_script( 'hjyl_logo', get_theme_file_uri( '/js/logo.js' ), array(), '20191012', true );
+		wp_enqueue_script( 'hjyl_logo', get_theme_file_uri( '/js/logo.js' ), array(), '20191014', true );
 	}
 	if( is_page('archives') ){
-		wp_enqueue_script( 'archives', get_template_directory_uri() . '/js/archives.js', array(), '20191012', false);
-		wp_enqueue_style( 'archives', get_template_directory_uri() . '/css/archives.css', array(), '20191012', 'screen');
+		wp_enqueue_script( 'archives', get_template_directory_uri() . '/js/archives.js', array(), '20191014', false);
+		wp_enqueue_style( 'archives', get_template_directory_uri() . '/css/archives.css', array(), '20191014', 'screen');
 	};
 	if ( is_singular() ) {
-	wp_enqueue_script( 'jquery-qrcode', 'https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js', array(), '20191012', true);
-	wp_enqueue_script( 'qrcode-js', get_theme_file_uri('/js/qrcode.js'), array('jquery'), '20191012', true);
-	wp_enqueue_script( 'lightbox-js', 'https://cdn.bootcss.com/lightbox2/2.11.1/js/lightbox.min.js', array('jquery'), '20191012', true);
-	wp_enqueue_style('lightbox', 'https://cdn.bootcss.com/lightbox2/2.11.1/css/lightbox.min.css', array(), '20191012', 'all');
+	wp_enqueue_script( 'jquery-qrcode', 'https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js', array(), '20191014', true);
+	wp_enqueue_script( 'qrcode-js', get_theme_file_uri('/js/qrcode.js'), array('jquery'), '20191014', true);
+	wp_enqueue_script( 'lightbox-js', 'https://cdn.bootcss.com/lightbox2/2.11.1/js/lightbox.min.js', array('jquery'), '20191014', true);
+	wp_enqueue_style('lightbox', 'https://cdn.bootcss.com/lightbox2/2.11.1/css/lightbox.min.css', array(), '20191014', 'all');
 	}
 	if ( is_singular() && comments_open() ) {
 	wp_enqueue_script( 'comment-reply' );
-	wp_enqueue_script( 'ajax-comment', get_theme_file_uri('/js/comments-ajax.js'), array('jquery'), '20191012', true);
+	wp_enqueue_script( 'ajax-comment', get_theme_file_uri('/js/comments-ajax.js'), array('jquery'), '20191014', true);
 	}
 	wp_localize_script( 'ajax-comment', 'ajaxcomment', array(
 		'ajax_url' => admin_url('admin-ajax.php'),
@@ -414,6 +414,33 @@ function move_comment_field_to_bottom( $fields ) {
 }
 add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
 
+/**
+* WordPress外链新窗口打开并使用php页面go跳转
+* https://zhang.ge/5086.html
+* 先添加go调整页面并应该go跳转页面模版
+* 伪静态设置：rewrite ^/go/([^\?]+)$ /go?url=$1 last;
+*/
+function the_content_nofollow($content){
+	preg_match_all('/<a(.*?)href="(.*?)"(.*?)>/',$content,$matches);
+	if($matches){
+		foreach($matches[2] as $val){
+			if(strpos($val,'://')!==false && strpos($val,home_url())===false && !preg_match('/\.(jpg|jepg|png|ico|bmp|gif|tiff)/i',$val)){
+				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go?url=".base64_encode($val)."\" ",$content);
+			}
+		}
+	}
+return $content;
+}
+add_filter('the_content','the_content_nofollow',999);
+add_filter('comment_text', 'the_content_nofollow', 99);
+add_filter('get_comment_author_link', 'the_content_nofollow', 5);
+
+//下载单页短代码
+function page_download($atts, $content = null) {
+	return '<a class="noexternal" href="'.home_url().'/download?pid='.get_the_ID().'" target="_blank" rel="nofollow"><button type="button" class="btn btn-outline-danger">'.hjyl_get_svg( array( 'icon' => 'download' ) ).' 点击下载</button></a>';
+}
+add_shortcode('pdownload', 'page_download');
+
 //快捷输入[Prism]标签
 function hjyl_highlight_quicktags() { 
 if (wp_script_is('quicktags')){
@@ -426,6 +453,7 @@ QTags.addButton( 'highlight_css', '[css]', '\n[css]\n', '[/css]\n' ); //快捷�
 QTags.addButton( 'highlight_js', '[js]', '\n[js]\n', '[/js]\n' ); //快捷输入[js]标签
 QTags.addButton( 'highlight_xml', '[xml]', '\n[xml]\n', '[/xml]\n' ); //快捷输入[xml]标签
 QTags.addButton( 'highlight_code', '[code]', '\n[code]\n', '[/code]\n' ); //快捷输入[code]标签
+QTags.addButton( 'hy_download', '下载按钮', '[pdownload]', '' ); //添加下载按钮
 </script>
 <?php }}
 add_action('after_wp_tiny_mce', 'hjyl_highlight_quicktags' );
@@ -445,5 +473,6 @@ require( get_template_directory() . '/inc/category-dropdown-custom-control.php')
 require( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
 require( get_template_directory() . '/inc/functions-weixin-push.php');
 require( get_template_directory() . '/inc/functions-svg.php');
+require( get_template_directory() . '/inc/class-metabox.php');
 
 ?>

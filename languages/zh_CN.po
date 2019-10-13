@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-12 20:18+0800\n"
-"PO-Revision-Date: 2019-10-12 20:19+0800\n"
+"POT-Creation-Date: 2019-10-14 01:12+0800\n"
+"PO-Revision-Date: 2019-10-14 01:13+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
@@ -251,6 +251,10 @@ msgstr ""
 "HJYL_HILAU THEME要求WordPress版本至少5.0以上，你目前的版本是%s。请升级后再"
 "试。"
 
+#: ../inc/class-metabox.php:59
+msgid "Download Options"
+msgstr "下载资源设置"
+
 #: ../inc/class-wp-bootstrap-navwalker.php:366
 msgid "Add a menu"
 msgstr "添加菜单"
@@ -297,7 +301,7 @@ msgstr "随机文章"
 msgid "Featured"
 msgstr "置顶"
 
-#: ../inc/content.php:37 ../page-tougao.php:33
+#: ../inc/content.php:37 ../page-tougao.php:33 ../tougao.php:33
 msgid "Pages:"
 msgstr "页面："
 
@@ -561,6 +565,79 @@ msgstr "分享给QQ好友"
 msgid "Share me on Qzone"
 msgstr "分享到QQ空间"
 
+#: ../page-download.php:26
+msgid "Free Resources, Download Page"
+msgstr "免费资源, 下载页面"
+
+#: ../page-download.php:27
+#, php-format
+msgid ""
+"The download page for the resource named \"%1$s\" in the article of %2$s"
+msgstr "%2$s文章中提到的资源信息为“%1$s”的下载页面"
+
+#: ../page-download.php:28 ../page-download.php:79
+#, php-format
+msgid "The download page for %s"
+msgstr "%s下载页面"
+
+#: ../page-download.php:102
+msgid "Download Info"
+msgstr "资源信息"
+
+#: ../page-download.php:105
+#, php-format
+msgid "Download Name: %s"
+msgstr "资源名称：%s"
+
+#: ../page-download.php:106
+#, php-format
+msgid "Download Size: %s"
+msgstr "文件大小：%s"
+
+#: ../page-download.php:107
+#, php-format
+msgid "Update Time: %s"
+msgstr "更新日期：%s"
+
+#: ../page-download.php:110
+msgid "Download Link"
+msgstr "下载链接"
+
+#: ../page-download.php:128
+msgid "Download Note"
+msgstr "下载说明"
+
+#: ../page-download.php:130
+msgid ""
+"<p>1.If the downloaded file is in compressed package format, please install "
+"RAR or other software to decompress it.<br />2.When files are large, "
+"download tools are recommended. Browser downloads sometimes interrupt "
+"automatically. Baidu Netdisks recommend PanDownload software or its webpage "
+"version for download.<br />3.Resources may be harmony due to content issues, "
+"leading to the unavailability of download links. If you encounter this "
+"problem, please go to the article page for feedback, and we will update it "
+"in time.<br />4.If you have any other questions or suggestions, please leave "
+"a comment.</p>"
+msgstr ""
+"<p>1、下载后文件若为压缩包格式，请安装RAR或者好压等压缩软件进行解压。<br /"
+">2、文件比较大的时候，建议使用下载工具进行下载，浏览器下载有时候会自动中断，"
+"百度网盘推荐PanDownload软件或其网页版下载。<br />3、资源可能会由于内容问题被"
+"和谐，导致下载链接不可用，遇到此问题，请到该文章页面进行反馈，我们会及时更新"
+"的。<br />4、若有其他问题或建议，欢迎留言评论。</p>"
+
+#: ../page-download.php:132
+msgid "Download Disclaimer"
+msgstr "免责声明"
+
+#: ../page-download.php:133
+msgid ""
+"Download Disclaimer: Some resources of this website are collected on the "
+"Internet for your study and reference only. If there is any infringement, "
+"please contact the administrator to delete it in time."
+msgstr ""
+"免责声明：本站部分资源收集于互联网，仅供大家学习与参考。如有侵权，请联系管理"
+"员及时删除。"
+
 #: ../single.php:14
 msgid "Previous: %title"
 msgstr "上一篇: %title"
@@ -568,13 +645,3 @@ msgstr "上一篇: %title"
 #: ../single.php:16
 msgid "Next: %title"
 msgstr "下一篇: %title"
-
-#~ msgid "Previous page"
-#~ msgstr "上一页"
-
-#~ msgid "Next page"
-#~ msgstr "下一页"
-
-#, php-format
-#~ msgid "%s Comments Off"
-#~ msgstr "%s 评论关闭"

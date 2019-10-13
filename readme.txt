@@ -31,3 +31,5 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 2019.10.13	修正评论标题和边栏标题下划线的位置.
 			style.css抬头属性的修改.
 			修改评论回复邮件通知勾选框美化.
+2019.10.14	给文章内容外链转内链go跳转.
+			添加单独下载页面.
