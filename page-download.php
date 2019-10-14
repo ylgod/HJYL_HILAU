@@ -35,6 +35,7 @@ empty($values3) ? Header('Location:/') : $theCode3 = $values3[0];
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/logo.js'></script>
 <?php endif; ?>
 <?php echo custom_login_head(); ?>
+<?php if(has_site_icon()) { wp_site_icon(); }?>
 <style type="text/css">
 #filelink a{margin:0 10px;}
 #breadcrumb a, #footer a{color:rgba(116,127,140,1)!important;font-weight:400;}
