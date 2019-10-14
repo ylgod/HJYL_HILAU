@@ -425,8 +425,8 @@ function the_content_nofollow($content){
 	if($matches){
 		foreach($matches[2] as $val){
 			if(strpos($val,'://')!==false && strpos($val,home_url())===false && !preg_match('/\.(jpg|jepg|png|ico|bmp|gif|tiff)/i',$val)){
-				//$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/?url=".base64_encode($val)."\" ",$content);  //非伪静态设置
-				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/".base64_encode($val)."\" ",$content);   //伪静态设置
+				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/?url=".base64_encode($val)."\" rel=\"nofollow\"",$content);  //非伪静态设置
+				//$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/".base64_encode($val)."\" rel=\"nofollow\"",$content);   //伪静态设置 暂时无效
 			}
 		}
 	}
