@@ -425,7 +425,8 @@ function the_content_nofollow($content){
 	if($matches){
 		foreach($matches[2] as $val){
 			if(strpos($val,'://')!==false && strpos($val,home_url())===false && !preg_match('/\.(jpg|jepg|png|ico|bmp|gif|tiff)/i',$val)){
-				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go?url=".base64_encode($val)."\" ",$content);
+				//$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/?url=".base64_encode($val)."\" ",$content);  //非伪静态设置
+				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/".base64_encode($val)."\" ",$content);   //伪静态设置
 			}
 		}
 	}
@@ -437,7 +438,8 @@ add_filter('get_comment_author_link', 'the_content_nofollow', 5);
 
 //下载单页短代码
 function page_download($atts, $content = null) {
-	return '<a class="noexternal" href="'.home_url().'/download?pid='.get_the_ID().'" target="_blank" rel="nofollow"><button type="button" class="btn btn-outline-danger">'.hjyl_get_svg( array( 'icon' => 'download' ) ).' 点击下载</button></a>';
+	//return '<a class="noexternal" href="'.home_url().'/download/?pid='.get_the_ID().'" target="_blank" rel="nofollow"><button type="button" class="btn btn-outline-danger">'.hjyl_get_svg( array( 'icon' => 'download' ) ).' 点击下载</button></a>';   //非伪静态设置
+	return '<a class="noexternal" href="'.home_url().'/download/'.get_the_ID().'" target="_blank" rel="nofollow"><button type="button" class="btn btn-outline-danger">'.hjyl_get_svg( array( 'icon' => 'download' ) ).' 点击下载</button></a>';   //伪静态设置
 }
 add_shortcode('pdownload', 'page_download');
 
