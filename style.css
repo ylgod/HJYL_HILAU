@@ -594,7 +594,7 @@ pre{
 }
 .widget-area h3 span{
 	border-bottom:1px solid rgba(178,34,34,1);
-	padding:20px 5px;
+	padding:21px 5px;
 }
 .widget-area .widget{
 	position:relative;
@@ -645,6 +645,9 @@ pre{
 	float:left;
 	padding:5px 0 0;
 	text-align:center;
+}
+.widget_count ul li i{
+	display:block;
 }
 .widget_count ul li:hover{
 	background:rgba(178,34,34,1);
@@ -737,7 +740,7 @@ nav.page-link{
 }
 #comments-title span{
 	border-bottom:1px solid rgba(178,34,34,1);
-	padding:11px 10px;
+	padding:12px 10px;
 	margin-left:-10px;
 }
 .commentlist li.comment{

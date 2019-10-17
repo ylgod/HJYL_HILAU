@@ -204,10 +204,10 @@ class analytics extends WP_Widget
 	  echo $before_title . $title . $after_title;
 	  ?>
 <ul>
-<li><span title="<?php global $wpdb; $count_posts = wp_count_posts(); $published_posts = $count_posts->publish; printf(__('Posts Nums: %s', 'HJYL_HILAU'), $published_posts); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'thumb-tack' ) ); echo $published_posts; ?></span></li>
-<li><span title="<?php $comment_nums = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments"); printf(__('Comments Nums: %s', 'HJYL_HILAU'), $comment_nums); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); echo $comment_nums; ?></span></li>
-<li><span title="<?php $web_age = floor((time()-strtotime($Date))/86400); printf(__('Website age: %s', 'HJYL_HILAU'), $web_age); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'time' ) ); echo $web_age; ?></span></li>
-<li><span title="<?php $count_tags = wp_count_terms('post_tag'); printf(__('Tags Nums: %s', 'HJYL_HILAU'), $count_tags); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'tags' ) ); echo $count_tags; ?></span></li>
+<li><span title="<?php global $wpdb; $count_posts = wp_count_posts(); $published_posts = $count_posts->publish; printf(__('Posts Nums: %s', 'HJYL_HILAU'), $published_posts); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'thumb-tack' ) ); ?><i><?php echo $published_posts; ?></i></span></li>
+<li><span title="<?php $comment_nums = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments"); printf(__('Comments Nums: %s', 'HJYL_HILAU'), $comment_nums); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); ?><i><?php echo $comment_nums; ?></i></span></li>
+<li><span title="<?php $web_age = floor((time()-strtotime($Date))/86400); printf(__('Website age: %s', 'HJYL_HILAU'), $web_age); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'time' ) ); ?><i><?php echo $web_age; ?></i></span></li>
+<li><span title="<?php $count_tags = wp_count_terms('post_tag'); printf(__('Tags Nums: %s', 'HJYL_HILAU'), $count_tags); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'tags' ) ); ?><i><?php echo $count_tags; ?></i></span></li>
 </ul>
 <p class="clearfix"></p>
 
