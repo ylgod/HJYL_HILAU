@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-14 01:12+0800\n"
-"PO-Revision-Date: 2019-10-14 01:13+0800\n"
+"POT-Creation-Date: 2019-10-17 23:29+0800\n"
+"PO-Revision-Date: 2019-10-17 23:31+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
@@ -132,6 +132,8 @@ msgstr "顶部菜单"
 
 #: ../functions.php:112 ../functions.php:337 ../inc/content-slide.php:44
 #: ../inc/content-slide.php:66 ../inc/content-slide.php:82
+#: ../inc/functions-widgets.php:40 ../inc/functions-widgets.php:98
+#: ../inc/functions-widgets.php:158 ../inc/functions-widgets.php:274
 #: ../inc/header-breadcrumb.php:39
 #, php-format
 msgid "Untitled #%s"
@@ -293,7 +295,8 @@ msgstr "最新评论"
 msgid "Lasted Modified"
 msgstr "最近更新"
 
-#: ../inc/content-slide.php:76
+#: ../inc/content-slide.php:76 ../inc/functions-widgets.php:116
+#: ../inc/functions-widgets.php:117 ../inc/functions-widgets.php:120
 msgid "Rand Posts"
 msgstr "随机文章"
 
@@ -301,7 +304,7 @@ msgstr "随机文章"
 msgid "Featured"
 msgstr "置顶"
 
-#: ../inc/content.php:37 ../page-tougao.php:33 ../tougao.php:33
+#: ../inc/content.php:37 ../page-tougao.php:33
 msgid "Pages:"
 msgstr "页面："
 
@@ -506,6 +509,87 @@ msgstr "文章链接： "
 msgid "Post Content: "
 msgstr "评论内容： "
 
+#: ../inc/functions-widgets.php:6 ../inc/functions-widgets.php:7
+#: ../inc/functions-widgets.php:10
+msgid "Hot Posts"
+msgstr "热门文章"
+
+#: ../inc/functions-widgets.php:14 ../inc/functions-widgets.php:63
+#: ../inc/functions-widgets.php:124 ../inc/functions-widgets.php:188
+#: ../inc/functions-widgets.php:234 ../inc/functions-widgets.php:300
+msgid "title:"
+msgstr "文章标题："
+
+#: ../inc/functions-widgets.php:15 ../inc/functions-widgets.php:64
+#: ../inc/functions-widgets.php:125 ../inc/functions-widgets.php:235
+#: ../inc/functions-widgets.php:302
+msgid "Max Num:"
+msgstr "最大数量："
+
+#: ../inc/functions-widgets.php:55 ../inc/functions-widgets.php:56
+#: ../inc/functions-widgets.php:59
+msgid "Related Posts"
+msgstr "相关文章"
+
+#: ../inc/functions-widgets.php:181 ../inc/functions-widgets.php:182
+#: ../inc/functions-widgets.php:185
+msgid "Website stat"
+msgstr "网站统计"
+
+#: ../inc/functions-widgets.php:189
+msgid "start time:"
+msgstr "开始时间："
+
+#: ../inc/functions-widgets.php:207
+#, php-format
+msgid "Posts Nums: %s"
+msgstr "文章数量： %s篇"
+
+#: ../inc/functions-widgets.php:208
+#, php-format
+msgid "Comments Nums: %s"
+msgstr "评论数量： %s条"
+
+#: ../inc/functions-widgets.php:209
+#, php-format
+msgid "Website age: %s"
+msgstr "网站年龄： %s天"
+
+#: ../inc/functions-widgets.php:210
+#, php-format
+msgid "Tags Nums: %s"
+msgstr "标签数量： %s个"
+
+#: ../inc/functions-widgets.php:226 ../inc/functions-widgets.php:227
+msgid "Recent Comments For Gravatar"
+msgstr "最近评论带头像版"
+
+#: ../inc/functions-widgets.php:230
+msgid "Recent Comments"
+msgstr "最近评论"
+
+#: ../inc/functions-widgets.php:275
+#, php-format
+msgid "comments at < %s >"
+msgstr "在《%s》上的评论"
+
+#: ../inc/functions-widgets.php:292 ../inc/functions-widgets.php:293
+msgid "Comments Wall For Gravatar"
+msgstr "评论墙头像版"
+
+#: ../inc/functions-widgets.php:296
+msgid "Comments Wall"
+msgstr "评论墙"
+
+#: ../inc/functions-widgets.php:301
+msgid "How many months:"
+msgstr "多少个月："
+
+#: ../inc/functions-widgets.php:343
+#, php-format
+msgid "%1$s replied %2$s comments"
+msgstr "%1$s 评论了 %2$s 条"
+
 #: ../inc/header-breadcrumb.php:21
 #, php-format
 msgid "Search Results for: %s"
@@ -575,39 +659,39 @@ msgid ""
 "The download page for the resource named \"%1$s\" in the article of %2$s"
 msgstr "%2$s文章中提到的资源信息为“%1$s”的下载页面"
 
-#: ../page-download.php:28 ../page-download.php:79
+#: ../page-download.php:28 ../page-download.php:80
 #, php-format
 msgid "The download page for %s"
 msgstr "%s下载页面"
 
-#: ../page-download.php:102
+#: ../page-download.php:103
 msgid "Download Info"
 msgstr "资源信息"
 
-#: ../page-download.php:105
+#: ../page-download.php:106
 #, php-format
 msgid "Download Name: %s"
 msgstr "资源名称：%s"
 
-#: ../page-download.php:106
+#: ../page-download.php:107
 #, php-format
 msgid "Download Size: %s"
 msgstr "文件大小：%s"
 
-#: ../page-download.php:107
+#: ../page-download.php:108
 #, php-format
 msgid "Update Time: %s"
 msgstr "更新日期：%s"
 
-#: ../page-download.php:110
+#: ../page-download.php:111
 msgid "Download Link"
 msgstr "下载链接"
 
-#: ../page-download.php:128
+#: ../page-download.php:129
 msgid "Download Note"
 msgstr "下载说明"
 
-#: ../page-download.php:130
+#: ../page-download.php:131
 msgid ""
 "<p>1.If the downloaded file is in compressed package format, please install "
 "RAR or other software to decompress it.<br />2.When files are large, "
@@ -625,11 +709,11 @@ msgstr ""
 "和谐，导致下载链接不可用，遇到此问题，请到该文章页面进行反馈，我们会及时更新"
 "的。<br />4、若有其他问题或建议，欢迎留言评论。</p>"
 
-#: ../page-download.php:132
+#: ../page-download.php:133
 msgid "Download Disclaimer"
 msgstr "免责声明"
 
-#: ../page-download.php:133
+#: ../page-download.php:134
 msgid ""
 "Download Disclaimer: Some resources of this website are collected on the "
 "Internet for your study and reference only. If there is any infringement, "

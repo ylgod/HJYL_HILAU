@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/ylgod/HJYL_HILAU/
 Description: based on bootstrap4, HTML5 and CSS3.
 Author: HJYL
 Author URI: https://hjyl.org/
-Version: 2.5
+Version: 3.0
 License: GNU General Public License v3.0 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: HJYL_HILAU
@@ -597,7 +597,6 @@ pre{
 	padding:20px 5px;
 }
 .widget-area .widget{
-	margin-bottom:50px;
 	position:relative;
 	line-height:26px;
 }
@@ -609,7 +608,52 @@ pre{
 	padding-left: 0;
 	margin-top:20px;
 }
-
+.widget_comment ul.recentcomments li > span img{
+		border-radius:100%;
+}
+.widget_comment ul.recentcomments li:hover > span img{
+	padding:2px;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+.widget_comment ul.recentcomments li > span{
+	float:left;
+	width:18%;
+}
+.widget_comment ul.recentcomments li span.comment_content{
+	float:left;
+	border:1px solid rgba(0,0,0,0.1);
+	width:80%;
+	padding:5px 10px;
+	position:relative;
+}
+.widget_comment ul.recentcomments li span.comment_content:before{
+	content:"";
+	position:absolute;
+	top:10px;
+	left:-6px;
+	z-index:1;
+	width:10px;
+	height:10px;
+	border-left:1px solid rgba(0,0,0,0.1);
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	transform:rotate(45deg);
+	background:#fff;
+	
+}
+.widget_count ul li{
+	width:25%;
+	float:left;
+	padding:5px 0 0;
+	text-align:center;
+}
+.widget_count ul li:hover{
+	background:rgba(178,34,34,1);
+	color:#fff;
+	border-radius:5px;
+}
+.widget_count ul li .icon{
+	font-size:50px;
+}
 /******************************
 * footer 底部部分
 *******************************/

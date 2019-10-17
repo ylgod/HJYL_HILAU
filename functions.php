@@ -476,5 +476,6 @@ require( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
 require( get_template_directory() . '/inc/functions-weixin-push.php');
 require( get_template_directory() . '/inc/functions-svg.php');
 require( get_template_directory() . '/inc/class-metabox.php');
+require( get_template_directory() . '/inc/functions-widgets.php');
 
 ?>
