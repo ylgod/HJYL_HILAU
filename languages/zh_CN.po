@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-17 23:29+0800\n"
-"PO-Revision-Date: 2019-10-17 23:31+0800\n"
+"POT-Creation-Date: 2019-10-17 23:53+0800\n"
+"PO-Revision-Date: 2019-10-17 23:53+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
@@ -132,7 +132,7 @@ msgstr "顶部菜单"
 
 #: ../functions.php:112 ../functions.php:337 ../inc/content-slide.php:44
 #: ../inc/content-slide.php:66 ../inc/content-slide.php:82
-#: ../inc/functions-widgets.php:40 ../inc/functions-widgets.php:98
+#: ../inc/functions-widgets.php:41 ../inc/functions-widgets.php:98
 #: ../inc/functions-widgets.php:158 ../inc/functions-widgets.php:274
 #: ../inc/header-breadcrumb.php:39
 #, php-format

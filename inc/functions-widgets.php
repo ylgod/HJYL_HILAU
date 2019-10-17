@@ -37,8 +37,8 @@ class Heat extends WP_Widget
 global $wpdb;
  $pop = $wpdb->get_results("SELECT id, post_title, post_date, comment_count FROM {$wpdb->prefix}posts WHERE post_type='post' AND post_status='publish' AND post_password='' ORDER BY comment_count DESC LIMIT ".$Heat.""); 
 ?>
-<?php foreach($pop as $post) : $post_title=$post->post_title; if($post_title==''){$post_title=sprintf(__('Untitled #%s', 'HJYL_HILAU'),date('Y-m-d',strtotime($post->post_date)));}?>
-<li><a href="<?php echo get_permalink($post->id); ?>" title="<?php echo $post_title; ?>"><?php echo $post_title; ?></a></li>
+<?php foreach($pop as $post) : ?>
+<li><a href="<?php echo get_permalink($post->id); ?>" title="<?php $post_title=$post->post_title; if($post_title==''){$post_title=sprintf(__('Untitled #%s', 'HJYL_HILAU'),date('Y-m-d',strtotime($post->post_date)));} echo $post_title; ?>"><?php echo $post_title; ?></a></li>
 <?php endforeach; ?>
 			
 		</ul>
