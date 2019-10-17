@@ -33,3 +33,4 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 			修改评论回复邮件通知勾选框美化.
 2019.10.14	给文章内容外链转内链go跳转.
 			添加单独下载页面.
+2019.10.17	添加自定义widget：读者墙、带头像的最新评论、博客统计、随机文章、热门文章、相关文章.

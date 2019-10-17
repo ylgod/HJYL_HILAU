@@ -418,14 +418,15 @@ add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
 * WordPress外链新窗口打开并使用php页面go跳转
 * https://zhang.ge/5086.html
 * 先添加go调整页面并应该go跳转页面模版
-* 伪静态设置：rewrite ^/go/([^\?]+)$ /go?url=$1 last;
+* 伪静态设置：rewrite ^/go/([^\?]+)$ /go/?url=$1 last;
 */
 function the_content_nofollow($content){
 	preg_match_all('/<a(.*?)href="(.*?)"(.*?)>/',$content,$matches);
 	if($matches){
 		foreach($matches[2] as $val){
 			if(strpos($val,'://')!==false && strpos($val,home_url())===false && !preg_match('/\.(jpg|jepg|png|ico|bmp|gif|tiff)/i',$val)){
-				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go?url=".base64_encode($val)."\" ",$content);
+				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/?url=".base64_encode($val)."\" rel=\"nofollow\"",$content);  //非伪静态设置
+				//$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/".base64_encode($val)."\" rel=\"nofollow\"",$content);   //伪静态设置 暂时无效
 			}
 		}
 	}
@@ -437,7 +438,8 @@ add_filter('get_comment_author_link', 'the_content_nofollow', 5);
 
 //下载单页短代码
 function page_download($atts, $content = null) {
-	return '<a class="noexternal" href="'.home_url().'/download?pid='.get_the_ID().'" target="_blank" rel="nofollow"><button type="button" class="btn btn-outline-danger">'.hjyl_get_svg( array( 'icon' => 'download' ) ).' 点击下载</button></a>';
+	//return '<a class="noexternal" href="'.home_url().'/download/?pid='.get_the_ID().'" target="_blank" rel="nofollow"><button type="button" class="btn btn-outline-danger">'.hjyl_get_svg( array( 'icon' => 'download' ) ).' 点击下载</button></a>';   //非伪静态设置
+	return '<a class="noexternal" href="'.home_url().'/download/'.get_the_ID().'/" target="_blank" rel="nofollow"><button type="button" class="btn btn-outline-danger">'.hjyl_get_svg( array( 'icon' => 'download' ) ).' 点击下载</button></a>';   //伪静态设置
 }
 add_shortcode('pdownload', 'page_download');
 
@@ -474,5 +476,6 @@ require( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
 require( get_template_directory() . '/inc/functions-weixin-push.php');
 require( get_template_directory() . '/inc/functions-svg.php');
 require( get_template_directory() . '/inc/class-metabox.php');
+require( get_template_directory() . '/inc/functions-widgets.php');
 
 ?>
