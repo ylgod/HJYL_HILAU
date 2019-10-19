@@ -75,6 +75,7 @@ if(is_singular()){
 					) );
 					?>
 				</div>
+				<div class="reading-bar"></div>
 			</nav>
 			<?php endif; ?>
 			<!-- .home top 468*60 start -->

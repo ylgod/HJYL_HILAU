@@ -22,8 +22,8 @@ class Heat extends WP_Widget
     }
    function widget($args,$instance){
 	  extract($args);
-	  $title = apply_filters('widget_title',empty($instance['title']) ? '&nbsp;' : $instance['title']);
-	  $Heat = empty($instance['Heat']) ? '#' : $instance['Heat'];
+	  $title = apply_filters('widget_title',empty($instance['title']) ? __('Hot Posts','HJYL_HILAU') : $instance['title']);
+	  $Heat = empty($instance['Heat']) ? '10' : $instance['Heat'];
 
 
 	  echo '<li class="widget widget_recent_entries">';
@@ -71,8 +71,8 @@ class Related extends WP_Widget
     }
    function widget($args,$instance){
 	  extract($args);
-	  $title = apply_filters('widget_title',empty($instance['title']) ? '&nbsp;' : $instance['title']);
-	  $Related = empty($instance['Related']) ? '#' : $instance['Related'];
+	  $title = apply_filters('widget_title',empty($instance['title']) ? __('Related Posts','HJYL_HILAU') : $instance['title']);
+	  $Related = empty($instance['Related']) ? '10' : $instance['Related'];
 
 
 	  echo '<li class="widget widget_recent_entries">';
@@ -85,9 +85,12 @@ class Related extends WP_Widget
 		global $post;
 		$tags = wp_get_post_tags($post->ID);
 		if ($tags) {
-		$first_tag = $tags[0]->term_id;
+			$tag_list = '';
+			foreach($tags as $tagsin){
+				$tag_list .= $tagsin->term_id . ',';
+			}
 		$args=array(
-		'tag__in' => array($first_tag),
+		'tag__in' => explode(',', $tag_list),
 		'post__not_in' => array($post->ID),
 		'showposts'=>$Related,
 		'ignore_sticky_posts'=>1
@@ -132,8 +135,8 @@ class Randposts extends WP_Widget
     }
    function widget($args,$instance){
 	  extract($args);
-	  $title = apply_filters('widget_title',empty($instance['title']) ? '&nbsp;' : $instance['title']);
-	  $Rand = empty($instance['Rand']) ? '#' : $instance['Rand'];
+	  $title = apply_filters('widget_title',empty($instance['title']) ? __('Rand Posts','HJYL_HILAU') : $instance['title']);
+	  $Rand = empty($instance['Rand']) ? '10' : $instance['Rand'];
 
 
 	  echo '<li class="widget widget_recent_entries">';
@@ -196,18 +199,18 @@ class analytics extends WP_Widget
 		return $instance;
     }
    function widget($args,$instance){
-	  extract($args);
-	  $title = apply_filters('widget_pages',empty($instance['title']) ? '&nbsp;' : $instance['title']);
-	 $Date = apply_filters('widget_pages',empty($instance['Date']) ? '&nbsp;' : $instance['Date']);
+		extract($args);
+		$title = apply_filters('widget_pages',empty($instance['title']) ? __('Website stat','HJYL_HILAU') : $instance['title']);
+		$Date = apply_filters('widget_pages',empty($instance['Date']) ? 'N/A' : $instance['Date']);
 
-	  echo '<li class="widget widget_count">';
-	  echo $before_title . $title . $after_title;
+		echo '<li class="widget widget_count">';
+		echo $before_title . $title . $after_title;
 	  ?>
 <ul>
-<li><span title="<?php global $wpdb; $count_posts = wp_count_posts(); $published_posts = $count_posts->publish; printf(__('Posts Nums: %s', 'HJYL_HILAU'), $published_posts); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'thumb-tack' ) ); ?><i><?php echo $published_posts; ?></i></span></li>
-<li><span title="<?php $comment_nums = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments"); printf(__('Comments Nums: %s', 'HJYL_HILAU'), $comment_nums); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); ?><i><?php echo $comment_nums; ?></i></span></li>
-<li><span title="<?php $web_age = floor((time()-strtotime($Date))/86400); printf(__('Website age: %s', 'HJYL_HILAU'), $web_age); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'time' ) ); ?><i><?php echo $web_age; ?></i></span></li>
-<li><span title="<?php $count_tags = wp_count_terms('post_tag'); printf(__('Tags Nums: %s', 'HJYL_HILAU'), $count_tags); ?>"><?php echo hjyl_get_svg( array( 'icon' => 'tags' ) ); ?><i><?php echo $count_tags; ?></i></span></li>
+<li title="<?php global $wpdb; $count_posts = wp_count_posts(); $published_posts = $count_posts->publish; printf(__('Posts Nums %s units', 'HJYL_HILAU'), $published_posts); ?>"><i><?php echo $published_posts; ?></i><?php echo hjyl_get_svg( array( 'icon' => 'thumb-tack' ) ); ?></li>
+<li title="<?php $comment_nums = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments"); printf(__('Comments Nums %s units', 'HJYL_HILAU'), $comment_nums); ?>"><i><?php echo $comment_nums; ?></i><?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); ?></li>
+<li title="<?php $web_age = floor((time()-strtotime($Date))/86400); printf(__('Website age %s days', 'HJYL_HILAU'), $web_age); ?>"><i><?php echo $web_age; ?></i><?php echo hjyl_get_svg( array( 'icon' => 'time' ) ); ?></li>
+<li title="<?php $count_tags = wp_count_terms('post_tag'); printf(__('Tags Nums %s units', 'HJYL_HILAU'), $count_tags); ?>"><i><?php echo $count_tags; ?></i><?php echo hjyl_get_svg( array( 'icon' => 'tags' ) ); ?></li>
 </ul>
 <p class="clearfix"></p>
 
@@ -242,8 +245,8 @@ class hjyl_Comment extends WP_Widget
     }
    function widget($args,$instance){
 	  extract($args);
-	  $title = apply_filters('widget_title',empty($instance['title']) ? '&nbsp;' : $instance['title']);
-	  $Comment = empty($instance['Comment']) ? '#' : $instance['Comment'];
+	  $title = apply_filters('widget_title',empty($instance['title']) ? __('Recent Comments','HJYL_HILAU') : $instance['title']);
+	  $Comment = empty($instance['Comment']) ? '10' : $instance['Comment'];
 
 	  echo '<li class="widget widget_comment">';
 	  echo $before_title . $title . $after_title;
@@ -310,9 +313,9 @@ class Wall extends WP_Widget
     }
    function widget($args,$instance){
 	  extract($args);
-	  $title = apply_filters('widget_title',empty($instance['title']) ? '&nbsp;' : $instance['title']);
-	  $Comment = empty($instance['Comment']) ? '#' : $instance['Comment'];
-	  $Wall = empty($instance['Wall']) ? '#' : $instance['Wall'];
+	  $title = apply_filters('widget_title',empty($instance['title']) ? __('Comments Wall','HJYL_HILAU') : $instance['title']);
+	  $Comment = empty($instance['Comment']) ? 'N/A' : $instance['Comment'];
+	  $Wall = empty($instance['Wall']) ? '10' : $instance['Wall'];
 	  echo '<li class="widget widget_wall">';
 	  echo $before_title . $title . $after_title;
 	  ?>

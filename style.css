@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/ylgod/HJYL_HILAU/
 Description: based on bootstrap4, HTML5 and CSS3.
 Author: HJYL
 Author URI: https://hjyl.org/
-Version: 3.0
+Version: 3.1
 License: GNU General Public License v3.0 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: HJYL_HILAU
@@ -206,7 +206,13 @@ pre{
 .bypostauthor{}
 
 /* =CSS样式从这里开始.= */
-
+.reading-bar{
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:2px;
+	background:rgba(178,34,34,1);
+}
 #warpper{
 	background:#FFF;
 	padding:0;
@@ -594,7 +600,7 @@ pre{
 }
 .widget-area h3 span{
 	border-bottom:1px solid rgba(178,34,34,1);
-	padding:21px 5px;
+	padding:20px 5px;
 }
 .widget-area .widget{
 	position:relative;
@@ -648,6 +654,8 @@ pre{
 }
 .widget_count ul li i{
 	display:block;
+	font-size:16px;
+	font-style:normal;
 }
 .widget_count ul li:hover{
 	background:rgba(178,34,34,1);
@@ -655,7 +663,7 @@ pre{
 	border-radius:5px;
 }
 .widget_count ul li .icon{
-	font-size:50px;
+	font-size:16px;
 }
 /******************************
 * footer 底部部分
@@ -740,7 +748,7 @@ nav.page-link{
 }
 #comments-title span{
 	border-bottom:1px solid rgba(178,34,34,1);
-	padding:12px 10px;
+	padding:11px 10px;
 	margin-left:-10px;
 }
 .commentlist li.comment{

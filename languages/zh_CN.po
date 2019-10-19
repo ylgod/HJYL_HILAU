@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-17 23:53+0800\n"
-"PO-Revision-Date: 2019-10-17 23:53+0800\n"
+"POT-Creation-Date: 2019-10-19 13:02+0800\n"
+"PO-Revision-Date: 2019-10-19 13:03+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
@@ -132,8 +132,8 @@ msgstr "顶部菜单"
 
 #: ../functions.php:112 ../functions.php:337 ../inc/content-slide.php:44
 #: ../inc/content-slide.php:66 ../inc/content-slide.php:82
-#: ../inc/functions-widgets.php:41 ../inc/functions-widgets.php:98
-#: ../inc/functions-widgets.php:158 ../inc/functions-widgets.php:274
+#: ../inc/functions-widgets.php:41 ../inc/functions-widgets.php:101
+#: ../inc/functions-widgets.php:161 ../inc/functions-widgets.php:277
 #: ../inc/header-breadcrumb.php:39
 #, php-format
 msgid "Untitled #%s"
@@ -216,30 +216,30 @@ msgstr " 分钟前"
 msgid " seconds ago"
 msgstr " 秒前"
 
-#: ../header.php:119 ../header.php:121 ../inc/content.php:61
+#: ../header.php:120 ../header.php:122 ../inc/content.php:61
 #: ../inc/content.php:63 ../inc/functions-comment.php:91
 #: ../inc/functions-comment.php:155 ../inc/functions-comment.php:156
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: ../header.php:125 ../inc/content.php:67
+#: ../header.php:126 ../inc/content.php:67
 msgid "Leave a reply"
 msgstr "回复"
 
-#: ../header.php:125 ../inc/content.php:67
+#: ../header.php:126 ../inc/content.php:67
 msgid "1 Comment"
 msgstr "1条评论"
 
-#: ../header.php:125 ../inc/content.php:67
+#: ../header.php:126 ../inc/content.php:67
 msgid "% Comments"
 msgstr "%条评论"
 
-#: ../header.php:125 ../inc/content.php:67
+#: ../header.php:126 ../inc/content.php:67
 msgid "Comments Off"
 msgstr "评论关闭"
 
-#: ../header.php:127 ../inc/content.php:69
+#: ../header.php:128 ../inc/content.php:69
 msgid "Edit"
 msgstr "编辑"
 
@@ -295,8 +295,9 @@ msgstr "最新评论"
 msgid "Lasted Modified"
 msgstr "最近更新"
 
-#: ../inc/content-slide.php:76 ../inc/functions-widgets.php:116
-#: ../inc/functions-widgets.php:117 ../inc/functions-widgets.php:120
+#: ../inc/content-slide.php:76 ../inc/functions-widgets.php:119
+#: ../inc/functions-widgets.php:120 ../inc/functions-widgets.php:123
+#: ../inc/functions-widgets.php:138
 msgid "Rand Posts"
 msgstr "随机文章"
 
@@ -510,82 +511,82 @@ msgid "Post Content: "
 msgstr "评论内容： "
 
 #: ../inc/functions-widgets.php:6 ../inc/functions-widgets.php:7
-#: ../inc/functions-widgets.php:10
+#: ../inc/functions-widgets.php:10 ../inc/functions-widgets.php:25
 msgid "Hot Posts"
 msgstr "热门文章"
 
 #: ../inc/functions-widgets.php:14 ../inc/functions-widgets.php:63
-#: ../inc/functions-widgets.php:124 ../inc/functions-widgets.php:188
-#: ../inc/functions-widgets.php:234 ../inc/functions-widgets.php:300
+#: ../inc/functions-widgets.php:127 ../inc/functions-widgets.php:191
+#: ../inc/functions-widgets.php:237 ../inc/functions-widgets.php:303
 msgid "title:"
 msgstr "文章标题："
 
 #: ../inc/functions-widgets.php:15 ../inc/functions-widgets.php:64
-#: ../inc/functions-widgets.php:125 ../inc/functions-widgets.php:235
-#: ../inc/functions-widgets.php:302
+#: ../inc/functions-widgets.php:128 ../inc/functions-widgets.php:238
+#: ../inc/functions-widgets.php:305
 msgid "Max Num:"
 msgstr "最大数量："
 
 #: ../inc/functions-widgets.php:55 ../inc/functions-widgets.php:56
-#: ../inc/functions-widgets.php:59
+#: ../inc/functions-widgets.php:59 ../inc/functions-widgets.php:74
 msgid "Related Posts"
 msgstr "相关文章"
 
-#: ../inc/functions-widgets.php:181 ../inc/functions-widgets.php:182
-#: ../inc/functions-widgets.php:185
+#: ../inc/functions-widgets.php:184 ../inc/functions-widgets.php:185
+#: ../inc/functions-widgets.php:188 ../inc/functions-widgets.php:203
 msgid "Website stat"
 msgstr "网站统计"
 
-#: ../inc/functions-widgets.php:189
+#: ../inc/functions-widgets.php:192
 msgid "start time:"
 msgstr "开始时间："
 
-#: ../inc/functions-widgets.php:207
-#, php-format
-msgid "Posts Nums: %s"
-msgstr "文章数量： %s篇"
-
-#: ../inc/functions-widgets.php:208
-#, php-format
-msgid "Comments Nums: %s"
-msgstr "评论数量： %s条"
-
-#: ../inc/functions-widgets.php:209
-#, php-format
-msgid "Website age: %s"
-msgstr "网站年龄： %s天"
-
 #: ../inc/functions-widgets.php:210
 #, php-format
-msgid "Tags Nums: %s"
-msgstr "标签数量： %s个"
+msgid "Posts Nums %s units"
+msgstr "文章数量%s篇"
 
-#: ../inc/functions-widgets.php:226 ../inc/functions-widgets.php:227
+#: ../inc/functions-widgets.php:211
+#, php-format
+msgid "Comments Nums %s units"
+msgstr "评论数量%s条"
+
+#: ../inc/functions-widgets.php:212
+#, php-format
+msgid "Website age %s days"
+msgstr "本站建站%s天"
+
+#: ../inc/functions-widgets.php:213
+#, php-format
+msgid "Tags Nums %s units"
+msgstr "标签数量%s个"
+
+#: ../inc/functions-widgets.php:229 ../inc/functions-widgets.php:230
 msgid "Recent Comments For Gravatar"
 msgstr "最近评论带头像版"
 
-#: ../inc/functions-widgets.php:230
+#: ../inc/functions-widgets.php:233 ../inc/functions-widgets.php:248
 msgid "Recent Comments"
 msgstr "最近评论"
 
-#: ../inc/functions-widgets.php:275
+#: ../inc/functions-widgets.php:278
 #, php-format
 msgid "comments at < %s >"
 msgstr "在《%s》上的评论"
 
-#: ../inc/functions-widgets.php:292 ../inc/functions-widgets.php:293
+#: ../inc/functions-widgets.php:295 ../inc/functions-widgets.php:296
 msgid "Comments Wall For Gravatar"
 msgstr "评论墙头像版"
 
-#: ../inc/functions-widgets.php:296
+#: ../inc/functions-widgets.php:299 ../inc/functions-widgets.php:316
 msgid "Comments Wall"
 msgstr "评论墙"
 
-#: ../inc/functions-widgets.php:301
+#: ../inc/functions-widgets.php:304
 msgid "How many months:"
 msgstr "多少个月："
 
-#: ../inc/functions-widgets.php:343
+#: ../inc/functions-widgets.php:346
 #, php-format
 msgid "%1$s replied %2$s comments"
 msgstr "%1$s 评论了 %2$s 条"
