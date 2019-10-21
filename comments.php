@@ -67,7 +67,7 @@
  ?>
 	</ol>
 <div class="clearfix"></div>
-<?php /*output Trackbacks and Pingbacks*/ $havepings="pings"; foreach($comments as $comment){if(get_comment_type() != 'comment' && $comment->comment_approved != '0'){ $havepings = 1; break; }}if($havepings == 1) : ?>
+<?php if(pings_open()) : ?>
 <div id="pings">
 	<h3 id="pings-title"><span><?php echo hjyl_get_svg( array( 'icon' => 'chain' ) ); ?> <a><?php _e('Pingbacks', 'HJYL_HILAU'); ?></a></span></h3>
 		<ul id="pinglist"><?php wp_list_comments('type=pings&per_page=0&callback=hjyl_pings'); ?></ul>
