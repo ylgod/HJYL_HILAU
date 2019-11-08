@@ -36,3 +36,4 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 2019.10.17	添加自定义widget：读者墙、带头像的最新评论、博客统计、随机文章、热门文章、相关文章.
 2019.10.19	修改自定义widget：博客统计、相关文章的样式和输出形式；
 			添加页面随滚动条加载进度条[位置顶部].
+2019.11.08  修正PHP版本bug；更新版本3.2
