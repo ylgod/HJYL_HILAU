@@ -8,10 +8,8 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
 }
 //检测主题更新 
 require get_template_directory() . '/inc/theme-update-checker.php'; 
-$hjyl_update_checker = new ThemeUpdateChecker(
-	'HJYL_HILAU', //主题名字
-	'https://raw.githubusercontent.com/ylgod/HJYL_HILAU/master/check_update.json',  //info.json 的访问地址
-);
+$hjyl_update_checker = new ThemeUpdateChecker('HJYL_HILAU', 'https://raw.githubusercontent.com/ylgod/HJYL_HILAU/master/check_update.json');
+
 if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 
 	function HJYL_HILAU_setup() {
@@ -478,4 +476,3 @@ require( get_template_directory() . '/inc/functions-svg.php');
 require( get_template_directory() . '/inc/class-metabox.php');
 require( get_template_directory() . '/inc/functions-widgets.php');
 
-?>

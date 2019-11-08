@@ -110,4 +110,3 @@ function hjyl_get_svg( $args = array() ) {
 	return $svg;
 }
 
-?>
