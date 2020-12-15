@@ -67,8 +67,6 @@ function hjyl_comment( $comment, $args, $depth ) {
 		$cpp=get_option('comments_per_page');
 		$commentcount = $cpp * ($page - 1);
 	}
-	switch ( $comment->comment_type ) :
-		case '' :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<span class="floor">
@@ -104,7 +102,7 @@ function hjyl_comment( $comment, $args, $depth ) {
 
 		</div><!-- #comment-##  -->
 
-<?php break;endswitch;}endif;
+<?php }endif;
 //pingback and trackback
 function hjyl_pings($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;

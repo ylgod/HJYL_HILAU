@@ -4,7 +4,7 @@
 <?php if ( have_comments() ) : ?>
 		<h3 id="comments-title"><span><?php echo hjyl_get_svg( array( 'icon' => 'comment' ) ); ?><?php comments_popup_link( __( ' Leave a reply', 'HJYL_HILAU' ), __( ' 1 Comment ', 'HJYL_HILAU' ), __( ' % Comments', 'HJYL_HILAU' ),'comments-views',__( ' Comments Off', 'HJYL_HILAU' ) ); ?></span></h3>
 	<ol class="commentlist" id="comments">
-		<?php wp_list_comments( array( 'callback' => 'hjyl_comment' ) );?>
+		<?php wp_list_comments( array( 'callback' => 'hjyl_comment','type' => 'comment' ) );?>
 			<p id="comments-nav">
 				<?php paginate_comments_links('prev_text='.__('Previous', 'HJYL_HILAU').'&next_text='.__('Next', 'HJYL_HILAU').'');?>
 			</p>
@@ -67,7 +67,7 @@
  ?>
 	</ol>
 <div class="clearfix"></div>
-<?php if(pings_open()) : ?>
+<?php $havepings="pings"; foreach($comments as $comment){if(get_comment_type() != 'comment' && $comment->comment_approved != '0'){ $havepings = 1; break; }}if($havepings == 1) : ?>
 <div id="pings">
 	<h3 id="pings-title"><span><?php echo hjyl_get_svg( array( 'icon' => 'chain' ) ); ?> <a><?php _e('Pingbacks', 'HJYL_HILAU'); ?></a></span></h3>
 		<ul id="pinglist"><?php wp_list_comments('type=pings&per_page=0&callback=hjyl_pings'); ?></ul>
