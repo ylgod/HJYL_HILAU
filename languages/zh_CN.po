@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-19 13:02+0800\n"
-"PO-Revision-Date: 2019-10-19 13:03+0800\n"
+"POT-Creation-Date: 2021-05-20 20:21+0800\n"
+"PO-Revision-Date: 2021-05-20 20:21+0800\n"
 "Last-Translator: 皇家元林 <i@hjyl.org>\n"
 "Language-Team: hjyl.org <i@hjyl.org>\n"
 "Language: zh_CN\n"
@@ -13,8 +13,16 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x;esc_html__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../archive.php:20 ../index.php:17
+msgid "<<"
+msgstr "<<"
+
+#: ../archive.php:21 ../index.php:18
+msgid ">>"
+msgstr ">>"
 
 #: ../comments.php:2
 msgid ""
@@ -45,41 +53,41 @@ msgstr "上一页"
 msgid "Next"
 msgstr "下一页"
 
-#: ../comments.php:14 ../comments.php:46
+#: ../comments.php:15 ../comments.php:47
 msgid "(Toggle)"
 msgstr "(打开)"
 
-#: ../comments.php:15
+#: ../comments.php:16
 msgid "(Close)"
 msgstr "(关闭)"
 
-#: ../comments.php:46
+#: ../comments.php:47
 #, php-format
 msgid "Welcome <strong>%s</strong>"
 msgstr "欢迎回来 <strong>%s</strong>"
 
-#: ../comments.php:46
+#: ../comments.php:47
 msgid "Name"
 msgstr "名字"
 
-#: ../comments.php:46 ../comments.php:47
+#: ../comments.php:47 ../comments.php:48
 msgid "(required)"
 msgstr "(必填)"
 
-#: ../comments.php:47 ../inc/functions-customizer.php:219
+#: ../comments.php:48 ../inc/functions-customizer.php:199
 msgid "Email"
 msgstr "邮箱"
 
-#: ../comments.php:48
+#: ../comments.php:49
 msgid "Website"
 msgstr "网站"
 
-#: ../comments.php:53
+#: ../comments.php:54
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "你必须 <a href=\"%s\">登录</a> 才能发布评论。"
 
-#: ../comments.php:54
+#: ../comments.php:55
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -88,24 +96,24 @@ msgstr ""
 "<a href=\"%1$s\">%2$s</a>已登录。 <a href=\"%3$s\" title=\"登出账户\">退出？"
 "</a>"
 
-#: ../comments.php:61
+#: ../comments.php:62
 msgid "Leave a Reply"
 msgstr "发表评论"
 
-#: ../comments.php:62
+#: ../comments.php:63
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "回复 %s"
 
-#: ../comments.php:63
+#: ../comments.php:64
 msgid "Cancel reply"
 msgstr "取消回复"
 
-#: ../comments.php:64
+#: ../comments.php:65
 msgid "Post Comment"
 msgstr "发布评论"
 
-#: ../comments.php:72
+#: ../comments.php:73
 msgid "Pingbacks"
 msgstr "引用通告"
 
@@ -130,7 +138,7 @@ msgstr "https://wordpress.org/"
 msgid "Top Menu"
 msgstr "顶部菜单"
 
-#: ../functions.php:112 ../functions.php:337 ../inc/content-slide.php:44
+#: ../functions.php:112 ../functions.php:317 ../inc/content-slide.php:44
 #: ../inc/content-slide.php:66 ../inc/content-slide.php:82
 #: ../inc/functions-widgets.php:41 ../inc/functions-widgets.php:101
 #: ../inc/functions-widgets.php:161 ../inc/functions-widgets.php:277
@@ -139,86 +147,78 @@ msgstr "顶部菜单"
 msgid "Untitled #%s"
 msgstr "无题 #%s"
 
-#: ../functions.php:183
+#: ../functions.php:184
 msgid "Search"
 msgstr "搜索"
 
-#: ../functions.php:191 ../inc/header-breadcrumb.php:5
+#: ../functions.php:192 ../inc/header-breadcrumb.php:5
 msgid "Home"
 msgstr "首页"
 
-#: ../functions.php:199
+#: ../functions.php:200
 msgid "Single"
 msgstr "文章页"
 
-#: ../functions.php:207
+#: ../functions.php:208
 msgid "Pages"
 msgstr "页面"
 
-#: ../functions.php:215
+#: ../functions.php:216
 msgid "404"
 msgstr "404页面"
 
-#: ../functions.php:223
+#: ../functions.php:224
 msgid "Other"
 msgstr "其他页"
 
-#: ../functions.php:274
+#: ../functions.php:275
 msgid "Wait a moment..."
 msgstr "请稍候..."
 
-#: ../functions.php:275
+#: ../functions.php:276
 msgid "Good Comment"
 msgstr "提交成功"
 
-#: ../functions.php:285
-msgid "To first page"
-msgstr "跳转到第一页"
-
-#: ../functions.php:298
-msgid "To last page"
-msgstr "跳转到最后一页"
-
-#: ../functions.php:368
+#: ../functions.php:348
 #, php-format
 msgid "%s ago"
 msgstr "%s前"
 
-#: ../functions.php:373
+#: ../functions.php:353
 msgid "Just Now"
 msgstr "刚刚"
 
-#: ../functions.php:375
+#: ../functions.php:355
 msgid " years ago"
 msgstr " 年前"
 
-#: ../functions.php:376
+#: ../functions.php:356
 msgid " month ago"
 msgstr " 个月前"
 
-#: ../functions.php:377
+#: ../functions.php:357
 msgid " weeks ago"
 msgstr " 周前"
 
-#: ../functions.php:378
+#: ../functions.php:358
 msgid " days ago"
 msgstr " 天前"
 
-#: ../functions.php:379
+#: ../functions.php:359
 msgid " hours ago"
 msgstr " 小时前"
 
-#: ../functions.php:380
+#: ../functions.php:360
 msgid " minutes ago"
 msgstr " 分钟前"
 
-#: ../functions.php:381
+#: ../functions.php:361
 msgid " seconds ago"
 msgstr " 秒前"
 
 #: ../header.php:120 ../header.php:122 ../inc/content.php:61
-#: ../inc/content.php:63 ../inc/functions-comment.php:91
-#: ../inc/functions-comment.php:155 ../inc/functions-comment.php:156
+#: ../inc/content.php:63 ../inc/functions-comment.php:89
+#: ../inc/functions-comment.php:153 ../inc/functions-comment.php:154
 #, php-format
 msgid "%s"
 msgstr "%s"
@@ -360,11 +360,11 @@ msgstr "此邮件由系统自动生成，请勿回复."
 msgid "Email me if replied"
 msgstr "有人回复时邮件通知我"
 
-#: ../inc/functions-comment.php:150
+#: ../inc/functions-comment.php:148
 msgid "Your comment is awaiting moderation."
 msgstr "你的评论正在等待审核。"
 
-#: ../inc/functions-comment.php:156
+#: ../inc/functions-comment.php:154
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s %2$s"
@@ -398,87 +398,79 @@ msgid "Blog if selected(Hide Slide part)"
 msgstr "选中转换为博客模式（隐藏幻灯片部分）"
 
 #: ../inc/functions-customizer.php:86
-msgid "SCKEY"
-msgstr "SCKEY"
-
-#: ../inc/functions-customizer.php:87
-msgid "No SCKEY? you can register on https://sc.ftqq.com"
-msgstr "没有SCKEY？你可以到https://sc.ftqq.com注册一个"
-
-#: ../inc/functions-customizer.php:106
 msgid "Alipay QRcode"
 msgstr "支付宝二维码"
 
-#: ../inc/functions-customizer.php:107
+#: ../inc/functions-customizer.php:87
 msgid "upload your alipay QRcode. 150px*150px"
 msgstr "上传你的支付宝二维码。建议150px*150px"
 
-#: ../inc/functions-customizer.php:125
+#: ../inc/functions-customizer.php:105
 msgid "WeChat Pay QRcode"
 msgstr "微信支付二维码"
 
-#: ../inc/functions-customizer.php:126
+#: ../inc/functions-customizer.php:106
 msgid "upload your WeChat Pay QRcode. 150px*150px"
 msgstr "上传你的微信支付二维码。建议150px*150px"
 
-#: ../inc/functions-customizer.php:142
+#: ../inc/functions-customizer.php:122
 msgid "Select category for slide"
 msgstr "选择一个分类显示幻灯片"
 
-#: ../inc/functions-customizer.php:161
+#: ../inc/functions-customizer.php:141
 msgid "QQ No."
 msgstr "QQ号码."
 
-#: ../inc/functions-customizer.php:181
+#: ../inc/functions-customizer.php:161
 msgid "Weibo Account"
 msgstr "微博号"
 
-#: ../inc/functions-customizer.php:200
+#: ../inc/functions-customizer.php:180
 msgid "WeChat QRcode"
 msgstr "微信二维码"
 
-#: ../inc/functions-customizer.php:237
+#: ../inc/functions-customizer.php:217
 msgid "Only Show AD on Home Page"
 msgstr "仅首页显示顶部广告"
 
-#: ../inc/functions-customizer.php:256
+#: ../inc/functions-customizer.php:236
 msgid "Home Ad"
 msgstr "首页顶部广告"
 
-#: ../inc/functions-customizer.php:257 ../inc/functions-customizer.php:297
-#: ../inc/functions-customizer.php:317
+#: ../inc/functions-customizer.php:237 ../inc/functions-customizer.php:277
+#: ../inc/functions-customizer.php:297
 msgid "AD for 468px*60px"
 msgstr "468px*60px大小的广告"
 
-#: ../inc/functions-customizer.php:276
+#: ../inc/functions-customizer.php:256
 msgid "Single Right Ad"
 msgstr "文章右侧广告"
 
-#: ../inc/functions-customizer.php:277
+#: ../inc/functions-customizer.php:257
 msgid "AD for 336px*280px"
 msgstr "336px*280px大小的广告"
 
-#: ../inc/functions-customizer.php:296
+#: ../inc/functions-customizer.php:276
 msgid "Singlar Bottom Ad"
 msgstr "页面底部广告"
 
-#: ../inc/functions-customizer.php:316
+#: ../inc/functions-customizer.php:296
 msgid "Archive Ad"
 msgstr "归档页广告"
 
-#: ../inc/functions-customizer.php:336
+#: ../inc/functions-customizer.php:316
 msgid "keywords"
 msgstr "关键词keywords"
 
-#: ../inc/functions-customizer.php:337
+#: ../inc/functions-customizer.php:317
 msgid "keywords, separate by \",\""
 msgstr "关键词，以英文逗号\",\"隔开"
 
-#: ../inc/functions-customizer.php:356 ../inc/functions-customizer.php:357
+#: ../inc/functions-customizer.php:336 ../inc/functions-customizer.php:337
 msgid "description"
 msgstr "描述description"
 
-#: ../inc/functions-customizer.php:376 ../inc/functions-customizer.php:377
+#: ../inc/functions-customizer.php:356 ../inc/functions-customizer.php:357
 msgid "Footer Code"
 msgstr "底部代码"
 
@@ -489,26 +481,6 @@ msgstr "请用数组的形式定义默认参数。"
 #: ../inc/functions-svg.php:40
 msgid "Please define an SVG icon filename."
 msgstr "请定义SVG图标文件名。"
-
-#: ../inc/functions-weixin-push.php:8
-msgid "You have new Message, Please Check it"
-msgstr "网站上有新的评论，请及时查看"
-
-#: ../inc/functions-weixin-push.php:11
-msgid "Comment Author: "
-msgstr "评论人： "
-
-#: ../inc/functions-weixin-push.php:12
-msgid "Post Title: "
-msgstr "文章标题： "
-
-#: ../inc/functions-weixin-push.php:13
-msgid "Post Link: "
-msgstr "文章链接： "
-
-#: ../inc/functions-weixin-push.php:14
-msgid "Post Content: "
-msgstr "评论内容： "
 
 #: ../inc/functions-widgets.php:6 ../inc/functions-widgets.php:7
 #: ../inc/functions-widgets.php:10 ../inc/functions-widgets.php:25
@@ -730,3 +702,30 @@ msgstr "上一篇: %title"
 #: ../single.php:16
 msgid "Next: %title"
 msgstr "下一篇: %title"
+
+#~ msgid "To first page"
+#~ msgstr "跳转到第一页"
+
+#~ msgid "To last page"
+#~ msgstr "跳转到最后一页"
+
+#~ msgid "SCKEY"
+#~ msgstr "SCKEY"
+
+#~ msgid "No SCKEY? you can register on https://sc.ftqq.com"
+#~ msgstr "没有SCKEY？你可以到https://sc.ftqq.com注册一个"
+
+#~ msgid "You have new Message, Please Check it"
+#~ msgstr "网站上有新的评论，请及时查看"
+
+#~ msgid "Comment Author: "
+#~ msgstr "评论人： "
+
+#~ msgid "Post Title: "
+#~ msgstr "文章标题： "
+
+#~ msgid "Post Link: "
+#~ msgstr "文章链接： "
+
+#~ msgid "Post Content: "
+#~ msgstr "评论内容： "

@@ -65,7 +65,7 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send'){
 	$status = wp_insert_post( $tougao );
 	if ($status != 0){
 		setcookie("tougao", time(), time()+1);
-		echo ('<div style="text-align:center;">'.'<title>'.'你好，刘！'.'</title>'.'</div>');
+		echo ('<div style="text-align:center;">'.'<title>'.bloginfo('name').'</title>'.'</div>');
 		echo ('<div style="text-align:center;">'.'<meta charset="UTF-8" /><meta http-equiv="refresh" content="5;URL=http://www.hilau.com">'.'</div>');
 		echo ('<div style="position:relative;font-size:14px;margin-top:100px;text-align:center;">'.'投稿成功，感谢投稿，5秒钟后将返回网站首页！'.'</div>');
 		echo ('<div style="position:relative;font-size:20px;margin-top:30px;text-align:center;">'.'<a href="/" >'.'立即返回网站首页'.'</a>'.'</div>');

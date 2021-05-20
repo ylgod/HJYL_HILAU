@@ -70,26 +70,6 @@ function hjyl_customize_register( $wp_customize ) {
 		)
 	);
 	
-	//评论微信推送
-	$wp_customize->add_setting(
-    'hjyl_hilau_options[wxpush]',
-		array(
-			'default' => '',
-			'sanitize_callback' => 'sanitize_text_field',
-			'transport' => 'postMessage',
-			'type' => 'theme_mod',
-		)
-	);
-	$wp_customize->add_control(
-    'hjyl_hilau_options[wxpush]',
-		array(
-			'label' => __('SCKEY','HJYL_HILAU'),
-			'description' => esc_html__( 'No SCKEY? you can register on https://sc.ftqq.com', 'HJYL_HILAU'),
-			'section' => 'basic_options',
-			'type' => 'text',
-		)
-	);
-	
 	//打赏--->支付宝二维码(建议尺寸150*150)
 	$wp_customize->add_setting(
     'hjyl_hilau_options[alipay]',

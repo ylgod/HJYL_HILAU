@@ -2,7 +2,7 @@
 Author:HJYL
 * by hjyl.org
 Requires at least: 5.0+
-Tested up to: 5.2.3
+Tested up to: 5.7.2
 
 == ABOUT HJYL_HILAU ==
 For questions, comments or bug reports, please go to
@@ -38,3 +38,8 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 			添加页面随滚动条加载进度条[位置顶部].
 2019.11.08  修正PHP版本bug；更新版本3.2
 2020.12.15	修正WordPress升级导致的评论列表消失的bug.更新版本3.3
+2021.05.20	改变logo文字字体为秦小篆；
+			启用官方默认分页导航；
+			评论框位置调整；
+			修正一些代码，更接近官方主题标准；
+			更新版本至3.4.

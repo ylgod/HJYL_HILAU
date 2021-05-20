@@ -8,13 +8,15 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
 }
 //检测主题更新 
 require get_template_directory() . '/inc/theme-update-checker.php'; 
-$hjyl_update_checker = new ThemeUpdateChecker('HJYL_HILAU', 'https://raw.githubusercontent.com/ylgod/HJYL_HILAU/master/check_update.json');
+$hjyl_update_checker = new ThemeUpdateChecker('HJYL_HILAU', 'https://cdn.jsdelivr.net/gh/ylgod/HJYL_HILAU@master/check_update.json');
 
 if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 
 	function HJYL_HILAU_setup() {
 		//Translations can be filed in the /languages/ directory.
 		load_theme_textdomain( 'HJYL_HILAU', get_template_directory() . '/languages' );
+		
+		add_theme_support( "custom-header");
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -115,13 +117,14 @@ function hjyl_document_title_parts( $title ){
 
 //调用bing没图url
 function hjyl_img(){
-    global $wp_filesystem;
-    require_once ( ABSPATH . '/wp-admin/includes/file.php' );
-    WP_Filesystem();
-    $str = $wp_filesystem ->get_contents('https://cn.bing.com/HPImageArchive.aspx?idx=0&n=1');
-    if(preg_match("/<url>(.+?)<\/url>/is",$str,$matches)){
-        $imgurl='https://cn.bing.com'.$matches[1];
-    }
+	global $wp_filesystem;
+	require_once ( ABSPATH . '/wp-admin/includes/file.php' );
+	WP_Filesystem();
+	$bing = "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1";
+	$Pinfo = json_decode($wp_filesystem->get_contents($bing));
+	$img = $Pinfo->{"images"}[0]->{"url"};
+	//$imgcopyright = $Pinfo->{"images"}[0]->{"copyright"};
+	$imgurl = "https://cn.bing.com".$img;
 	return $imgurl;
 }
 
@@ -240,30 +243,30 @@ add_action( 'after_setup_theme', 'hjyl_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function hjyl_script() {
-	wp_enqueue_style( 'hjyl-hilau', get_stylesheet_uri(), array(), '20201215', 'all' );
+	wp_enqueue_style( 'hjyl-hilau', get_stylesheet_uri(), array(), '20210519', 'all' );
 	wp_deregister_script( 'l10n' );
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js', array(), '20201215', false);
+	wp_register_script( 'jquery', 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js', array(), '20210519', false);
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js', array(), '20201215', false );
-	wp_enqueue_style('bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css', array(), '20201215', 'all');
-	wp_enqueue_script( 'hjyl', get_theme_file_uri( '/js/hjyl.js' ), array(), '20201215', true );
+	wp_enqueue_script( 'bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js', array(), '20210519', false );
+	wp_enqueue_style('bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css', array(), '20210519', 'all');
+	wp_enqueue_script( 'hjyl', get_theme_file_uri( '/js/hjyl.js' ), array(), '20210519', true );
 	if ( ! has_custom_logo() ) {
-		wp_enqueue_script( 'hjyl_logo', get_theme_file_uri( '/js/logo.js' ), array(), '20201215', true );
+		wp_enqueue_script( 'hjyl_logo', get_theme_file_uri( '/js/logo.js' ), array(), '20210519', true );
 	}
 	if( is_page('archives') ){
-		wp_enqueue_script( 'archives', get_template_directory_uri() . '/js/archives.js', array(), '20201215', false);
-		wp_enqueue_style( 'archives', get_template_directory_uri() . '/css/archives.css', array(), '20201215', 'screen');
+		wp_enqueue_script( 'archives', get_template_directory_uri() . '/js/archives.js', array(), '20210519', false);
+		wp_enqueue_style( 'archives', get_template_directory_uri() . '/css/archives.css', array(), '20210519', 'screen');
 	};
 	if ( is_singular() ) {
-	wp_enqueue_script( 'jquery-qrcode', 'https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js', array(), '20201215', true);
-	wp_enqueue_script( 'qrcode-js', get_theme_file_uri('/js/qrcode.js'), array('jquery'), '20201215', true);
-	wp_enqueue_script( 'lightbox-js', 'https://cdn.bootcss.com/lightbox2/2.11.1/js/lightbox.min.js', array('jquery'), '20201215', true);
-	wp_enqueue_style('lightbox', 'https://cdn.bootcss.com/lightbox2/2.11.1/css/lightbox.min.css', array(), '20201215', 'all');
+	wp_enqueue_script( 'jquery-qrcode', 'https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js', array(), '20210519', true);
+	wp_enqueue_script( 'qrcode-js', get_theme_file_uri('/js/qrcode.js'), array('jquery'), '20210519', true);
+	wp_enqueue_script( 'lightbox-js', 'https://cdn.bootcss.com/lightbox2/2.11.1/js/lightbox.min.js', array('jquery'), '20210519', true);
+	wp_enqueue_style('lightbox', 'https://cdn.bootcss.com/lightbox2/2.11.1/css/lightbox.min.css', array(), '20210519', 'all');
 	}
 	if ( is_singular() && comments_open() ) {
 	wp_enqueue_script( 'comment-reply' );
-	wp_enqueue_script( 'ajax-comment', get_theme_file_uri('/js/comments-ajax.js'), array('jquery'), '20201215', true);
+	wp_enqueue_script( 'ajax-comment', get_theme_file_uri('/js/comments-ajax.js'), array('jquery'), '20210519', true);
 	}
 	wp_localize_script( 'ajax-comment', 'ajaxcomment', array(
 		'ajax_url' => admin_url('admin-ajax.php'),
@@ -274,27 +277,6 @@ function hjyl_script() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'hjyl_script' );
-
-	//分页导航	
-function par_pagenavi($range = 9){
-	global $paged, $wp_query;
-	$max_page = $wp_query->max_num_pages;
-	if($max_page > 1){if(!$paged){$paged = 1;}
-	if($paged != 1){echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='".__('To first page', 'HJYL_HILAU')."'>".hjyl_get_svg( array( 'icon' => 'arrow-dleft' ) )."</a>";}
-	previous_posts_link(hjyl_get_svg( array( 'icon' => 'arrow-left' ) ));
-    if($max_page > $range){
-		if($paged < $range){for($i = 1; $i <= ($range + 1); $i++){echo "<a href='" . get_pagenum_link($i) ."'";
-		if($i==$paged)echo " class='current'";echo ">$i</a>";}}
-    elseif($paged >= ($max_page - ceil(($range/2)))){
-		for($i = $max_page - $range; $i <= $max_page; $i++){echo "<a href='" . get_pagenum_link($i) ."'";
-		if($i==$paged)echo " class='current'";echo ">$i</a>";}}
-	elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))){
-		for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){echo "<a href='" . get_pagenum_link($i) ."'";if($i==$paged) echo " class='current'";echo ">$i</a>";}}}
-    else{for($i = 1; $i <= $max_page; $i++){echo "<a href='" . get_pagenum_link($i) ."'";
-    if($i==$paged)echo " class='current'";echo ">$i</a>";}}
-	next_posts_link(hjyl_get_svg( array( 'icon' => 'arrow-right' ) ));
-    if($paged != $max_page){echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='".__('To last page', 'HJYL_HILAU')."'>".hjyl_get_svg( array( 'icon' => 'arrow-dright' ) )."</a>";}}
-}
 
 // 文末版权声明
 function hjyl_content_copyright($content)
@@ -471,7 +453,6 @@ require( get_template_directory() . '/inc/functions-customizer.php' );
 // Custom Category control 
 require( get_template_directory() . '/inc/category-dropdown-custom-control.php');
 require( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
-require( get_template_directory() . '/inc/functions-weixin-push.php');
 require( get_template_directory() . '/inc/functions-svg.php');
 require( get_template_directory() . '/inc/class-metabox.php');
 require( get_template_directory() . '/inc/functions-widgets.php');

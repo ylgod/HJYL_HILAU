@@ -5,7 +5,7 @@ Template Name: 投稿页面
 get_header();
 $options = get_theme_mod( 'hjyl_hilau_options');
 ?>
-<script type="text/javascript" src="<?php echo home_url(); ?>/wp-includes/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(home_url()); ?>/wp-includes/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
   tinymce.init({
     selector : '#tougao_content',

@@ -10,6 +10,7 @@
 			</p>
 			
 <?php endif; ?>
+	</ol>
 				<script type="text/javascript" charset="utf-8">
 				var changeMsg = "<?php echo  esc_js( __('(Toggle)', 'HJYL_HILAU') ); ?>";
 				var closeMsg = "<?php echo esc_js( __('(Close)', 'HJYL_HILAU') ); ?>";
@@ -49,7 +50,7 @@
 	);
         $comment_form_args = array(
           	'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
-            'comment_field'        => '<p class="comment-form-comment"><textarea class="form-control" aria-required="true" rows="8" cols="70" name="comment" id="comment" onkeydown="if(event.ctrlKey){if(event.keyCode==13){document.getElementById(\'submit\').click();return false}};"></textarea></p>',
+            'comment_field'        => '<p class="comment-form-comment"><textarea class="form-control" aria-required="true" rows="8" cols="70" name="comment" id="comment"></textarea></p>',
             'must_log_in'          => '<p class="must-log-in">' .  sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'HJYL_HILAU' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
             'logged_in_as'         => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'HJYL_HILAU' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
             'comment_notes_before' => null,
@@ -65,7 +66,7 @@
     );
     comment_form($comment_form_args);
  ?>
-	</ol>
+
 <div class="clearfix"></div>
 <?php $havepings="pings"; foreach($comments as $comment){if(get_comment_type() != 'comment' && $comment->comment_approved != '0'){ $havepings = 1; break; }}if($havepings == 1) : ?>
 <div id="pings">

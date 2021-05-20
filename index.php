@@ -13,9 +13,10 @@
 				get_template_part( 'inc/content');
 			}
 				// Previous/next page navigation.
-				echo '<nav class="hjylNav" aria-label="Page navigation">';
-					par_pagenavi(4);
-				echo '</nav>';
+				the_posts_pagination( array(
+				'prev_text'          => __('<<', 'HJYL_HILAU'),
+				'next_text'          => __('>>', 'HJYL_HILAU'),
+				) );
 			} else {
 				get_template_part( 'inc/content', 'none');
 			}
