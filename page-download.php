@@ -27,10 +27,10 @@ empty($values3) ? Header('Location:/') : $theCode3 = $values3[0];
 	<meta name="description" content="<?php printf(__('The download page for the resource named "%1$s" in the article of %2$s', 'HJYL_HILAU'), $theCode1, $title); ?>" />
 	<title><?php printf(__('The download page for %s', 'HJYL_HILAU'), $theCode1); ?> &#8211; <?php bloginfo( 'name' ); ?></title>
 <link rel='stylesheet' id='hjyl-hilau-css'  href='<?php echo get_stylesheet_uri(); ?>' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap-css'  href='https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css?ver=20191012' type='text/css' media='all' />
-<script type='text/javascript' src='https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js?ver=20191012'></script>
-<script type='text/javascript' src='https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js?ver=20191012'></script>
-<script type='text/javascript' src='<?php echo esc_url(get_template_directory_uri()); ?>/js/hjyl.js'></script>
+<link rel='stylesheet' id='bootstrap-css'  href='//cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css?ver=20220130' type='text/css' media='all' />
+<script src='//cdn.staticfile.org/jquery/3.6.0/jquery.min.js?ver=20220130'></script>
+<script src='//cdn.staticfile.org/twitter-bootstrap/4.6.1/js/bootstrap.min.js?ver=20220130'></script>
+<script src='<?php echo esc_url(get_template_directory_uri()); ?>/js/hjyl.js'></script>
 <?php if ( !has_custom_logo() ) : ?>
 <script type='text/javascript' src='<?php echo esc_url(get_template_directory_uri()); ?>/js/logo.js'></script>
 <?php endif; ?>
