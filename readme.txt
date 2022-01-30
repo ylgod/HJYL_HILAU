@@ -43,3 +43,4 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 			评论框位置调整；
 			修正一些代码，更接近官方主题标准；
 			更新版本至3.4.
+2022.01.30  bootstrap CDN断了,重新更新一下.
