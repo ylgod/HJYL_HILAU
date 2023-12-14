@@ -1,6 +1,5 @@
-<?php $options = get_theme_mod( 'hjyl_hilau_options'); ?>
 			<nav id="breadcrumb" class="row">
-				<ol class="breadcrumb col-xs-12 col-md-9">
+				<ol class="breadcrumb col-xs-12 col-md-8">
 					<li class="breadcrumb-item">
 						<?php echo hjyl_get_svg( array( 'icon' => 'home' ) ); ?> <a href="<?php echo esc_url(home_url()); ?>"><?php _e('Home', 'HJYL_HILAU'); ?></a>
 					</li>
@@ -51,20 +50,20 @@
 				  </li>
 				  
 				</ol>
-				  <div class="socialink col-xs-12 col-md-3 alert-warning">
+				  <div class="socialink col-xs-12 col-md-4 alert-warning">
 				<?php if(!is_singular()) {?>
 					<span><?php _e('Contact : ', 'HJYL_HILAU'); ?></span>
-					<?php if(!empty($options['social_qq'])){ ?>
-					<a href="tencent://Message/?Uin=<?php echo $options['social_qq']; ?>&amp;websiteName=hilau.com&amp;Menu=yes"><span class="tooltiptext"><?php _e('Follow me on QQ', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'qq' ) ); ?><span class="rotate"></span></a>
+					<?php if(!empty(of_get_option('social_qq'))){ ?>
+					<a href="tencent://Message/?Uin=<?php echo of_get_option('social_qq'); ?>&amp;websiteName=hilau.com&amp;Menu=yes"><span class="tooltiptext"><?php _e('Follow me on QQ', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'qq' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
-					<?php if(!empty($options['social_weibo'])){ ?>
-					<a href="https://weibo.com/<?php echo $options['social_weibo']; ?>?is_all=1"><span class="tooltiptext"><?php _e('Follow me on Weibo', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'weibo' ) ); ?><span class="rotate"></span></a>
+					<?php if(!empty(of_get_option('social_weibo'))){ ?>
+					<a href="https://weibo.com/<?php echo of_get_option('social_weibo'); ?>?is_all=1"><span class="tooltiptext"><?php _e('Follow me on Weibo', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'weibo' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
-					<?php if(!empty($options['social_wechat'])){ ?>
-					<a href="#" class="bds_weixin"><span class="tooltiptext"><img width="180" height="180" src="<?php echo $options['social_wechat']; ?>" alt="<?php _e('Follow me on weChat', 'HJYL_HILAU'); ?>"></span><?php echo hjyl_get_svg( array( 'icon' => 'qrcode' ) ); ?><span class="rotate"></span></a>
+					<?php if(!empty(of_get_option('social_wechat'))){ ?>
+					<a href="#" class="bds_weixin"><span class="tooltiptext"><img width="180" height="180" src="<?php echo of_get_option('social_wechat'); ?>" alt="<?php _e('Follow me on weChat', 'HJYL_HILAU'); ?>"></span><?php echo hjyl_get_svg( array( 'icon' => 'qrcode' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
-					<?php if(!empty($options['social_mail'])){ ?>
-					<a href="mailto:<?php echo $options['social_mail']; ?>"><span class="tooltiptext"><?php _e('Follow me on Email', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'email' ) ); ?><span class="rotate"></span></a>
+					<?php if(!empty(of_get_option('social_mail'))){ ?>
+					<a href="mailto:<?php echo of_get_option('social_mail'); ?>"><span class="tooltiptext"><?php _e('Follow me on Email', 'HJYL_HILAU'); ?></span><?php echo hjyl_get_svg( array( 'icon' => 'email' ) ); ?><span class="rotate"></span></a>
 					<?php } ?>
 				<?php }else{ ?>
 					<div class="share-button">

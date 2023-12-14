@@ -8,9 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <?php
-$options = get_theme_mod('hjyl_hilau_options');
-	$keywords = isset($options['keywords'] ) ? $options['keywords'] : '';
-	$description = isset($options['description'] ) ? $options['description'] : '';
+	$keywords = of_get_option('keywords', '');
+	$description = of_get_option('description', '');
 if(is_singular()){
 	if ($post->post_excerpt) {
 		$description     = $post->post_excerpt;
@@ -22,20 +21,21 @@ if(is_singular()){
 	}
 	$tags = wp_get_post_tags($post->ID);
 	foreach ($tags as $tag ) {
-		$keywords .= $tag->name . ', ';
+		$keywords .= ', ' .$tag->name;
 	}
 } elseif ( is_category() ) {
 	$category = get_the_category();
 	$keywords = $category[0]->cat_name;
 	$description = category_description();
 }else{
-	$keywords = isset($options['keywords'] ) ? $options['keywords'] : '';
-	$description = isset($options['description'] ) ? $options['description'] : '';
+	$keywords;
+	$description;
 }
 ?>
 	<meta name="keywords" content="<?php echo $keywords; ?>" />
 	<meta name="description" content="<?php echo $description; ?>" />
 	<?php wp_head(); ?>
+	<?php echo of_get_option('head_code'); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -55,40 +55,29 @@ if(is_singular()){
 				<?php endif; ?>
 
 				</div><!-- .topNav -->
-			<?php if ( has_nav_menu( 'top-menu' ) ) : ?>
-			<nav class="navbar navbar-expand-md navbar-light bg-light justify-content-end" role="navigation">
+			<nav id="hjyl_menu" class="navbar navbar-light bg-light" role="navigation">
 				<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-					<?php
-					wp_nav_menu( array(
-						'theme_location'    => 'top-menu',
-						'depth'             => 2,
-						'container'         => 'div',
-						'container_class'   => 'collapse navbar-collapse',
-						'container_id'      => 'bs-example-navbar-collapse-1',
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-						'walker'            => new WP_Bootstrap_Navwalker(),
-					) );
-					?>
+				<?php
+					if(!wp_is_mobile()) {
+						wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'hjyl_wp_list_pages', 'container' => false ) );
+					}else{
+						wp_nav_menu( array( 'theme_location' => 'mobile', 'fallback_cb' => 'hjyl_wp_list_pages', 'container' => false ) );
+					}
+				?>
 				</div>
 				<div class="reading-bar"></div>
 			</nav>
-			<?php endif; ?>
 			<!-- .home top 468*60 start -->
-			<?php if(!empty($options['is_home_ad']) && $options['is_home_ad'] == 1) : ?>
-			<?php if(is_home() && !empty($options['home_google_ad'])){ ?>
+			<?php if(of_get_option('is_home_ad') == 1) : ?>
+			<?php if(is_home() && !empty(of_get_option('home_google_ad'))){ ?>
 				<figure class="home_google_ad">
-				<?php echo $options['home_google_ad']; ?>
+				<?php echo of_get_option('home_google_ad'); ?>
 				</figure>
 			<?php } ?>
 			<?php else: ?>
-			<?php if(!empty($options['home_google_ad'])){ ?>
+			<?php if(!empty(of_get_option('home_google_ad'))){ ?>
 				<figure class="home_google_ad">
-				<?php echo $options['home_google_ad']; ?>
+				<?php echo of_get_option('home_google_ad'); ?>
 				</figure>
 			<?php } ?>
 			<?php endif; ?>

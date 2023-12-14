@@ -1,9 +1,9 @@
-<?php get_header(); $options = get_theme_mod('hjyl_hilau_options'); ?>
+<?php get_header(); ?>
 <?php
-	$is_blog = isset($options['is_blog'] ) ? $options['is_blog'] : 0;
-	if(is_home() && !is_paged() && $is_blog == 0){ ?>		
+	if(is_home() && !is_paged() && of_get_option('is_blog') != 1){ 
+?>		
 <?php get_template_part( 'inc/content', 'slide'); ?>
-<?php } ?>
+<?php }else{ ?>
 		<section id="primary" class="content-area row">
 			<main id="main" class="site-main col-xs-12 <?php if( is_active_sidebar( 'home' )) { ?> col-md-9 col-lg-9 <?php }else{ ?> col-md-12 col-lg-12<?php } ?>">
 			<?php
@@ -28,5 +28,5 @@
 <?php get_sidebar(); ?>
 		
 		</section><!-- .content-area -->
-		
+<?php } ?>	
 <?php get_footer(); ?>

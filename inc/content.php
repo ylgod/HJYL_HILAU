@@ -1,4 +1,3 @@
-<?php $options = get_theme_mod( 'hjyl_hilau_options'); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
 					<figure>
@@ -28,9 +27,9 @@
 				<div class="entry-content">
 					<?php
 						if(is_singular()){
-							if(!empty($options['single_google_ad'])){
+							if(!empty(of_get_option('single_google_ad'))){
 							echo '<figure class="single_google_ad">';
-								echo $options['single_google_ad'];
+								echo of_get_option('single_google_ad');
 							echo '</figure>';
 							}
 							the_content();
@@ -43,9 +42,9 @@
 
 				<footer class="entry-footer">
 				<?php
-					if(is_singular() && !empty($options['singlar_google_ad'])){
+					if(is_singular() && !empty(of_get_option('singlar_google_ad'))){
 					echo '<figure class="singlar_google_ad mx-auto">';
-					echo $options['singlar_google_ad'];
+					echo of_get_option('singlar_google_ad');
 					echo '</figure>';
 					}
 				?>
@@ -73,7 +72,7 @@
 				<div class="reward">
 					<div class="reward-button">
 					  <?php _e('$', 'HJYL_HILAU'); ?>
-					  <span class="reward-code"><span class="alipay-code"><img class="alipay-img" src="<?php if(!empty($options['alipay'])) { echo $options['alipay']; } ?>"><b><?php _e('Alipay Donate', 'HJYL_HILAU'); ?></b></span><span class="wechat-code"><img class="wechat-img" src="<?php if(!empty($options['wxpay'])) { echo $options['wxpay']; } ?>"><b><?php _e('WeChat Pay Donate', 'HJYL_HILAU'); ?></b></span></span>
+					  <span class="reward-code"><span class="alipay-code"><img class="alipay-img" src="<?php if(!empty(of_get_option('alipay'))) { echo of_get_option('alipay'); } ?>"><b><?php _e('Alipay Donate', 'HJYL_HILAU'); ?></b></span><span class="wechat-code"><img class="wechat-img" src="<?php if(!empty(of_get_option('wxpay'))) { echo of_get_option('wxpay'); } ?>"><b><?php _e('WeChat Pay Donate', 'HJYL_HILAU'); ?></b></span></span>
 					</div>
 					<p class="reward-notice"><?php _e('If valuable for you, welcome to donate.', 'HJYL_HILAU'); ?></p>
 				 

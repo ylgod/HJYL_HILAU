@@ -20,7 +20,7 @@ if(strlen($_SERVER['REQUEST_URI']) > 384 ||
         @exit;
 }
 //通过QUERY_STRING取得完整的传入数据，然后取得url=之后的所有值，兼容性更好
-$t_url = htmlspecialchars(preg_replace('/^url=(.*)$/i','$1',$_SERVER["QUERY_STRING"]));
+$t_url = preg_replace('/^url=(.*)$/i','$1',$_SERVER["QUERY_STRING"]);
 
 //此处可以自定义一些特别的外链，不需要可以删除以下5行
 foreach($cars as $k=>$val){
@@ -38,23 +38,23 @@ if(!empty($t_url)) {
     }
     //对取值进行网址校验和判断
     preg_match('/^(http|https|thunder|qqdl|ed2k|Flashget|qbrowser):\/\//i',$t_url,$matches);
-if($matches){
-    $url=$t_url;
-    $title='页面加载中,请稍候...';
-} else {
-    preg_match('/\./i',$t_url,$matche);
-    if($matche){
-        $url='http://'.$t_url;
-        $title='页面加载中,请稍候...';
+    if($matches){
+        $url = $t_url;
+        $title = '页面加载中,请稍候...';
     } else {
-        $url = 'http://'.$_SERVER['HTTP_HOST'];
-        $title='参数错误，正在返回首页...';
+        preg_match('/\./i',$t_url,$matche);
+        if($matche){
+            $url = 'http://'.$t_url;
+            $title = '页面加载中,请稍候...';
+        } else {
+            $url = 'http://'.$_SERVER['HTTP_HOST'];
+            $title = '参数错误，正在返回首页...';
+        }
     }
-}
-} else {
-    $title = '参数缺失，正在返回首页...';
-    $url = 'http://'.$_SERVER['HTTP_HOST'];
-}
+    } else {
+        $title = '参数缺失，正在返回首页...';
+        $url = 'http://'.$_SERVER['HTTP_HOST'];
+    }
 ?>
 <html>
 <!--

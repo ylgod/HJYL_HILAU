@@ -1,30 +1,68 @@
 $(document).ready(function(){ //Begin jQuery
 
-$(".carousel-inner a:first-child").addClass("active");
-
-//up to top
-$body=(window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
-$(window).scroll(function(){
-	if($(window).scrollTop()>=300){
-		$('#hjylUp').fadeIn(600);
-	}else{
-		$('#hjylUp').fadeOut(600);
-}});
-$('#hjylUp').click(function() {
-	$body.animate({
-		scrollTop: 0
-	}, 600)
-});
-//add external link to entry a tag;
-$('.entry-content p a').each(function(){
-    $self = $(this);
-    if(!$self.has('img, button').length){
-            $self.append('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(178,34,34,1)" fill-rule="evenodd" d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"/></svg>');
+    /****二级菜单****/
+    navMenuEl = document.getElementById( 'hjyl_menu' );
+    subMenu = $('.menu-item-has-children');
+    if ( ! subMenu ) {
+        return;
+    }else{
+        var subMenuToggle = $('.sub-menu-toggle');
+    $('.sub-menu-toggle').on('click', function(){
+        var sMt = subMenuToggle.index(this);
+        if('true' !==$(this).attr( 'aria-expanded')){
+            $('.hjyl-jump_to_top:eq('+sMt+')').css('display', 'block');
+            $('.hjyl-jump_to_bottom:eq('+sMt+')').css('display', 'none');
+            $('ul.sub-menu:eq('+sMt+')').css('display', 'block'); 
+            $(this).attr( 'aria-expanded', 'true' );
+        }else{
+            $('.hjyl-jump_to_top:eq('+sMt+')').css('display', 'none');
+            $('.hjyl-jump_to_bottom:eq('+sMt+')').css('display', 'block');
+            $('ul.sub-menu:eq('+sMt+')').css('display', 'none');    
+            $(this).attr( 'aria-expanded', 'false' );
+        }
+    }); 
+    $('.menu-item-has-children').on('hover', function(){
+        var sMt = subMenu.index(this);
+        console.log(sMt);
+        if('true' !==$(this).attr( 'aria-expanded')){
+            $('.hjyl-jump_to_top:eq('+sMt+')').css('display', 'block');
+            $('.hjyl-jump_to_bottom:eq('+sMt+')').css('display', 'none');
+            $('ul.sub-menu:eq('+sMt+')').css('display', 'block'); 
+            $(this).attr( 'aria-expanded', 'true' );
+        }else{
+            $('.hjyl-jump_to_top:eq('+sMt+')').css('display', 'none');
+            $('.hjyl-jump_to_bottom:eq('+sMt+')').css('display', 'block');
+            $('ul.sub-menu:eq('+sMt+')').css('display', 'none');    
+            $(this).attr( 'aria-expanded', 'false' );
+        }
+    }); 
     }
-});
 
-	aniToReview('.gif');
-}); 
+    $(".carousel-inner a:first-child").addClass("active");
+
+    //up to top
+    $body=(window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
+    $(window).scroll(function(){
+    	if($(window).scrollTop()>=300){
+    		$('#hjylUp').fadeIn(600);
+    	}else{
+    		$('#hjylUp').fadeOut(600);
+    }});
+    $('#hjylUp').click(function() {
+    	$body.animate({
+    		scrollTop: 0
+    	}, 600)
+    });
+    //add external link to entry a tag;
+    $('.entry-content p a').each(function(){
+        $self = $(this);
+        if(!$self.has('img, button').length){
+                $self.append('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(178,34,34,1)" fill-rule="evenodd" d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"/></svg>');
+        }
+    });
+
+    	aniToReview('.gif');
+    }); 
 
 	function isAssetTypeAnImage(ext) {
 	  return ['gif'].indexOf(ext.toLowerCase()) !== -1;

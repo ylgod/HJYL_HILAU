@@ -6,9 +6,10 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
+
 //检测主题更新 
-require get_template_directory() . '/inc/theme-update-checker.php'; 
-$hjyl_update_checker = new ThemeUpdateChecker('HJYL_HILAU', 'https://cdn.jsdelivr.net/gh/ylgod/HJYL_HILAU@master/check_update.json');
+//require get_template_directory() . '/inc/theme-update-checker.php'; 
+//$hjyl_update_checker = new ThemeUpdateChecker('HJYL_HILAU', 'https://cdn.jsdelivr.net/gh/ylgod/HJYL_HILAU@master/check_update.json');
 
 if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 
@@ -31,11 +32,13 @@ if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size('slide', 700, 380, true );
 		add_image_size('post', 790, 300, true );
+		add_image_size('wp', 180, 180, true );
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'top-menu' => __( 'Top Menu', 'HJYL_HILAU' ),
+				'primary' => esc_html__( 'Primary menu', 'HJYL_HILAU' ),
+				'mobile'  => esc_html__( 'Mobile menu', 'HJYL_HILAU' ),
 			)
 		);
 
@@ -68,6 +71,8 @@ if ( ! function_exists( 'HJYL_HILAU_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		add_theme_support( 'align-wide' );
 		
 		add_theme_support( "custom-background" );
 
@@ -278,6 +283,27 @@ function hjyl_script() {
 }
 add_action( 'wp_enqueue_scripts', 'hjyl_script' );
 
+// 自定义菜单链接
+function hjyl_wp_list_pages(){
+	echo "<ul>";
+	echo wp_list_pages('title_li=&depth=1');
+	echo "</ul>";
+}
+
+function twenty_twenty_one_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
+
+		// Add toggle button.
+		$output .= '<button class="sub-menu-toggle" aria-expanded="false">';
+		$output .= '<i class="hjylfont hjyl-jump_to_bottom">▲</i>';
+		$output .= '<i class="hjylfont hjyl-jump_to_top" style="display:none;">▼</i>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'HJYL_HILAU' ) . '</span>';
+		$output .= '</button>';
+	}
+	return $output;
+}
+add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle', 10, 4 );
+
 // 文末版权声明
 function hjyl_content_copyright($content)
 {
@@ -338,6 +364,8 @@ function post_thumbnail($width=0, $height=0){
 	$np = count($aPics[0]);  
 	if ( $np > 0 ) { 
 		echo '<img src="'.$aPics[1][0].'" alt="'.get_the_title().'" width="'.$width.'" height="'.$height.'"/>';      
+	}else{
+		echo '<img src="'.get_template_directory_uri().'/images/no-pic.jpg" alt="'.get_the_title().'" width="'.$width.'" height="'.$height.'"/>';
 	}; 
 }
 
@@ -354,7 +382,7 @@ function timeago($ptime) {
     $interval = array(
         12 * 30 * 24 * 60 * 60 => __(' years ago', 'HJYL_HILAU'),
         30 * 24 * 60 * 60 => __(' month ago', 'HJYL_HILAU'),
-        7 * 24 * 60 * 60 => __(' weeks ago', 'HJYL_HILAU'),
+        //7 * 24 * 60 * 60 => __(' weeks ago', 'HJYL_HILAU'),
         24 * 60 * 60 => __(' days ago', 'HJYL_HILAU'),
         60 * 60 => __(' hours ago', 'HJYL_HILAU'),
         60 => __(' minutes ago', 'HJYL_HILAU'),
@@ -394,27 +422,33 @@ function move_comment_field_to_bottom( $fields ) {
 }
 add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
 
-/**
-* WordPress外链新窗口打开并使用php页面go跳转
-* https://zhang.ge/5086.html
-* 先添加go调整页面并应该go跳转页面模版
-* 伪静态设置：rewrite ^/go/([^\?]+)$ /go/?url=$1 last;
-*/
-function the_content_nofollow($content){
-	preg_match_all('/<a(.*?)href="(.*?)"(.*?)>/',$content,$matches);
-	if($matches){
-		foreach($matches[2] as $val){
-			if(strpos($val,'://')!==false && strpos($val,home_url())===false && !preg_match('/\.(jpg|jepg|png|ico|bmp|gif|tiff)/i',$val)){
-				$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/?url=".base64_encode($val)."\" rel=\"nofollow\"",$content);  //非伪静态设置
-				//$content=str_replace("href=\"$val\"", "href=\"".home_url()."/go/".base64_encode($val)."\" rel=\"nofollow\"",$content);   //伪静态设置 暂时无效
-			}
-		}
-	}
-return $content;
+//go.php跳转替换函数开始
+function go_link_jump( $content ) {
+    // Get the host of the current site
+    $host = parse_url( home_url(), PHP_URL_HOST );
+
+    // Find all links in the content
+    preg_match_all( '/<a[^>]+href=[\"\']([^\"\']+)[\"\'][^>]*>(.*?)<\/a>/i', $content, $matches, PREG_SET_ORDER );
+
+    // Iterate over each link
+    foreach ( $matches as $match ) {
+        $url = $match[1];
+        $text = $match[2];
+
+        // Check if the link is external
+        if ( strpos( $url, 'http' ) === 0 && strpos( $url, $host ) === false ) {
+            // Add nofollow and target="_blank" attributes, and convert to a redirect link
+            //$redirect_link = home_url() . '/go.php?' . base64_encode( $url ); 
+            $redirect_link = home_url() . '/go/' . base64_encode( $url ); 
+            $new_link = sprintf( '<a href="%s" rel="nofollow" target="_blank">%s</a>', $redirect_link, $text );
+            $content = str_replace( $match[0], $new_link, $content );
+        }
+    }
+
+    return $content;
 }
-add_filter('the_content','the_content_nofollow',999);
-add_filter('comment_text', 'the_content_nofollow', 99);
-add_filter('get_comment_author_link', 'the_content_nofollow', 5);
+add_filter( 'the_content', 'go_link_jump', 999 );
+//go.php跳转替换函数结束
 
 //下载单页短代码
 function page_download($atts, $content = null) {
@@ -449,11 +483,79 @@ add_action('wp_footer', 'iperformance', 20);
 
 require( get_template_directory() . '/inc/functions-comment.php' );
 require( get_template_directory() . '/inc/functions-tougao.php' );
-require( get_template_directory() . '/inc/functions-customizer.php' );
-// Custom Category control 
-require( get_template_directory() . '/inc/category-dropdown-custom-control.php');
-require( get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php');
 require( get_template_directory() . '/inc/functions-svg.php');
 require( get_template_directory() . '/inc/class-metabox.php');
 require( get_template_directory() . '/inc/functions-widgets.php');
 
+add_filter( 'wp_unique_post_slug', 'unique_slug_so_customer', 10, 6 );
+function unique_slug_so_customer( $slug, $post_ID, $post_status, $post_type, $post_parent, $original_slug ) {
+	$real_status = get_post_status($post_ID);
+    if($post_type == 'post' && in_array( $real_status, array( 'draft', 'pending', 'auto-draft', 'publish' )) && empty(get_post_meta($post_ID,'unique_slug', true))){
+		$newSlug = auto_unique_post_slug('guid');
+		wp_update_post(array('post_name' => $newSlug ));
+		add_post_meta($post_ID, 'unique_slug', 1, true);
+    }else{
+        return $slug; 
+    }
+
+}
+ 
+function auto_unique_post_slug($col,$table='yl_posts'){
+    global $wpdb;
+ 
+    // WordPress slug 更新后大写会自动转成小写，所以不建议用大写字母
+    $str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $alphabet = str_split($str);
+ 
+    $already_exists = true;
+ 
+    do {
+        $guidchr = array();
+        //下面的参数36为上面 $str 的字符串数量
+        for ($i=0; $i<36; $i++)
+            $guidchr[] = $alphabet[array_rand( $alphabet )];
+        //YL是前缀，可以改成自己的，下面的参数10为生成的字符串位数
+        $guid = sprintf( "yl%s", implode("", array_slice($guidchr, 0, 10, true)) );
+        // check that GUID is unique
+        $already_exists = (boolean) $wpdb->get_var("SELECT COUNT($col) as the_amount FROM $table WHERE $col = '$guid'");
+    } while ( true == $already_exists );
+ 
+    return $guid;
+ 
+}
+
+//调用框架 options-framework
+define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/options-framework/' );
+require_once dirname( __FILE__ ) . '/options-framework/options-framework.php';
+$optionsfile = locate_template( 'options.php' );
+load_template( $optionsfile );
+add_action( 'optionsframework_custom_scripts', 'optionsframework_custom_scripts' );
+
+//自定义调用JS
+function optionsframework_custom_scripts() { ?>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+	jQuery('#example_showhidden').click(function() {
+  		jQuery('#section-example_text_hidden').fadeToggle(400);
+	});
+
+	if (jQuery('#example_showhidden:checked').val() !== undefined) {
+		jQuery('#section-example_text_hidden').show();
+	}
+
+});
+</script>
+
+<?php
+}
+
+//侧边菜单
+add_filter( 'optionsframework_menu', 'HJYL_HILAU_options' );
+function HJYL_HILAU_options( $menu ) {
+	$menu['mode'] = 'menu';
+	$menu['page_title'] = __( 'HILAU Theme Options', 'HJYL_HILAU');
+	$menu['menu_title'] = __( 'HILAU Theme Options', 'HJYL_HILAU');
+	$menu['menu_slug'] = 'HJYL_HILAU-options';
+	return $menu;
+}

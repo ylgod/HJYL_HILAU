@@ -117,7 +117,12 @@ empty($values3) ? Header('Location:/') : $theCode3 = $values3[0];
                                 foreach ($hjyl_download_links as $hjyl_download_link) {
                                     $hjyl_download_link = explode("   ", $hjyl_download_link);
                                     $hjyl_dlink = '<a class="btn btn-outline-primary" href="' . trim($hjyl_download_link[0]) . '"target="_blank" rel="nofollow" data-original-title="' . esc_attr(trim($hjyl_download_link[2])) . '" title="' . esc_attr(trim($hjyl_download_link[2])) . '">' . trim($hjyl_download_link[1]) . '</a>';
-									echo the_content_nofollow($hjyl_dlink); //与go跳转相结合
+									if( function_exists('the_content_nofollow')) {
+										echo the_content_nofollow($hjyl_dlink); //与go跳转相结合
+									}else{
+										echo $hjyl_dlink;
+									}
+										
                                     }
                                 }
                         ?>

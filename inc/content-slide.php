@@ -1,4 +1,6 @@
-			<?php $options = get_theme_mod( 'hjyl_hilau_options'); if(is_home()) {?>
+			<?php
+				if(is_home() && of_get_option('is_blog') != 1){ 
+			?>	
 			<div class="col-ul row" id="colRow">
 				<div class="col-xs-12 col-md-8 colnum-1">
 				<!--------------幻灯片  开始--------------->
@@ -6,8 +8,7 @@
 					<div id="coin-slider" class="carousel slide" data-ride="carousel">
 						<div id="nav_wrapper" class="carousel-inner">
 						<?php
-							$options['slide'] = isset($options['slide']) ? $options['slide'] : '';
-							$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => $options['slide'], 'posts_per_page' => 5);
+							$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('slide'), 'posts_per_page' => 5);
 							$news_query = new WP_Query($args);	
 							while($news_query->have_posts() ) : $news_query->the_post();
 						?>
@@ -35,7 +36,10 @@
 				  <!--------------幻灯片  结束--------------->
 				</div>
 				<div class="col-xs-12 col-md-4 colnum-2">
-					<span><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php _e('Lasted Posts', 'HJYL_HILAU'); ?></span>
+					<div class="row">
+						<span class="col-xs-12 col-md-10"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php _e('Lasted Posts', 'HJYL_HILAU'); ?></span>
+						<span class="col-xs-12 col-md-2"><?php echo get_next_posts_link(__( 'More', 'HJYL_HILAU' )); ?></span>
+					</div>
 					<ul class="list-unstyled">
 						<?php query_posts('posts_per_page=13&ignore_sticky_posts=1'); while (have_posts()) : the_post(); ?>
 						<li>
@@ -84,8 +88,203 @@
 								echo wp_trim_words(get_the_title(), 18); 
 							} ?></a><span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_time('Y-m-d G:i:s'))); ?></span>
 						</li> 
-				<?php endforeach;?> 
+					<?php endforeach;?> 
 					</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="hilau-wp" class="row">
+				<div class="col-xs-12 col-md-12 colnum-wp">
+					<div class="row">
+						<span class="col-xs-12 col-md-11"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php echo get_cat_name(of_get_option('first_op')); ?></span>
+						<span class="col-xs-12 col-md-1"><a href="<?php echo get_category_link(of_get_option('first_op')); ?>"><?php _e('More', 'HJYL_HILAU'); ?></a></span>
+					</div>
+
+						<ul class="row list-unstyled">	
+							<?php
+								$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('first_op'), 'posts_per_page' => 6);
+								$news_query = new WP_Query($args);
+								while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+							<li class="col-xs-12 col-md-2">
+								<?php
+									if(has_post_thumbnail()){    //如果有缩略图，则显示缩略图
+										the_post_thumbnail('wp');
+									} else {
+										post_thumbnail(150,120);
+									}
+								?><br>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => '', 'after' => '' ) ); ?>">
+								<?php if("" == get_the_title()) {
+									printf(__('Untitled #%s', 'HJYL_HILAU'),get_the_date('Y-m-d'));
+								}else{
+									echo wp_trim_words(get_the_title(), 20); 
+								}?>
+								</a><br>
+								<span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_modified_time('Y-m-d G:i:s'))); ?></span>
+							</li>
+							<?php endwhile; wp_reset_query(); ?>
+						</ul>
+
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="hilau-wp" class="row col-ul">
+				<div class="col-xs-12 col-md-4">
+					<div class="row ">
+						<span class="col-xs-12 col-md-10"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php echo get_cat_name(of_get_option('second_op')); ?></span>
+						<span class="col-xs-12 col-md-2"><a href="<?php echo get_category_link(of_get_option('second_op')); ?>"><?php _e('More', 'HJYL_HILAU'); ?></a></span>
+					</div>
+
+						<ul class="list-unstyled">	
+							<?php
+								$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('second_op'), 'posts_per_page' => 10);
+								$news_query = new WP_Query($args);
+								while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+							<li>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => '', 'after' => '' ) ); ?>">
+								<?php if("" == get_the_title()) {
+									printf(__('Untitled #%s', 'HJYL_HILAU'),get_the_date('Y-m-d'));
+								}else{
+									echo wp_trim_words(get_the_title(), 18); 
+								}?>
+								</a>
+								<span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_modified_time('Y-m-d G:i:s'))); ?></span>
+							</li>
+							<?php endwhile; wp_reset_query(); ?>
+						</ul>
+
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="row">
+						<span class="col-xs-12 col-md-10"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php echo get_cat_name(of_get_option('third_op')); ?></span>
+						<span class="col-xs-12 col-md-2"><a href="<?php echo get_category_link(of_get_option('third_op')); ?>"><?php _e('More', 'HJYL_HILAU'); ?></a></span>
+					</div>
+
+						<ul class="list-unstyled">	
+							<?php
+								$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('third_op'), 'posts_per_page' => 10);
+								$news_query = new WP_Query($args);
+								while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+							<li>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => '', 'after' => '' ) ); ?>">
+								<?php if("" == get_the_title()) {
+									printf(__('Untitled #%s', 'HJYL_HILAU'),get_the_date('Y-m-d'));
+								}else{
+									echo wp_trim_words(get_the_title(), 18); 
+								}?>
+								</a>
+								<span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_modified_time('Y-m-d G:i:s'))); ?></span>
+							</li>
+							<?php endwhile; wp_reset_query(); ?>
+						</ul>
+
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="row">
+						<span class="col-xs-12 col-md-10"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php echo get_cat_name(of_get_option('fourth_op')); ?></span>
+						<span class="col-xs-12 col-md-2"><a href="<?php echo get_category_link(of_get_option('fourth_op')); ?>"><?php _e('More', 'HJYL_HILAU'); ?></a></span>
+					</div>
+
+						<ul class="list-unstyled">	
+							<?php
+								$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('fourth_op'), 'posts_per_page' => 10);
+								$news_query = new WP_Query($args);
+								while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+							<li>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => '', 'after' => '' ) ); ?>">
+								<?php if("" == get_the_title()) {
+									printf(__('Untitled #%s', 'HJYL_HILAU'),get_the_date('Y-m-d'));
+								}else{
+									echo wp_trim_words(get_the_title(), 18); 
+								}?>
+								</a>
+								<span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_modified_time('Y-m-d G:i:s'))); ?></span>
+							</li>
+							<?php endwhile; wp_reset_query(); ?>
+						</ul>
+
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="row">
+						<span class="col-xs-12 col-md-10"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php echo get_cat_name(of_get_option('fifth_op')); ?></span>
+						<span class="col-xs-12 col-md-2"><a href="<?php echo get_category_link(of_get_option('fifth_op')); ?>"><?php _e('More', 'HJYL_HILAU'); ?></a></span>
+					</div>
+
+						<ul class="list-unstyled">	
+							<?php
+								$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('fifth_op'), 'posts_per_page' => 10);
+								$news_query = new WP_Query($args);
+								while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+							<li>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => '', 'after' => '' ) ); ?>">
+								<?php if("" == get_the_title()) {
+									printf(__('Untitled #%s', 'HJYL_HILAU'),get_the_date('Y-m-d'));
+								}else{
+									echo wp_trim_words(get_the_title(), 18); 
+								}?>
+								</a>
+								<span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_modified_time('Y-m-d G:i:s'))); ?></span>
+							</li>
+							<?php endwhile; wp_reset_query(); ?>
+						</ul>
+
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="row">
+						<span class="col-xs-12 col-md-10"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php echo get_cat_name(of_get_option('sixth_op')); ?></span>
+						<span class="col-xs-12 col-md-2"><a href="<?php echo get_category_link(of_get_option('sixth_op')); ?>"><?php _e('More', 'HJYL_HILAU'); ?></a></span>
+					</div>
+
+						<ul class="list-unstyled">	
+							<?php
+								$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('sixth_op'), 'posts_per_page' => 10);
+								$news_query = new WP_Query($args);
+								while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+							<li>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => '', 'after' => '' ) ); ?>">
+								<?php if("" == get_the_title()) {
+									printf(__('Untitled #%s', 'HJYL_HILAU'),get_the_date('Y-m-d'));
+								}else{
+									echo wp_trim_words(get_the_title(), 18); 
+								}?>
+								</a>
+								<span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_modified_time('Y-m-d G:i:s'))); ?></span>
+							</li>
+							<?php endwhile; wp_reset_query(); ?>
+						</ul>
+
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="row">
+						<span class="col-xs-12 col-md-10"><?php echo hjyl_get_svg( array( 'icon' => 'list' ) ); ?> <?php echo get_cat_name(of_get_option('seventh_op')); ?></span>
+						<span class="col-xs-12 col-md-2"><a href="<?php echo get_category_link(of_get_option('seventh_op')); ?>"><?php _e('More', 'HJYL_HILAU'); ?></a></span>
+					</div>
+
+						<ul class="list-unstyled">	
+							<?php
+								$args = array( 'post_type' => 'post','ignore_sticky_posts' => 1 , 'category__in' => of_get_option('seventh_op'), 'posts_per_page' => 10);
+								$news_query = new WP_Query($args);
+								while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+							<li>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => '', 'after' => '' ) ); ?>">
+								<?php if("" == get_the_title()) {
+									printf(__('Untitled #%s', 'HJYL_HILAU'),get_the_date('Y-m-d'));
+								}else{
+									echo wp_trim_words(get_the_title(), 18); 
+								}?>
+								</a>
+								<span class="list_date"><?php echo timeago(get_gmt_from_date(get_the_modified_time('Y-m-d G:i:s'))); ?></span>
+							</li>
+							<?php endwhile; wp_reset_query(); ?>
+						</ul>
+
 				</div>
 			</div>
 			<div class="clearfix"></div>

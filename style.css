@@ -6,17 +6,22 @@ Description: based on bootstrap4, HTML5 and CSS3.
 Author: HJYL
 Author URI: https://hjyl.org/
 Version: 3.5
-Requires at least: 5.0
-Requires PHP: 5.2.4
-Tested up to: 5.7.2
+Requires at least: 6.0
+Tested up to: 6.1
+Requires PHP: 5.6
 License: GNU General Public License v3.0 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: HJYL_HILAU
 Tags: two-columns, custom-menu, right-sidebar, editor-style, sticky-post, blog
 */
 @font-face {
-	font-family:'Play';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.font.im/s/play/v11/6aez4K2oVqwIvtU2Hw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family:'Play';
+	font-style:normal;
+	font-weight:400;
+	src:url("css/6aez4K2oVqwIvtU2Hw.woff2") format('woff2');
+	unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+/*****http://fonts.gstatic.com/s/play/v11/6aez4K2oVqwIvtU2Hw.woff2*****/
 @font-face {
   font-family: "xz";
   src: url("css/xz.woff2") format("woff2"),
@@ -30,6 +35,7 @@ Tags: two-columns, custom-menu, right-sidebar, editor-style, sticky-post, blog
 html body{
 	font-family: Play,"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif;
 	color:rgba(116,127,140,1);
+	background: rgba(238, 238, 238, 1);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -305,10 +311,66 @@ pre{
   }
 }
 /*******menu***************/
-.navbar{
-	z-index:100;
+#hjyl_menu{
+	height: 70px;
+	z-index: 100;
+	padding: 0 !important;
 }
-
+#hjyl_menu ul{
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 !important;
+}
+#hjyl_menu ul li{
+	display: flex;
+	position: relative;
+}
+#hjyl_menu > div.container > ul > li > ul.sub-menu{
+    text-align: center;
+    display: none;
+	float: left;
+	height: auto;
+	min-width: 200px;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	z-index: 10;
+	background: #e7e7e8;
+}
+#hjyl_menu  > div.container > ul > li > ul.sub-menu ul.sub-menu{
+	height: auto;
+	margin-left: 20px;
+	float: none;
+}
+#hjyl_menu ul li a{
+	font-weight: 600;
+	text-decoration: none;
+	line-height: 50px;
+	padding: 0 10px;
+	border-top: 10px solid transparent;
+}
+#hjyl_menu > div.container > ul > li > ul.sub-menu li a{
+	width: 100%;
+}
+#hjyl_menu ul li.current-menu-item > a,
+#hjyl_menu ul li.current-menu-parent > a,
+#hjyl_menu ul li.current_page_item > a,
+#hjyl_menu ul li a:hover,
+#hjyl_menu ul li a:focus,
+#open-menu i:hover,
+#open-menu i:focus{
+	border-top: 10px solid;
+}
+.sub-menu-toggle{
+	background: transparent;
+	border: none;
+}
+.sub-menu-toggle:hover{
+	cursor: pointer;
+}
 .custom-logo-link, #hjyl_logo{
 	position: absolute;
 	left:50px;
@@ -448,7 +510,7 @@ pre{
 	width:200px;
 	height:auto;
     bottom:45px;
-    right:0;
+    right:20px;
     position: absolute;
     z-index: 1;
 }
@@ -492,13 +554,15 @@ pre{
 	margin:0 0 20px 0;
 	padding:50px 20px;
 }
-#colRow{
+#colRow,
+#hilau-wp{
 	text-align:left;
-	margin:20px;
+	margin:0 20px;
 }
-.col-ul div > span{
+.col-ul div > span,
+.colnum-wp > div.row > span{
 	border-bottom:1px solid rgba(0,0,0, 0.2);
-	padding:20px 10px;
+	padding:10px 0;
 	display:block;
 	color:rgba(64,64,64, 0.7);
 	font-size:18px;
@@ -506,8 +570,9 @@ pre{
 .col-ul .col-3, .col-ul .col-4,.col-ul .col-5{
 	margin-top:20px;
 }
-.col-ul ul{
-	margin:20px 0;
+.col-ul ul,
+.colnum-wp ul{
+	margin:10px 0;
 }
 .col-ul ul li{
 	position:relative;
@@ -518,6 +583,9 @@ pre{
 }
 .colnum-1{
 	margin-top:20px;
+}
+.colnum-wp ul{
+	padding: 0;
 }
 
 .entry-header{
@@ -694,7 +762,7 @@ pre{
 #footer{
 	text-align:center;
 	font-size:13px;
-	background:rgba(51,52,54,0.8);
+	background:rgba(233,236,239,0.8);
 	padding:20px 0;
 }
 #hjylUp{
