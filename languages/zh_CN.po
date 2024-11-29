@@ -1,0 +1,1023 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-14 15:52+0800\n"
+"PO-Revision-Date: 2023-12-14 15:53+0800\n"
+"Last-Translator: 皇家元林 <i@hjyl.org>\n"
+"Language-Team: hjyl.org <i@hjyl.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../archive.php:20 ../index.php:17 ../search.php:13
+msgid "<<"
+msgstr "<<"
+
+#: ../archive.php:21 ../index.php:18 ../search.php:14
+msgid ">>"
+msgstr ">>"
+
+#: ../comments.php:2
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "此文密码保护。键入你的密码才能看所有的评论。"
+
+#: ../comments.php:5
+msgid " Leave a reply"
+msgstr " 回复"
+
+#: ../comments.php:5
+msgid " 1 Comment "
+msgstr " 1条评论 "
+
+#: ../comments.php:5
+msgid " % Comments"
+msgstr " %条评论"
+
+#: ../comments.php:5
+msgid " Comments Off"
+msgstr " 评论关闭"
+
+#: ../comments.php:9
+msgid "Previous"
+msgstr "上一页"
+
+#: ../comments.php:9
+msgid "Next"
+msgstr "下一页"
+
+#: ../comments.php:15 ../comments.php:47
+msgid "(Toggle)"
+msgstr "(打开)"
+
+#: ../comments.php:16
+msgid "(Close)"
+msgstr "(关闭)"
+
+#: ../comments.php:47
+#, php-format
+msgid "Welcome <strong>%s</strong>"
+msgstr "欢迎回来 <strong>%s</strong>"
+
+#: ../comments.php:47
+msgid "Name"
+msgstr "名字"
+
+#: ../comments.php:47 ../comments.php:48
+msgid "(required)"
+msgstr "(必填)"
+
+#: ../comments.php:48
+msgid "Email"
+msgstr "邮箱"
+
+#: ../comments.php:49
+msgid "Website"
+msgstr "网站"
+
+#: ../comments.php:54
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "你必须 <a href=\"%s\">登录</a> 才能发布评论。"
+
+#: ../comments.php:55
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"<a href=\"%1$s\">%2$s</a>已登录。 <a href=\"%3$s\" title=\"登出账户\">退出？"
+"</a>"
+
+#: ../comments.php:62
+msgid "Leave a Reply"
+msgstr "发表评论"
+
+#: ../comments.php:63
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "回复 %s"
+
+#: ../comments.php:64
+msgid "Cancel reply"
+msgstr "取消回复"
+
+#: ../comments.php:65
+msgid "Post Comment"
+msgstr "发布评论"
+
+#: ../comments.php:73
+msgid "Pingbacks"
+msgstr "引用通告"
+
+#: ../footer.php:3
+msgid "CopyRight"
+msgstr "版权"
+
+#: ../footer.php:3
+#, php-format
+msgid "%1$s Powered by %2$s"
+msgstr "%1$s 由 %2$s 强力驱动"
+
+#: ../footer.php:3
+msgid "https://hjyl.org/"
+msgstr "https://hjyl.org/"
+
+#: ../footer.php:3
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: ../functions.php:40
+msgid "Primary menu"
+msgstr "主菜单"
+
+#: ../functions.php:41
+msgid "Mobile menu"
+msgstr "手机菜单"
+
+#: ../functions.php:117 ../functions.php:343 ../inc/content-slide.php:48
+#: ../inc/content-slide.php:70 ../inc/content-slide.php:86
+#: ../inc/content-slide.php:119 ../inc/content-slide.php:148
+#: ../inc/content-slide.php:174 ../inc/content-slide.php:200
+#: ../inc/content-slide.php:226 ../inc/content-slide.php:252
+#: ../inc/content-slide.php:278 ../inc/functions-widgets.php:41
+#: ../inc/functions-widgets.php:101 ../inc/functions-widgets.php:161
+#: ../inc/functions-widgets.php:277 ../inc/header-breadcrumb.php:38
+#, php-format
+msgid "Untitled #%s"
+msgstr "无题 #%s"
+
+#: ../functions.php:189 ../searchform.php:2
+msgid "Search"
+msgstr "搜索"
+
+#: ../functions.php:197 ../inc/header-breadcrumb.php:4
+msgid "Home"
+msgstr "首页"
+
+#: ../functions.php:205
+msgid "Single"
+msgstr "文章页"
+
+#: ../functions.php:213
+msgid "Pages"
+msgstr "页面"
+
+#: ../functions.php:221
+msgid "404"
+msgstr "404页面"
+
+#: ../functions.php:229
+msgid "Other"
+msgstr "其他页"
+
+#: ../functions.php:280
+msgid "Wait a moment..."
+msgstr "请稍候..."
+
+#: ../functions.php:281
+msgid "Good Comment"
+msgstr "提交成功"
+
+#: ../functions.php:300
+msgid "Open menu"
+msgstr "打开菜单"
+
+#: ../functions.php:376
+#, php-format
+msgid "%s ago"
+msgstr "%s前"
+
+#: ../functions.php:381
+msgid "Just Now"
+msgstr "刚刚"
+
+#: ../functions.php:383
+msgid " years ago"
+msgstr " 年前"
+
+#: ../functions.php:384
+msgid " month ago"
+msgstr " 个月前"
+
+#: ../functions.php:386
+msgid " days ago"
+msgstr " 天前"
+
+#: ../functions.php:387
+msgid " hours ago"
+msgstr " 小时前"
+
+#: ../functions.php:388
+msgid " minutes ago"
+msgstr " 分钟前"
+
+#: ../functions.php:389
+msgid " seconds ago"
+msgstr " 秒前"
+
+#: ../functions.php:557 ../functions.php:558
+msgid "HILAU Theme Options"
+msgstr "HILAU主题设置"
+
+#: ../header.php:109 ../header.php:111 ../inc/content.php:60
+#: ../inc/content.php:62 ../inc/functions-comment.php:89
+#: ../inc/functions-comment.php:153 ../inc/functions-comment.php:154
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../header.php:115 ../inc/content.php:66
+msgid "Leave a reply"
+msgstr "回复"
+
+#: ../header.php:115 ../inc/content.php:66
+msgid "1 Comment"
+msgstr "1条评论"
+
+#: ../header.php:115 ../inc/content.php:66
+msgid "% Comments"
+msgstr "%条评论"
+
+#: ../header.php:115 ../inc/content.php:66
+msgid "Comments Off"
+msgstr "评论关闭"
+
+#: ../header.php:117 ../inc/content.php:68
+msgid "Edit"
+msgstr "编辑"
+
+#: ../inc/back-compat.php:12 ../inc/back-compat.php:20
+#: ../inc/back-compat.php:34
+#, php-format
+msgid ""
+"HJYL_HILAU THEME requires at least WordPress version 5.0. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+"HJYL_HILAU THEME要求WordPress版本至少5.0以上，你目前的版本是%s。请升级后再"
+"试。"
+
+#: ../inc/class-metabox.php:59
+msgid "Download Options"
+msgstr "下载资源设置"
+
+#: ../inc/content-none.php:3
+msgid "Nothing Found"
+msgstr "什么都没有"
+
+#: ../inc/content-none.php:13
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好写博客了吗？ <a href=\"%1$s\">从这开始吧</a>."
+
+#: ../inc/content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "很抱歉，没有搜索到你要的，请尝试用其他关键词吧."
+
+#: ../inc/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "貌似我们能找到，或许可以试试搜索."
+
+#: ../inc/content-slide.php:40
+msgid "Lasted Posts"
+msgstr "最新文章"
+
+#: ../inc/content-slide.php:41 ../inc/content-slide.php:101
+#: ../inc/content-slide.php:137 ../inc/content-slide.php:163
+#: ../inc/content-slide.php:189 ../inc/content-slide.php:215
+#: ../inc/content-slide.php:241 ../inc/content-slide.php:267
+msgid "More"
+msgstr "更多"
+
+#: ../inc/content-slide.php:58
+msgid "Lasted Comments"
+msgstr "最新评论"
+
+#: ../inc/content-slide.php:64
+msgid "Lasted Modified"
+msgstr "最近更新"
+
+#: ../inc/content-slide.php:80 ../inc/functions-widgets.php:119
+#: ../inc/functions-widgets.php:120 ../inc/functions-widgets.php:123
+#: ../inc/functions-widgets.php:138
+msgid "Rand Posts"
+msgstr "随机文章"
+
+#: ../inc/content.php:14
+msgid "Featured"
+msgstr "置顶"
+
+#: ../inc/content.php:36 ../page-tougao.php:33
+msgid "Pages:"
+msgstr "页面："
+
+#: ../inc/content.php:38
+msgid "Continue reading"
+msgstr "继续阅读"
+
+#: ../inc/content.php:74
+msgid "$"
+msgstr "赏"
+
+#: ../inc/content.php:75
+msgid "Alipay Donate"
+msgstr "支付宝打赏"
+
+#: ../inc/content.php:75
+msgid "WeChat Pay Donate"
+msgstr "微信打赏"
+
+#: ../inc/content.php:77
+msgid "If valuable for you, welcome to donate."
+msgstr "如果此文对你有帮助，欢迎打赏作者。"
+
+#: ../inc/functions-comment.php:16
+#, php-format
+msgid "replied you at [ %s ] as followed:"
+msgstr "在 《 %s 》文章上的回应："
+
+#: ../inc/functions-comment.php:18
+#, php-format
+msgid "replied you at [ Untitled #%s ] as followed:"
+msgstr "在 《 无题 #%s 》文章上的回应："
+
+#: ../inc/functions-comment.php:30
+#, php-format
+msgid "You have a message from %s"
+msgstr "您在[ %s ]上的评论有回应"
+
+#: ../inc/functions-comment.php:34
+msgid "Hello!"
+msgstr "你好！"
+
+#: ../inc/functions-comment.php:40
+msgid "Read more"
+msgstr "点击查看"
+
+#: ../inc/functions-comment.php:43
+msgid "The mail automatically by system, Do not Reply."
+msgstr "此邮件由系统自动生成，请勿回复."
+
+#: ../inc/functions-comment.php:55
+msgid "Email me if replied"
+msgstr "有人回复时邮件通知我"
+
+#: ../inc/functions-comment.php:148
+msgid "Your comment is awaiting moderation."
+msgstr "你的评论正在等待审核。"
+
+#: ../inc/functions-comment.php:154
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: ../inc/functions-svg.php:35
+msgid "Please define default parameters in the form of an array."
+msgstr "请用数组的形式定义默认参数。"
+
+#: ../inc/functions-svg.php:40
+msgid "Please define an SVG icon filename."
+msgstr "请定义SVG图标文件名。"
+
+#: ../inc/functions-widgets.php:6 ../inc/functions-widgets.php:7
+#: ../inc/functions-widgets.php:10 ../inc/functions-widgets.php:25
+msgid "Hot Posts"
+msgstr "热门文章"
+
+#: ../inc/functions-widgets.php:14 ../inc/functions-widgets.php:63
+#: ../inc/functions-widgets.php:127 ../inc/functions-widgets.php:191
+#: ../inc/functions-widgets.php:237 ../inc/functions-widgets.php:303
+msgid "title:"
+msgstr "文章标题："
+
+#: ../inc/functions-widgets.php:15 ../inc/functions-widgets.php:64
+#: ../inc/functions-widgets.php:128 ../inc/functions-widgets.php:238
+#: ../inc/functions-widgets.php:305
+msgid "Max Num:"
+msgstr "最大数量："
+
+#: ../inc/functions-widgets.php:55 ../inc/functions-widgets.php:56
+#: ../inc/functions-widgets.php:59 ../inc/functions-widgets.php:74
+msgid "Related Posts"
+msgstr "相关文章"
+
+#: ../inc/functions-widgets.php:184 ../inc/functions-widgets.php:185
+#: ../inc/functions-widgets.php:188 ../inc/functions-widgets.php:203
+msgid "Website stat"
+msgstr "网站统计"
+
+#: ../inc/functions-widgets.php:192
+msgid "start time:"
+msgstr "开始时间："
+
+#: ../inc/functions-widgets.php:210
+#, php-format
+msgid "Posts Nums %s units"
+msgstr "文章数量%s篇"
+
+#: ../inc/functions-widgets.php:211
+#, php-format
+msgid "Comments Nums %s units"
+msgstr "评论数量%s条"
+
+#: ../inc/functions-widgets.php:212
+#, php-format
+msgid "Website age %s days"
+msgstr "本站建站%s天"
+
+#: ../inc/functions-widgets.php:213
+#, php-format
+msgid "Tags Nums %s units"
+msgstr "标签数量%s个"
+
+#: ../inc/functions-widgets.php:229 ../inc/functions-widgets.php:230
+msgid "Recent Comments For Gravatar"
+msgstr "最近评论带头像版"
+
+#: ../inc/functions-widgets.php:233 ../inc/functions-widgets.php:248
+msgid "Recent Comments"
+msgstr "最近评论"
+
+#: ../inc/functions-widgets.php:278
+#, php-format
+msgid "comments at < %s >"
+msgstr "在《%s》上的评论"
+
+#: ../inc/functions-widgets.php:295 ../inc/functions-widgets.php:296
+msgid "Comments Wall For Gravatar"
+msgstr "评论墙头像版"
+
+#: ../inc/functions-widgets.php:299 ../inc/functions-widgets.php:316
+msgid "Comments Wall"
+msgstr "评论墙"
+
+#: ../inc/functions-widgets.php:304
+msgid "How many months:"
+msgstr "多少个月："
+
+#: ../inc/functions-widgets.php:346
+#, php-format
+msgid "%1$s replied %2$s comments"
+msgstr "%1$s 评论了 %2$s 条"
+
+#: ../inc/header-breadcrumb.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr "\" %s \"的搜索结果"
+
+#: ../inc/header-breadcrumb.php:42
+msgid "404 Error"
+msgstr "404错误"
+
+#: ../inc/header-breadcrumb.php:44
+#, php-format
+msgid "Author \"%s\" as followed"
+msgstr "作者 %s 的文章"
+
+#: ../inc/header-breadcrumb.php:47
+#, php-format
+msgid " - Page %s - "
+msgstr " - 第 %s 页 - "
+
+#: ../inc/header-breadcrumb.php:55
+msgid "Contact : "
+msgstr "联系方式： "
+
+#: ../inc/header-breadcrumb.php:57
+msgid "Follow me on QQ"
+msgstr "QQ联系我"
+
+#: ../inc/header-breadcrumb.php:60
+msgid "Follow me on Weibo"
+msgstr "关注我的微博"
+
+#: ../inc/header-breadcrumb.php:63
+msgid "Follow me on weChat"
+msgstr "关注我的微信公众号"
+
+#: ../inc/header-breadcrumb.php:66
+msgid "Follow me on Email"
+msgstr "给我发邮件"
+
+#: ../inc/header-breadcrumb.php:70
+msgid "Share To : "
+msgstr "分享到： "
+
+#: ../inc/header-breadcrumb.php:71
+msgid "Share me on WeChat"
+msgstr "分享到微信"
+
+#: ../inc/header-breadcrumb.php:72
+msgid "Share me on Weibo"
+msgstr "分享到微博"
+
+#: ../inc/header-breadcrumb.php:73
+msgid "Share me to QQ Friends"
+msgstr "分享给QQ好友"
+
+#: ../inc/header-breadcrumb.php:74
+msgid "Share me on Qzone"
+msgstr "分享到QQ空间"
+
+#: ../options-framework/includes/class-options-framework-admin.php:91
+#: ../options-framework/includes/class-options-framework-admin.php:92
+msgid "Theme Options"
+msgstr "主题设置"
+
+#: ../options-framework/includes/class-options-framework-admin.php:204
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "点击OK重置. 所有主题设置将丢失！"
+
+#: ../options-framework/includes/class-options-framework-admin.php:235
+msgid "Default options restored."
+msgstr "恢复默认设置."
+
+#: ../options-framework/includes/class-options-framework-admin.php:289
+msgid "Options saved."
+msgstr "设置已保存."
+
+#: ../options-framework/includes/class-options-media-uploader.php:62
+msgid "No file chosen"
+msgstr "无选中文件"
+
+#: ../options-framework/includes/class-options-media-uploader.php:65
+#: ../options-framework/includes/class-options-media-uploader.php:118
+msgid "Upload"
+msgstr "上传"
+
+#: ../options-framework/includes/class-options-media-uploader.php:67
+#: ../options-framework/includes/class-options-media-uploader.php:119
+msgid "Remove"
+msgstr "移除"
+
+#: ../options-framework/includes/class-options-media-uploader.php:70
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "升级您的WordPress版本以支持完整媒体."
+
+#: ../options-framework/includes/class-options-media-uploader.php:94
+msgid "View File"
+msgstr "演示文件"
+
+#: ../options-framework/includes/class-options-sanitization.php:316
+msgid "No Repeat"
+msgstr "无重复"
+
+#: ../options-framework/includes/class-options-sanitization.php:317
+msgid "Repeat Horizontally"
+msgstr "水平重复"
+
+#: ../options-framework/includes/class-options-sanitization.php:318
+msgid "Repeat Vertically"
+msgstr "垂直重复"
+
+#: ../options-framework/includes/class-options-sanitization.php:319
+msgid "Repeat All"
+msgstr "整体重复"
+
+#: ../options-framework/includes/class-options-sanitization.php:331
+msgid "Top Left"
+msgstr "左上"
+
+#: ../options-framework/includes/class-options-sanitization.php:332
+msgid "Top Center"
+msgstr "中上"
+
+#: ../options-framework/includes/class-options-sanitization.php:333
+msgid "Top Right"
+msgstr "右上"
+
+#: ../options-framework/includes/class-options-sanitization.php:334
+msgid "Middle Left"
+msgstr "左中"
+
+#: ../options-framework/includes/class-options-sanitization.php:335
+msgid "Middle Center"
+msgstr "居中"
+
+#: ../options-framework/includes/class-options-sanitization.php:336
+msgid "Middle Right"
+msgstr "右中"
+
+#: ../options-framework/includes/class-options-sanitization.php:337
+msgid "Bottom Left"
+msgstr "左下"
+
+#: ../options-framework/includes/class-options-sanitization.php:338
+msgid "Bottom Center"
+msgstr "中下"
+
+#: ../options-framework/includes/class-options-sanitization.php:339
+msgid "Bottom Right"
+msgstr "右下"
+
+#: ../options-framework/includes/class-options-sanitization.php:351
+msgid "Scroll Normally"
+msgstr "正常滚动"
+
+#: ../options-framework/includes/class-options-sanitization.php:352
+msgid "Fixed in Place"
+msgstr "固定位置"
+
+#: ../options-framework/includes/class-options-sanitization.php:424
+msgid "Normal"
+msgstr "正常"
+
+#: ../options-framework/includes/class-options-sanitization.php:425
+msgid "Italic"
+msgstr "斜体"
+
+#: ../options-framework/includes/class-options-sanitization.php:426
+msgid "Bold"
+msgstr "加粗"
+
+#: ../options-framework/includes/class-options-sanitization.php:427
+msgid "Bold Italic"
+msgstr "加粗斜体"
+
+#: ../options.php:26
+msgid "One"
+msgstr "1"
+
+#: ../options.php:27
+msgid "Two"
+msgstr "2"
+
+#: ../options.php:28
+msgid "Three"
+msgstr "3"
+
+#: ../options.php:29
+msgid "Four"
+msgstr "4"
+
+#: ../options.php:30
+msgid "Five"
+msgstr "5"
+
+#: ../options.php:35
+msgid "French Toast"
+msgstr "法式炸面包"
+
+#: ../options.php:36
+msgid "Pancake"
+msgstr "煎饼"
+
+#: ../options.php:37
+msgid "Omelette"
+msgstr "煎鸡蛋"
+
+#: ../options.php:38
+msgid "Crepe"
+msgstr "薄煎饼"
+
+#: ../options.php:39
+msgid "Waffle"
+msgstr "华夫饼"
+
+#: ../options.php:100
+msgid "Basic Settings"
+msgstr "基本设置"
+
+#: ../options.php:105
+msgid "Blog Mode"
+msgstr "博客模式"
+
+#: ../options.php:106
+msgid "Blog if selected(Hide Slide part)."
+msgstr "选中转换为博客模式（隐藏幻灯片部分）"
+
+#: ../options.php:113
+msgid "Alipay QRcode"
+msgstr "支付宝支付二维码"
+
+#: ../options.php:114
+msgid "upload your alipay QRcode. 150px*150px."
+msgstr "上传你的支付宝二维码。建议150px*150px."
+
+#: ../options.php:120
+msgid "WeChat Pay QRcode"
+msgstr "微信支付二维码"
+
+#: ../options.php:121
+msgid "upload your WeChat Pay QRcode. 150px*150px."
+msgstr "上传你的微信支付二维码。建议150px*150px."
+
+#: ../options.php:128
+msgid "Slide Options"
+msgstr "幻灯片设置"
+
+#: ../options.php:129
+msgid "Select category for slide"
+msgstr "选择一个分类显示幻灯片"
+
+#: ../options.php:137
+msgid "QQ No."
+msgstr "QQ号码."
+
+#: ../options.php:138
+msgid "Fill your QQ No."
+msgstr "填写你的QQ号码."
+
+#: ../options.php:145
+msgid "Email Account"
+msgstr "邮箱账号"
+
+#: ../options.php:146
+msgid "Fill your Email Account."
+msgstr "填写你的邮箱账号."
+
+#: ../options.php:153
+msgid "Weibo Account"
+msgstr "微博号"
+
+#: ../options.php:154
+msgid "Fill your Weibo Account."
+msgstr "填写你的微博号."
+
+#: ../options.php:161
+msgid "WeChat QRcode"
+msgstr "微信二维码"
+
+#: ../options.php:162
+msgid "upload your WeChat QRcode."
+msgstr "上传你的微信二维码。"
+
+#: ../options.php:168
+msgid "SEO Settings"
+msgstr "SEO设置"
+
+#: ../options.php:173
+msgid "keywords"
+msgstr "关键词keywords"
+
+#: ../options.php:174
+msgid "fill your keywords, separate by \",\"."
+msgstr "填写你的关键词，以英文逗号\",\"隔开."
+
+#: ../options.php:181
+msgid "description"
+msgstr "描述description"
+
+#: ../options.php:182
+msgid "description."
+msgstr "描述description."
+
+#: ../options.php:203
+msgid "Head Code"
+msgstr "顶部代码"
+
+#: ../options.php:204
+msgid "Head Code. For example: css,js."
+msgstr "head标签里的代码，譬如css, js等."
+
+#: ../options.php:211
+msgid "Footer Code"
+msgstr "底部代码"
+
+#: ../options.php:212
+msgid "Footer Code. For example: Stat code, ICP No."
+msgstr "底部代码，譬如统计代码，备案号等."
+
+#: ../options.php:220
+msgid "CMS Home Settings"
+msgstr "CMS首页设置"
+
+#: ../options.php:226
+msgid "First Options"
+msgstr "第一个选项"
+
+#: ../options.php:227
+msgid "Select category for First Options"
+msgstr "给第一个选择一个分类"
+
+#: ../options.php:236
+msgid "Second Options"
+msgstr "第二个选项"
+
+#: ../options.php:237
+msgid "Select category for Second Options"
+msgstr "给第二个选择一个分类"
+
+#: ../options.php:246
+msgid "Third Options"
+msgstr "第三个选项"
+
+#: ../options.php:247
+msgid "Select category for Third Options"
+msgstr "给第三个选择一个分类"
+
+#: ../options.php:256
+msgid "Fourth Options"
+msgstr "第四个选项"
+
+#: ../options.php:257
+msgid "Select category for Fourth Options"
+msgstr "给第四个选择一个分类"
+
+#: ../options.php:266
+msgid "Fifth Options"
+msgstr "第五个选项"
+
+#: ../options.php:267
+msgid "Select category for Fifth Options"
+msgstr "给第五个选择一个分类"
+
+#: ../options.php:276
+msgid "Sixth Options"
+msgstr "第六个选项"
+
+#: ../options.php:277
+msgid "Select category for Sixth Options"
+msgstr "给第六个选择一个分类"
+
+#: ../options.php:286
+msgid "Seventh Options"
+msgstr "第七个选项"
+
+#: ../options.php:287
+msgid "Select category for Seventh Options"
+msgstr "给第第七个选择一个分类"
+
+#: ../options.php:295
+msgid "AD Settings"
+msgstr "广告设置"
+
+#: ../options.php:301
+msgid "Only Show AD on Home Page"
+msgstr "仅首页显示顶部广告"
+
+#: ../options.php:302
+msgid "Click here and Only Show AD on Home Page."
+msgstr "选中此选项仅首页显示顶部广告."
+
+#: ../options.php:308
+msgid "Home Ad"
+msgstr "首页顶部广告"
+
+#: ../options.php:309
+msgid "Home AD for 468px*60px."
+msgstr "468px*60px大小的首页广告."
+
+#: ../options.php:317
+msgid "Single Right Ad"
+msgstr "文章右侧广告"
+
+#: ../options.php:318
+msgid "Single Right AD for 336px*280px."
+msgstr "336px*280px大小的文章右侧广告."
+
+#: ../options.php:326
+msgid "Singlar Bottom Ad"
+msgstr "页面底部广告"
+
+#: ../options.php:327
+msgid "Singlar Bottom AD for 468px*60px."
+msgstr "468px*60px大小的页面内容底部广告."
+
+#: ../options.php:335
+msgid "Archive Ad"
+msgstr "归档页广告"
+
+#: ../options.php:336
+msgid "Archive Ad for 468px*60px."
+msgstr "468px*60px大小的归档页广告."
+
+#: ../page-download.php:26
+msgid "Free Resources, Download Page"
+msgstr "免费资源, 下载页面"
+
+#: ../page-download.php:27
+#, php-format
+msgid ""
+"The download page for the resource named \"%1$s\" in the article of %2$s"
+msgstr "%2$s文章中提到的资源信息为“%1$s”的下载页面"
+
+#: ../page-download.php:28 ../page-download.php:80
+#, php-format
+msgid "The download page for %s"
+msgstr "%s下载页面"
+
+#: ../page-download.php:103
+msgid "Download Info"
+msgstr "资源信息"
+
+#: ../page-download.php:106
+#, php-format
+msgid "Download Name: %s"
+msgstr "资源名称：%s"
+
+#: ../page-download.php:107
+#, php-format
+msgid "Download Size: %s"
+msgstr "文件大小：%s"
+
+#: ../page-download.php:108
+#, php-format
+msgid "Update Time: %s"
+msgstr "更新日期：%s"
+
+#: ../page-download.php:111
+msgid "Download Link"
+msgstr "下载链接"
+
+#: ../page-download.php:134
+msgid "Download Note"
+msgstr "下载说明"
+
+#: ../page-download.php:136
+msgid ""
+"<p>1.If the downloaded file is in compressed package format, please install "
+"RAR or other software to decompress it.<br />2.When files are large, "
+"download tools are recommended. Browser downloads sometimes interrupt "
+"automatically. Baidu Netdisks recommend PanDownload software or its webpage "
+"version for download.<br />3.Resources may be harmony due to content issues, "
+"leading to the unavailability of download links. If you encounter this "
+"problem, please go to the article page for feedback, and we will update it "
+"in time.<br />4.If you have any other questions or suggestions, please leave "
+"a comment.</p>"
+msgstr ""
+"<p>1、下载后文件若为压缩包格式，请安装RAR或者好压等压缩软件进行解压。<br /"
+">2、文件比较大的时候，建议使用下载工具进行下载，浏览器下载有时候会自动中断，"
+"百度网盘推荐PanDownload软件或其网页版下载。<br />3、资源可能会由于内容问题被"
+"和谐，导致下载链接不可用，遇到此问题，请到该文章页面进行反馈，我们会及时更新"
+"的。<br />4、若有其他问题或建议，欢迎留言评论。</p>"
+
+#: ../page-download.php:138
+msgid "Download Disclaimer"
+msgstr "免责声明"
+
+#: ../page-download.php:139
+msgid ""
+"Download Disclaimer: Some resources of this website are collected on the "
+"Internet for your study and reference only. If there is any infringement, "
+"please contact the administrator to delete it in time."
+msgstr ""
+"免责声明：本站部分资源收集于互联网，仅供大家学习与参考。如有侵权，请联系管理"
+"员及时删除。"
+
+#: ../searchform.php:3
+msgid "Search..."
+msgstr "请输入关键词..."
+
+#: ../searchform.php:5
+msgid "Enter"
+msgstr "搜索"
+
+#: ../single.php:14
+msgid "Previous: %title"
+msgstr "上一篇: %title"
+
+#: ../single.php:16
+msgid "Next: %title"
+msgstr "下一篇: %title"
+
+#~ msgid "HILAU主题设置"
+#~ msgstr "HILAU主题设置"
+
+#~ msgid " weeks ago"
+#~ msgstr " 周前"
+
+#~ msgid "Add a menu"
+#~ msgstr "添加菜单"
+
+#~ msgid "Social Links"
+#~ msgstr "社会链接"
+
+#~ msgid "To first page"
+#~ msgstr "跳转到第一页"
+
+#~ msgid "To last page"
+#~ msgstr "跳转到最后一页"
+
+#~ msgid "SCKEY"
+#~ msgstr "SCKEY"
+
+#~ msgid "No SCKEY? you can register on https://sc.ftqq.com"
+#~ msgstr "没有SCKEY？你可以到https://sc.ftqq.com注册一个"
+
+#~ msgid "You have new Message, Please Check it"
+#~ msgstr "网站上有新的评论，请及时查看"
+
+#~ msgid "Comment Author: "
+#~ msgstr "评论人： "
+
+#~ msgid "Post Title: "
+#~ msgstr "文章标题： "
+
+#~ msgid "Post Link: "
+#~ msgstr "文章链接： "
+
+#~ msgid "Post Content: "
+#~ msgstr "评论内容： "
