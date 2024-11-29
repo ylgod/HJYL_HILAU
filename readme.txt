@@ -45,3 +45,4 @@ HJYL_HILAU has theme options page:Go into your Wordpress Admin, navigate to 'App
 			更新版本至3.4.
 2022.01.30  bootstrap CDN断了,重新更新一下.
 2023.12.14  重新后台主题设置板块；首页重写；修复一些BUG；新增随机字符串作为slug；
+2024.11.29  修复首页的bug；修改归档页样式；更新版本到4.1
